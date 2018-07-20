@@ -13,3 +13,4 @@ Require-Bundle: org.eclipse.core.runtime;bundle-version="3.14.0",
 Bundle-RequiredExecutionEnvironment: JavaSE-1.8
 Import-Package: javax.inject;version="1.0.0"
 Automatic-Module-Name: ep.definition
+Bundle-Activator: EPDefActivator

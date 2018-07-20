@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.4"?>
+<plugin>
+   <extension
+         point="org.eclipse.e4.tools.spy.spyPart">
+      <spyPart
+            name="mySpy1"
+            part="spy1.MySpyPart"
+            shortcut="M2+M3+F2">
+      </spyPart>
+   </extension>
+
+</plugin>
