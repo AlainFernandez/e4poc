@@ -1,18 +1,17 @@
-package ep.handler;
+package ep.definition;
+
+import javax.annotation.PostConstruct;
 
 import org.eclipse.core.runtime.CoreException;
 import org.eclipse.core.runtime.IConfigurationElement;
 import org.eclipse.core.runtime.IExtensionRegistry;
 import org.eclipse.core.runtime.ISafeRunnable;
 import org.eclipse.core.runtime.SafeRunner;
-import org.eclipse.e4.core.di.annotations.Execute;
 
-import ep.definition.IGreeter;
-
-public class EvaluateContributionHandler {
-	private static final String EPTRY1_ID = "eptry1";
+public class EpAddon {
+	private static final String EPTRY1_ID = "ep.definition.eptry1";
 	
-	@Execute
+	@PostConstruct
 	public void execute(IExtensionRegistry registry) {
 		IConfigurationElement[] config = registry.getConfigurationElementsFor(EPTRY1_ID);
 		try {
