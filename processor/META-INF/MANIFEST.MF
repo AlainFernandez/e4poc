@@ -1,0 +1,12 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Processor
+Bundle-SymbolicName: processor;singleton:=true
+Bundle-Version: 1.0.0.qualifier
+Automatic-Module-Name: processor
+Bundle-RequiredExecutionEnvironment: JavaSE-1.8
+Require-Bundle: org.eclipse.e4.ui.workbench,
+ org.eclipse.e4.ui.model.workbench,
+ org.eclipse.e4.core.di.annotations,
+ javax.inject,
+ org.eclipse.e4.ui.di
