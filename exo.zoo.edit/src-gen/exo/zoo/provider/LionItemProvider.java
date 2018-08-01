@@ -2,6 +2,7 @@
  */
 package exo.zoo.provider;
 
+import exo.zoo.Lion;
 import java.util.Collection;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link exo.zoo.Lion} object.
+ * This is the item provider adapter for a {@link exo.zoo.MLion} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -71,7 +72,9 @@ public class LionItemProvider extends AnimalItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Lion_type");
+		String label = ((Lion) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Lion_type")
+				: getString("_UI_Lion_type") + " " + label;
 	}
 
 	/**

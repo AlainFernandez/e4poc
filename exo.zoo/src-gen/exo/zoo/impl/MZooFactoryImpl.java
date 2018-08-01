@@ -18,23 +18,23 @@ import org.eclipse.emf.ecore.plugin.EcorePlugin;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ZooFactoryImpl extends EFactoryImpl implements ZooFactory {
+public class MZooFactoryImpl extends EFactoryImpl implements MZooFactory {
 	/**
 	 * Creates the default factory implementation.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public static ZooFactory init() {
+	public static MZooFactory init() {
 		try {
-			ZooFactory theZooFactory = (ZooFactory) EPackage.Registry.INSTANCE.getEFactory(ZooPackage.eNS_URI);
+			MZooFactory theZooFactory = (MZooFactory) EPackage.Registry.INSTANCE.getEFactory(MZooPackage.eNS_URI);
 			if (theZooFactory != null) {
 				return theZooFactory;
 			}
 		} catch (Exception exception) {
 			EcorePlugin.INSTANCE.log(exception);
 		}
-		return new ZooFactoryImpl();
+		return new MZooFactoryImpl();
 	}
 
 	/**
@@ -43,7 +43,7 @@ public class ZooFactoryImpl extends EFactoryImpl implements ZooFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ZooFactoryImpl() {
+	public MZooFactoryImpl() {
 		super();
 	}
 
@@ -55,15 +55,15 @@ public class ZooFactoryImpl extends EFactoryImpl implements ZooFactory {
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case ZooPackage.ZOO:
+		case MZooPackage.ZOO:
 			return createZoo();
-		case ZooPackage.PARC:
+		case MZooPackage.PARC:
 			return createParc();
-		case ZooPackage.ANIMAL:
+		case MZooPackage.ANIMAL:
 			return createAnimal();
-		case ZooPackage.LION:
+		case MZooPackage.LION:
 			return createLion();
-		case ZooPackage.MONKEY:
+		case MZooPackage.MONKEY:
 			return createMonkey();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
@@ -125,8 +125,8 @@ public class ZooFactoryImpl extends EFactoryImpl implements ZooFactory {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ZooPackage getZooPackage() {
-		return (ZooPackage) getEPackage();
+	public MZooPackage getZooPackage() {
+		return (MZooPackage) getEPackage();
 	}
 
 	/**
@@ -136,8 +136,8 @@ public class ZooFactoryImpl extends EFactoryImpl implements ZooFactory {
 	 * @generated
 	 */
 	@Deprecated
-	public static ZooPackage getPackage() {
-		return ZooPackage.eINSTANCE;
+	public static MZooPackage getPackage() {
+		return MZooPackage.eINSTANCE;
 	}
 
-} //ZooFactoryImpl
+} //MZooFactoryImpl

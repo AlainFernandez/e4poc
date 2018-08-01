@@ -19,7 +19,7 @@ import org.eclipse.emf.ecore.util.Switch;
  * until a non-null result is returned,
  * which is the result of the switch.
  * <!-- end-user-doc -->
- * @see exo.zoo.ZooPackage
+ * @see exo.zoo.MZooPackage
  * @generated
  */
 public class ZooSwitch<T> extends Switch<T> {
@@ -29,7 +29,7 @@ public class ZooSwitch<T> extends Switch<T> {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static ZooPackage modelPackage;
+	protected static MZooPackage modelPackage;
 
 	/**
 	 * Creates an instance of the switch.
@@ -39,7 +39,7 @@ public class ZooSwitch<T> extends Switch<T> {
 	 */
 	public ZooSwitch() {
 		if (modelPackage == null) {
-			modelPackage = ZooPackage.eINSTANCE;
+			modelPackage = MZooPackage.eINSTANCE;
 		}
 	}
 
@@ -66,28 +66,28 @@ public class ZooSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case ZooPackage.ZOO: {
+		case MZooPackage.ZOO: {
 			Zoo zoo = (Zoo) theEObject;
 			T result = caseZoo(zoo);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ZooPackage.PARC: {
+		case MZooPackage.PARC: {
 			Parc parc = (Parc) theEObject;
 			T result = caseParc(parc);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ZooPackage.ANIMAL: {
+		case MZooPackage.ANIMAL: {
 			Animal animal = (Animal) theEObject;
 			T result = caseAnimal(animal);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ZooPackage.LION: {
+		case MZooPackage.LION: {
 			Lion lion = (Lion) theEObject;
 			T result = caseLion(lion);
 			if (result == null)
@@ -96,7 +96,7 @@ public class ZooSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
-		case ZooPackage.MONKEY: {
+		case MZooPackage.MONKEY: {
 			Monkey monkey = (Monkey) theEObject;
 			T result = caseMonkey(monkey);
 			if (result == null)

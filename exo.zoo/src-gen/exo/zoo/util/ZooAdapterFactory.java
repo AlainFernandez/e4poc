@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * The <b>Adapter Factory</b> for the model.
  * It provides an adapter <code>createXXX</code> method for each class of the model.
  * <!-- end-user-doc -->
- * @see exo.zoo.ZooPackage
+ * @see exo.zoo.MZooPackage
  * @generated
  */
 public class ZooAdapterFactory extends AdapterFactoryImpl {
@@ -26,7 +26,7 @@ public class ZooAdapterFactory extends AdapterFactoryImpl {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected static ZooPackage modelPackage;
+	protected static MZooPackage modelPackage;
 
 	/**
 	 * Creates an instance of the adapter factory.
@@ -36,7 +36,7 @@ public class ZooAdapterFactory extends AdapterFactoryImpl {
 	 */
 	public ZooAdapterFactory() {
 		if (modelPackage == null) {
-			modelPackage = ZooPackage.eINSTANCE;
+			modelPackage = MZooPackage.eINSTANCE;
 		}
 	}
 
@@ -111,13 +111,13 @@ public class ZooAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link exo.zoo.Zoo <em>Zoo</em>}'.
+	 * Creates a new adapter for an object of class '{@link exo.zoo.MZoo <em>Zoo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see exo.zoo.Zoo
+	 * @see exo.zoo.MZoo
 	 * @generated
 	 */
 	public Adapter createZooAdapter() {
@@ -125,13 +125,13 @@ public class ZooAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link exo.zoo.Parc <em>Parc</em>}'.
+	 * Creates a new adapter for an object of class '{@link exo.zoo.MParc <em>Parc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see exo.zoo.Parc
+	 * @see exo.zoo.MParc
 	 * @generated
 	 */
 	public Adapter createParcAdapter() {
@@ -139,13 +139,13 @@ public class ZooAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link exo.zoo.Animal <em>Animal</em>}'.
+	 * Creates a new adapter for an object of class '{@link exo.zoo.MAnimal <em>Animal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see exo.zoo.Animal
+	 * @see exo.zoo.MAnimal
 	 * @generated
 	 */
 	public Adapter createAnimalAdapter() {
@@ -153,13 +153,13 @@ public class ZooAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link exo.zoo.Lion <em>Lion</em>}'.
+	 * Creates a new adapter for an object of class '{@link exo.zoo.MLion <em>Lion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see exo.zoo.Lion
+	 * @see exo.zoo.MLion
 	 * @generated
 	 */
 	public Adapter createLionAdapter() {
@@ -167,13 +167,13 @@ public class ZooAdapterFactory extends AdapterFactoryImpl {
 	}
 
 	/**
-	 * Creates a new adapter for an object of class '{@link exo.zoo.Monkey <em>Monkey</em>}'.
+	 * Creates a new adapter for an object of class '{@link exo.zoo.MMonkey <em>Monkey</em>}'.
 	 * <!-- begin-user-doc -->
 	 * This default implementation returns null so that we can easily ignore cases;
 	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
 	 * <!-- end-user-doc -->
 	 * @return the new adapter.
-	 * @see exo.zoo.Monkey
+	 * @see exo.zoo.MMonkey
 	 * @generated
 	 */
 	public Adapter createMonkeyAdapter() {

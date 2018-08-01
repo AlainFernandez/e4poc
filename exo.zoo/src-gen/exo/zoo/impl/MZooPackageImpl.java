@@ -4,11 +4,11 @@ package exo.zoo.impl;
 
 import exo.zoo.Animal;
 import exo.zoo.Lion;
+import exo.zoo.MZooFactory;
+import exo.zoo.MZooPackage;
 import exo.zoo.Monkey;
 import exo.zoo.Parc;
 import exo.zoo.Zoo;
-import exo.zoo.ZooFactory;
-import exo.zoo.ZooPackage;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
@@ -23,7 +23,7 @@ import org.eclipse.emf.ecore.impl.EPackageImpl;
  * <!-- end-user-doc -->
  * @generated
  */
-public class ZooPackageImpl extends EPackageImpl implements ZooPackage {
+public class MZooPackageImpl extends EPackageImpl implements MZooPackage {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -70,12 +70,12 @@ public class ZooPackageImpl extends EPackageImpl implements ZooPackage {
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see org.eclipse.emf.ecore.EPackage.Registry
-	 * @see exo.zoo.ZooPackage#eNS_URI
+	 * @see exo.zoo.MZooPackage#eNS_URI
 	 * @see #init()
 	 * @generated
 	 */
-	private ZooPackageImpl() {
-		super(eNS_URI, ZooFactory.eINSTANCE);
+	private MZooPackageImpl() {
+		super(eNS_URI, MZooFactory.eINSTANCE);
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class ZooPackageImpl extends EPackageImpl implements ZooPackage {
 	/**
 	 * Creates, registers, and initializes the <b>Package</b> for this model, and for any others upon which it depends.
 	 *
-	 * <p>This method is used to initialize {@link ZooPackage#eINSTANCE} when that field is accessed.
+	 * <p>This method is used to initialize {@link MZooPackage#eINSTANCE} when that field is accessed.
 	 * Clients should not invoke it directly. Instead, they should simply access that field to obtain the package.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -97,15 +97,15 @@ public class ZooPackageImpl extends EPackageImpl implements ZooPackage {
 	 * @see #initializePackageContents()
 	 * @generated
 	 */
-	public static ZooPackage init() {
+	public static MZooPackage init() {
 		if (isInited)
-			return (ZooPackage) EPackage.Registry.INSTANCE.getEPackage(ZooPackage.eNS_URI);
+			return (MZooPackage) EPackage.Registry.INSTANCE.getEPackage(MZooPackage.eNS_URI);
 
 		// Obtain or create and register package
 		Object registeredZooPackage = EPackage.Registry.INSTANCE.get(eNS_URI);
-		ZooPackageImpl theZooPackage = registeredZooPackage instanceof ZooPackageImpl
-				? (ZooPackageImpl) registeredZooPackage
-				: new ZooPackageImpl();
+		MZooPackageImpl theZooPackage = registeredZooPackage instanceof MZooPackageImpl
+				? (MZooPackageImpl) registeredZooPackage
+				: new MZooPackageImpl();
 
 		isInited = true;
 
@@ -119,7 +119,7 @@ public class ZooPackageImpl extends EPackageImpl implements ZooPackage {
 		theZooPackage.freeze();
 
 		// Update the registry and return the package
-		EPackage.Registry.INSTANCE.put(ZooPackage.eNS_URI, theZooPackage);
+		EPackage.Registry.INSTANCE.put(MZooPackage.eNS_URI, theZooPackage);
 		return theZooPackage;
 	}
 
@@ -182,6 +182,15 @@ public class ZooPackageImpl extends EPackageImpl implements ZooPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EAttribute getAnimal_Name() {
+		return (EAttribute) animalEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getLion() {
 		return lionEClass;
 	}
@@ -200,8 +209,8 @@ public class ZooPackageImpl extends EPackageImpl implements ZooPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public ZooFactory getZooFactory() {
-		return (ZooFactory) getEFactoryInstance();
+	public MZooFactory getZooFactory() {
+		return (MZooFactory) getEFactoryInstance();
 	}
 
 	/**
@@ -232,6 +241,7 @@ public class ZooPackageImpl extends EPackageImpl implements ZooPackage {
 		createEReference(parcEClass, PARC__ANIMAL);
 
 		animalEClass = createEClass(ANIMAL);
+		createEAttribute(animalEClass, ANIMAL__NAME);
 
 		lionEClass = createEClass(LION);
 
@@ -283,6 +293,8 @@ public class ZooPackageImpl extends EPackageImpl implements ZooPackage {
 				IS_ORDERED);
 
 		initEClass(animalEClass, Animal.class, "Animal", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getAnimal_Name(), ecorePackage.getEString(), "name", null, 0, 1, Animal.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(lionEClass, Lion.class, "Lion", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
@@ -292,4 +304,4 @@ public class ZooPackageImpl extends EPackageImpl implements ZooPackage {
 		createResource(eNS_URI);
 	}
 
-} //ZooPackageImpl
+} //MZooPackageImpl

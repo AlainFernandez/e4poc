@@ -2,6 +2,7 @@
  */
 package exo.zoo.provider;
 
+import exo.zoo.Monkey;
 import java.util.Collection;
 import java.util.List;
 
@@ -11,7 +12,7 @@ import org.eclipse.emf.common.notify.Notification;
 import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 
 /**
- * This is the item provider adapter for a {@link exo.zoo.Monkey} object.
+ * This is the item provider adapter for a {@link exo.zoo.MMonkey} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -71,7 +72,9 @@ public class MonkeyItemProvider extends AnimalItemProvider {
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Monkey_type");
+		String label = ((Monkey) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Monkey_type")
+				: getString("_UI_Monkey_type") + " " + label;
 	}
 
 	/**

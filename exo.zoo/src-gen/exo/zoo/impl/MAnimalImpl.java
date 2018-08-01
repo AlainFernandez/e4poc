@@ -3,53 +3,55 @@
 package exo.zoo.impl;
 
 import exo.zoo.Animal;
-import exo.zoo.Parc;
-import exo.zoo.ZooPackage;
+import exo.zoo.MZooPackage;
 
-import java.util.Collection;
-
-import org.eclipse.emf.common.notify.NotificationChain;
-
-import org.eclipse.emf.common.util.EList;
+import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.ecore.EClass;
-import org.eclipse.emf.ecore.InternalEObject;
 
+import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
-import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Parc</b></em>'.
+ * An implementation of the model object '<em><b>Animal</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link exo.zoo.impl.ParcImpl#getAnimal <em>Animal</em>}</li>
+ *   <li>{@link exo.zoo.impl.MAnimalImpl#getName <em>Name</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class ParcImpl extends MinimalEObjectImpl.Container implements Parc {
+public class MAnimalImpl extends MinimalEObjectImpl.Container implements Animal {
 	/**
-	 * The cached value of the '{@link #getAnimal() <em>Animal</em>}' containment reference list.
+	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getAnimal()
+	 * @see #getName()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Animal> animal;
+	protected static final String NAME_EDEFAULT = null;
+
+	/**
+	 * The cached value of the '{@link #getName() <em>Name</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getName()
+	 * @generated
+	 * @ordered
+	 */
+	protected String name = NAME_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ParcImpl() {
+	protected MAnimalImpl() {
 		super();
 	}
 
@@ -60,7 +62,7 @@ public class ParcImpl extends MinimalEObjectImpl.Container implements Parc {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ZooPackage.Literals.PARC;
+		return MZooPackage.Literals.ANIMAL;
 	}
 
 	/**
@@ -68,11 +70,8 @@ public class ParcImpl extends MinimalEObjectImpl.Container implements Parc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Animal> getAnimal() {
-		if (animal == null) {
-			animal = new EObjectContainmentEList<Animal>(Animal.class, this, ZooPackage.PARC__ANIMAL);
-		}
-		return animal;
+	public String getName() {
+		return name;
 	}
 
 	/**
@@ -80,13 +79,11 @@ public class ParcImpl extends MinimalEObjectImpl.Container implements Parc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@Override
-	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
-		switch (featureID) {
-		case ZooPackage.PARC__ANIMAL:
-			return ((InternalEList<?>) getAnimal()).basicRemove(otherEnd, msgs);
-		}
-		return super.eInverseRemove(otherEnd, featureID, msgs);
+	public void setName(String newName) {
+		String oldName = name;
+		name = newName;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MZooPackage.ANIMAL__NAME, oldName, name));
 	}
 
 	/**
@@ -97,8 +94,8 @@ public class ParcImpl extends MinimalEObjectImpl.Container implements Parc {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case ZooPackage.PARC__ANIMAL:
-			return getAnimal();
+		case MZooPackage.ANIMAL__NAME:
+			return getName();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -108,13 +105,11 @@ public class ParcImpl extends MinimalEObjectImpl.Container implements Parc {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	@SuppressWarnings("unchecked")
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case ZooPackage.PARC__ANIMAL:
-			getAnimal().clear();
-			getAnimal().addAll((Collection<? extends Animal>) newValue);
+		case MZooPackage.ANIMAL__NAME:
+			setName((String) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -128,8 +123,8 @@ public class ParcImpl extends MinimalEObjectImpl.Container implements Parc {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case ZooPackage.PARC__ANIMAL:
-			getAnimal().clear();
+		case MZooPackage.ANIMAL__NAME:
+			setName(NAME_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -143,10 +138,27 @@ public class ParcImpl extends MinimalEObjectImpl.Container implements Parc {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case ZooPackage.PARC__ANIMAL:
-			return animal != null && !animal.isEmpty();
+		case MZooPackage.ANIMAL__NAME:
+			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
 		}
 		return super.eIsSet(featureID);
 	}
 
-} //ParcImpl
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String toString() {
+		if (eIsProxy())
+			return super.toString();
+
+		StringBuilder result = new StringBuilder(super.toString());
+		result.append(" (name: ");
+		result.append(name);
+		result.append(')');
+		return result.toString();
+	}
+
+} //MAnimalImpl

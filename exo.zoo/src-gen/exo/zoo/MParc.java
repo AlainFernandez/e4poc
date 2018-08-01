@@ -15,14 +15,14 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link exo.zoo.Parc#getAnimal <em>Animal</em>}</li>
+ *   <li>{@link exo.zoo.MParc#getAnimal <em>Animal</em>}</li>
  * </ul>
  *
- * @see exo.zoo.ZooPackage#getParc()
+ * @see exo.zoo.MZooPackage#getParc()
  * @model
  * @generated
  */
-public interface Parc extends EObject {
+public interface MParc extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Animal</b></em>' containment reference list.
 	 * The list contents are of type {@link exo.zoo.Animal}.
@@ -33,10 +33,10 @@ public interface Parc extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Animal</em>' containment reference list.
-	 * @see exo.zoo.ZooPackage#getParc_Animal()
+	 * @see exo.zoo.MZooPackage#getParc_Animal()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Animal> getAnimal();
 
-} // Parc
+} // MParc

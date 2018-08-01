@@ -73,7 +73,7 @@ public class ZooItemProviderAdapterFactory extends ZooAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link exo.zoo.Zoo} instances.
+	 * This keeps track of the one adapter used for all {@link exo.zoo.MZoo} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -81,7 +81,7 @@ public class ZooItemProviderAdapterFactory extends ZooAdapterFactory
 	protected ZooItemProvider zooItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link exo.zoo.Zoo}.
+	 * This creates an adapter for a {@link exo.zoo.MZoo}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -96,7 +96,7 @@ public class ZooItemProviderAdapterFactory extends ZooAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link exo.zoo.Parc} instances.
+	 * This keeps track of the one adapter used for all {@link exo.zoo.MParc} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -104,7 +104,7 @@ public class ZooItemProviderAdapterFactory extends ZooAdapterFactory
 	protected ParcItemProvider parcItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link exo.zoo.Parc}.
+	 * This creates an adapter for a {@link exo.zoo.MParc}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -119,7 +119,7 @@ public class ZooItemProviderAdapterFactory extends ZooAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link exo.zoo.Animal} instances.
+	 * This keeps track of the one adapter used for all {@link exo.zoo.MAnimal} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -127,7 +127,7 @@ public class ZooItemProviderAdapterFactory extends ZooAdapterFactory
 	protected AnimalItemProvider animalItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link exo.zoo.Animal}.
+	 * This creates an adapter for a {@link exo.zoo.MAnimal}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -142,7 +142,7 @@ public class ZooItemProviderAdapterFactory extends ZooAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link exo.zoo.Lion} instances.
+	 * This keeps track of the one adapter used for all {@link exo.zoo.MLion} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -150,7 +150,7 @@ public class ZooItemProviderAdapterFactory extends ZooAdapterFactory
 	protected LionItemProvider lionItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link exo.zoo.Lion}.
+	 * This creates an adapter for a {@link exo.zoo.MLion}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -165,7 +165,7 @@ public class ZooItemProviderAdapterFactory extends ZooAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link exo.zoo.Monkey} instances.
+	 * This keeps track of the one adapter used for all {@link exo.zoo.MMonkey} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -173,7 +173,7 @@ public class ZooItemProviderAdapterFactory extends ZooAdapterFactory
 	protected MonkeyItemProvider monkeyItemProvider;
 
 	/**
-	 * This creates an adapter for a {@link exo.zoo.Monkey}.
+	 * This creates an adapter for a {@link exo.zoo.MMonkey}.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated

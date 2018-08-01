@@ -2,6 +2,8 @@
  */
 package exo.zoo.provider;
 
+import exo.zoo.MZooFactory;
+import exo.zoo.MZooPackage;
 import exo.zoo.Parc;
 import exo.zoo.ZooFactory;
 import exo.zoo.ZooPackage;
@@ -26,7 +28,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link exo.zoo.Parc} object.
+ * This is the item provider adapter for a {@link exo.zoo.MParc} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -70,7 +72,7 @@ public class ParcItemProvider extends ItemProviderAdapter implements IEditingDom
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ZooPackage.Literals.PARC__ANIMAL);
+			childrenFeatures.add(MZooPackage.Literals.PARC__ANIMAL);
 		}
 		return childrenFeatures;
 	}
@@ -132,7 +134,7 @@ public class ParcItemProvider extends ItemProviderAdapter implements IEditingDom
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Parc.class)) {
-		case ZooPackage.PARC__ANIMAL:
+		case MZooPackage.PARC__ANIMAL:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -151,13 +153,13 @@ public class ParcItemProvider extends ItemProviderAdapter implements IEditingDom
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
 		newChildDescriptors
-				.add(createChildParameter(ZooPackage.Literals.PARC__ANIMAL, ZooFactory.eINSTANCE.createAnimal()));
+				.add(createChildParameter(MZooPackage.Literals.PARC__ANIMAL, MZooFactory.eINSTANCE.createAnimal()));
 
 		newChildDescriptors
-				.add(createChildParameter(ZooPackage.Literals.PARC__ANIMAL, ZooFactory.eINSTANCE.createLion()));
+				.add(createChildParameter(MZooPackage.Literals.PARC__ANIMAL, MZooFactory.eINSTANCE.createLion()));
 
 		newChildDescriptors
-				.add(createChildParameter(ZooPackage.Literals.PARC__ANIMAL, ZooFactory.eINSTANCE.createMonkey()));
+				.add(createChildParameter(MZooPackage.Literals.PARC__ANIMAL, MZooFactory.eINSTANCE.createMonkey()));
 	}
 
 	/**

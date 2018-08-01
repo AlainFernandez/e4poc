@@ -5,7 +5,7 @@
     editorDirectory="/exo.zoo.editor/src-gen" modelPluginID="exo.zoo" modelName="Zoo"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    operationReflection="true" importOrganizing="true">
+    interfaceNamePattern="M{0}" classNamePattern="M{0}Impl" operationReflection="true">
   <foreignModel>zoo.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Zoo" basePackage="exo" disposableProviderFactory="true" ecorePackage="zoo.ecore#/">
@@ -16,7 +16,9 @@
     <genClasses ecoreClass="zoo.ecore#//Parc">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference zoo.ecore#//Parc/animal"/>
     </genClasses>
-    <genClasses ecoreClass="zoo.ecore#//Animal"/>
+    <genClasses ecoreClass="zoo.ecore#//Animal">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute zoo.ecore#//Animal/name"/>
+    </genClasses>
     <genClasses ecoreClass="zoo.ecore#//Lion"/>
     <genClasses ecoreClass="zoo.ecore#//Monkey"/>
   </genPackages>

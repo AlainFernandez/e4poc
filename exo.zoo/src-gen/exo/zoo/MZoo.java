@@ -15,15 +15,15 @@ import org.eclipse.emf.ecore.EObject;
  * The following features are supported:
  * </p>
  * <ul>
- *   <li>{@link exo.zoo.Zoo#getName <em>Name</em>}</li>
- *   <li>{@link exo.zoo.Zoo#getParc <em>Parc</em>}</li>
+ *   <li>{@link exo.zoo.MZoo#getName <em>Name</em>}</li>
+ *   <li>{@link exo.zoo.MZoo#getParc <em>Parc</em>}</li>
  * </ul>
  *
- * @see exo.zoo.ZooPackage#getZoo()
+ * @see exo.zoo.MZooPackage#getZoo()
  * @model
  * @generated
  */
-public interface Zoo extends EObject {
+public interface MZoo extends EObject {
 	/**
 	 * Returns the value of the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
@@ -34,14 +34,14 @@ public interface Zoo extends EObject {
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Name</em>' attribute.
 	 * @see #setName(String)
-	 * @see exo.zoo.ZooPackage#getZoo_Name()
+	 * @see exo.zoo.MZooPackage#getZoo_Name()
 	 * @model
 	 * @generated
 	 */
 	String getName();
 
 	/**
-	 * Sets the value of the '{@link exo.zoo.Zoo#getName <em>Name</em>}' attribute.
+	 * Sets the value of the '{@link exo.zoo.MZoo#getName <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @param value the new value of the '<em>Name</em>' attribute.
@@ -60,10 +60,10 @@ public interface Zoo extends EObject {
 	 * </p>
 	 * <!-- end-user-doc -->
 	 * @return the value of the '<em>Parc</em>' containment reference list.
-	 * @see exo.zoo.ZooPackage#getZoo_Parc()
+	 * @see exo.zoo.MZooPackage#getZoo_Parc()
 	 * @model containment="true"
 	 * @generated
 	 */
 	EList<Parc> getParc();
 
-} // Zoo
+} // MZoo

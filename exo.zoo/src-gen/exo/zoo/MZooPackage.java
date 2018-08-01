@@ -19,11 +19,11 @@ import org.eclipse.emf.ecore.EReference;
  *   <li>and each data type</li>
  * </ul>
  * <!-- end-user-doc -->
- * @see exo.zoo.ZooFactory
+ * @see exo.zoo.MZooFactory
  * @model kind="package"
  * @generated
  */
-public interface ZooPackage extends EPackage {
+public interface MZooPackage extends EPackage {
 	/**
 	 * The package name.
 	 * <!-- begin-user-doc -->
@@ -54,14 +54,14 @@ public interface ZooPackage extends EPackage {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	ZooPackage eINSTANCE = exo.zoo.impl.ZooPackageImpl.init();
+	MZooPackage eINSTANCE = exo.zoo.impl.MZooPackageImpl.init();
 
 	/**
-	 * The meta object id for the '{@link exo.zoo.impl.ZooImpl <em>Zoo</em>}' class.
+	 * The meta object id for the '{@link exo.zoo.impl.MZooImpl <em>Zoo</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see exo.zoo.impl.ZooImpl
-	 * @see exo.zoo.impl.ZooPackageImpl#getZoo()
+	 * @see exo.zoo.impl.MZooImpl
+	 * @see exo.zoo.impl.MZooPackageImpl#getZoo()
 	 * @generated
 	 */
 	int ZOO = 0;
@@ -103,11 +103,11 @@ public interface ZooPackage extends EPackage {
 	int ZOO_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link exo.zoo.impl.ParcImpl <em>Parc</em>}' class.
+	 * The meta object id for the '{@link exo.zoo.impl.MParcImpl <em>Parc</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see exo.zoo.impl.ParcImpl
-	 * @see exo.zoo.impl.ZooPackageImpl#getParc()
+	 * @see exo.zoo.impl.MParcImpl
+	 * @see exo.zoo.impl.MZooPackageImpl#getParc()
 	 * @generated
 	 */
 	int PARC = 1;
@@ -140,14 +140,23 @@ public interface ZooPackage extends EPackage {
 	int PARC_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link exo.zoo.impl.AnimalImpl <em>Animal</em>}' class.
+	 * The meta object id for the '{@link exo.zoo.impl.MAnimalImpl <em>Animal</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see exo.zoo.impl.AnimalImpl
-	 * @see exo.zoo.impl.ZooPackageImpl#getAnimal()
+	 * @see exo.zoo.impl.MAnimalImpl
+	 * @see exo.zoo.impl.MZooPackageImpl#getAnimal()
 	 * @generated
 	 */
 	int ANIMAL = 2;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANIMAL__NAME = 0;
 
 	/**
 	 * The number of structural features of the '<em>Animal</em>' class.
@@ -156,7 +165,7 @@ public interface ZooPackage extends EPackage {
 	 * @generated
 	 * @ordered
 	 */
-	int ANIMAL_FEATURE_COUNT = 0;
+	int ANIMAL_FEATURE_COUNT = 1;
 
 	/**
 	 * The number of operations of the '<em>Animal</em>' class.
@@ -168,14 +177,23 @@ public interface ZooPackage extends EPackage {
 	int ANIMAL_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link exo.zoo.impl.LionImpl <em>Lion</em>}' class.
+	 * The meta object id for the '{@link exo.zoo.impl.MLionImpl <em>Lion</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see exo.zoo.impl.LionImpl
-	 * @see exo.zoo.impl.ZooPackageImpl#getLion()
+	 * @see exo.zoo.impl.MLionImpl
+	 * @see exo.zoo.impl.MZooPackageImpl#getLion()
 	 * @generated
 	 */
 	int LION = 3;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int LION__NAME = ANIMAL__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Lion</em>' class.
@@ -196,14 +214,23 @@ public interface ZooPackage extends EPackage {
 	int LION_OPERATION_COUNT = ANIMAL_OPERATION_COUNT + 0;
 
 	/**
-	 * The meta object id for the '{@link exo.zoo.impl.MonkeyImpl <em>Monkey</em>}' class.
+	 * The meta object id for the '{@link exo.zoo.impl.MMonkeyImpl <em>Monkey</em>}' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see exo.zoo.impl.MonkeyImpl
-	 * @see exo.zoo.impl.ZooPackageImpl#getMonkey()
+	 * @see exo.zoo.impl.MMonkeyImpl
+	 * @see exo.zoo.impl.MZooPackageImpl#getMonkey()
 	 * @generated
 	 */
 	int MONKEY = 4;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int MONKEY__NAME = ANIMAL__NAME;
 
 	/**
 	 * The number of structural features of the '<em>Monkey</em>' class.
@@ -224,84 +251,95 @@ public interface ZooPackage extends EPackage {
 	int MONKEY_OPERATION_COUNT = ANIMAL_OPERATION_COUNT + 0;
 
 	/**
-	 * Returns the meta object for class '{@link exo.zoo.Zoo <em>Zoo</em>}'.
+	 * Returns the meta object for class '{@link exo.zoo.MZoo <em>Zoo</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Zoo</em>'.
-	 * @see exo.zoo.Zoo
+	 * @see exo.zoo.MZoo
 	 * @generated
 	 */
 	EClass getZoo();
 
 	/**
-	 * Returns the meta object for the attribute '{@link exo.zoo.Zoo#getName <em>Name</em>}'.
+	 * Returns the meta object for the attribute '{@link exo.zoo.MZoo#getName <em>Name</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the attribute '<em>Name</em>'.
-	 * @see exo.zoo.Zoo#getName()
+	 * @see exo.zoo.MZoo#getName()
 	 * @see #getZoo()
 	 * @generated
 	 */
 	EAttribute getZoo_Name();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link exo.zoo.Zoo#getParc <em>Parc</em>}'.
+	 * Returns the meta object for the containment reference list '{@link exo.zoo.MZoo#getParc <em>Parc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Parc</em>'.
-	 * @see exo.zoo.Zoo#getParc()
+	 * @see exo.zoo.MZoo#getParc()
 	 * @see #getZoo()
 	 * @generated
 	 */
 	EReference getZoo_Parc();
 
 	/**
-	 * Returns the meta object for class '{@link exo.zoo.Parc <em>Parc</em>}'.
+	 * Returns the meta object for class '{@link exo.zoo.MParc <em>Parc</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Parc</em>'.
-	 * @see exo.zoo.Parc
+	 * @see exo.zoo.MParc
 	 * @generated
 	 */
 	EClass getParc();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link exo.zoo.Parc#getAnimal <em>Animal</em>}'.
+	 * Returns the meta object for the containment reference list '{@link exo.zoo.MParc#getAnimal <em>Animal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for the containment reference list '<em>Animal</em>'.
-	 * @see exo.zoo.Parc#getAnimal()
+	 * @see exo.zoo.MParc#getAnimal()
 	 * @see #getParc()
 	 * @generated
 	 */
 	EReference getParc_Animal();
 
 	/**
-	 * Returns the meta object for class '{@link exo.zoo.Animal <em>Animal</em>}'.
+	 * Returns the meta object for class '{@link exo.zoo.MAnimal <em>Animal</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Animal</em>'.
-	 * @see exo.zoo.Animal
+	 * @see exo.zoo.MAnimal
 	 * @generated
 	 */
 	EClass getAnimal();
 
 	/**
-	 * Returns the meta object for class '{@link exo.zoo.Lion <em>Lion</em>}'.
+	 * Returns the meta object for the attribute '{@link exo.zoo.MAnimal#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see exo.zoo.MAnimal#getName()
+	 * @see #getAnimal()
+	 * @generated
+	 */
+	EAttribute getAnimal_Name();
+
+	/**
+	 * Returns the meta object for class '{@link exo.zoo.MLion <em>Lion</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Lion</em>'.
-	 * @see exo.zoo.Lion
+	 * @see exo.zoo.MLion
 	 * @generated
 	 */
 	EClass getLion();
 
 	/**
-	 * Returns the meta object for class '{@link exo.zoo.Monkey <em>Monkey</em>}'.
+	 * Returns the meta object for class '{@link exo.zoo.MMonkey <em>Monkey</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @return the meta object for class '<em>Monkey</em>'.
-	 * @see exo.zoo.Monkey
+	 * @see exo.zoo.MMonkey
 	 * @generated
 	 */
 	EClass getMonkey();
@@ -313,7 +351,7 @@ public interface ZooPackage extends EPackage {
 	 * @return the factory that creates the instances of the model.
 	 * @generated
 	 */
-	ZooFactory getZooFactory();
+	MZooFactory getZooFactory();
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -330,11 +368,11 @@ public interface ZooPackage extends EPackage {
 	 */
 	interface Literals {
 		/**
-		 * The meta object literal for the '{@link exo.zoo.impl.ZooImpl <em>Zoo</em>}' class.
+		 * The meta object literal for the '{@link exo.zoo.impl.MZooImpl <em>Zoo</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see exo.zoo.impl.ZooImpl
-		 * @see exo.zoo.impl.ZooPackageImpl#getZoo()
+		 * @see exo.zoo.impl.MZooImpl
+		 * @see exo.zoo.impl.MZooPackageImpl#getZoo()
 		 * @generated
 		 */
 		EClass ZOO = eINSTANCE.getZoo();
@@ -356,11 +394,11 @@ public interface ZooPackage extends EPackage {
 		EReference ZOO__PARC = eINSTANCE.getZoo_Parc();
 
 		/**
-		 * The meta object literal for the '{@link exo.zoo.impl.ParcImpl <em>Parc</em>}' class.
+		 * The meta object literal for the '{@link exo.zoo.impl.MParcImpl <em>Parc</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see exo.zoo.impl.ParcImpl
-		 * @see exo.zoo.impl.ZooPackageImpl#getParc()
+		 * @see exo.zoo.impl.MParcImpl
+		 * @see exo.zoo.impl.MZooPackageImpl#getParc()
 		 * @generated
 		 */
 		EClass PARC = eINSTANCE.getParc();
@@ -374,35 +412,43 @@ public interface ZooPackage extends EPackage {
 		EReference PARC__ANIMAL = eINSTANCE.getParc_Animal();
 
 		/**
-		 * The meta object literal for the '{@link exo.zoo.impl.AnimalImpl <em>Animal</em>}' class.
+		 * The meta object literal for the '{@link exo.zoo.impl.MAnimalImpl <em>Animal</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see exo.zoo.impl.AnimalImpl
-		 * @see exo.zoo.impl.ZooPackageImpl#getAnimal()
+		 * @see exo.zoo.impl.MAnimalImpl
+		 * @see exo.zoo.impl.MZooPackageImpl#getAnimal()
 		 * @generated
 		 */
 		EClass ANIMAL = eINSTANCE.getAnimal();
 
 		/**
-		 * The meta object literal for the '{@link exo.zoo.impl.LionImpl <em>Lion</em>}' class.
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see exo.zoo.impl.LionImpl
-		 * @see exo.zoo.impl.ZooPackageImpl#getLion()
+		 * @generated
+		 */
+		EAttribute ANIMAL__NAME = eINSTANCE.getAnimal_Name();
+
+		/**
+		 * The meta object literal for the '{@link exo.zoo.impl.MLionImpl <em>Lion</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see exo.zoo.impl.MLionImpl
+		 * @see exo.zoo.impl.MZooPackageImpl#getLion()
 		 * @generated
 		 */
 		EClass LION = eINSTANCE.getLion();
 
 		/**
-		 * The meta object literal for the '{@link exo.zoo.impl.MonkeyImpl <em>Monkey</em>}' class.
+		 * The meta object literal for the '{@link exo.zoo.impl.MMonkeyImpl <em>Monkey</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
-		 * @see exo.zoo.impl.MonkeyImpl
-		 * @see exo.zoo.impl.ZooPackageImpl#getMonkey()
+		 * @see exo.zoo.impl.MMonkeyImpl
+		 * @see exo.zoo.impl.MZooPackageImpl#getMonkey()
 		 * @generated
 		 */
 		EClass MONKEY = eINSTANCE.getMonkey();
 
 	}
 
-} //ZooPackage
+} //MZooPackage

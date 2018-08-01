@@ -68,6 +68,8 @@ import org.eclipse.ui.dialogs.WizardNewFileCreationPage;
 import org.eclipse.ui.part.FileEditorInput;
 import org.eclipse.ui.part.ISetSelectionTarget;
 
+import exo.zoo.MZooFactory;
+import exo.zoo.MZooPackage;
 import exo.zoo.ZooFactory;
 import exo.zoo.ZooPackage;
 import exo.zoo.provider.ZooEditPlugin;
@@ -113,7 +115,7 @@ public class ZooModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ZooPackage zooPackage = ZooPackage.eINSTANCE;
+	protected MZooPackage zooPackage = MZooPackage.eINSTANCE;
 
 	/**
 	 * This caches an instance of the model factory.
@@ -121,7 +123,7 @@ public class ZooModelWizard extends Wizard implements INewWizard {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected ZooFactory zooFactory = zooPackage.getZooFactory();
+	protected MZooFactory zooFactory = zooPackage.getZooFactory();
 
 	/**
 	 * This is the file creation page.

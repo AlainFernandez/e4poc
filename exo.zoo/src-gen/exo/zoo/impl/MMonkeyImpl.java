@@ -2,27 +2,25 @@
  */
 package exo.zoo.impl;
 
-import exo.zoo.Animal;
-import exo.zoo.ZooPackage;
+import exo.zoo.MZooPackage;
+import exo.zoo.Monkey;
 
 import org.eclipse.emf.ecore.EClass;
 
-import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
-
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Animal</b></em>'.
+ * An implementation of the model object '<em><b>Monkey</b></em>'.
  * <!-- end-user-doc -->
  *
  * @generated
  */
-public class AnimalImpl extends MinimalEObjectImpl.Container implements Animal {
+public class MMonkeyImpl extends AnimalImpl implements Monkey {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected AnimalImpl() {
+	protected MMonkeyImpl() {
 		super();
 	}
 
@@ -33,7 +31,7 @@ public class AnimalImpl extends MinimalEObjectImpl.Container implements Animal {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ZooPackage.Literals.ANIMAL;
+		return MZooPackage.Literals.MONKEY;
 	}
 
-} //AnimalImpl
+} //MMonkeyImpl

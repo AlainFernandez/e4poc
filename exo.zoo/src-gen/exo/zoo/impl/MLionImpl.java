@@ -3,7 +3,7 @@
 package exo.zoo.impl;
 
 import exo.zoo.Lion;
-import exo.zoo.ZooPackage;
+import exo.zoo.MZooPackage;
 
 import org.eclipse.emf.ecore.EClass;
 
@@ -14,13 +14,13 @@ import org.eclipse.emf.ecore.EClass;
  *
  * @generated
  */
-public class LionImpl extends AnimalImpl implements Lion {
+public class MLionImpl extends AnimalImpl implements Lion {
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected LionImpl() {
+	protected MLionImpl() {
 		super();
 	}
 
@@ -31,7 +31,7 @@ public class LionImpl extends AnimalImpl implements Lion {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return ZooPackage.Literals.LION;
+		return MZooPackage.Literals.LION;
 	}
 
-} //LionImpl
+} //MLionImpl

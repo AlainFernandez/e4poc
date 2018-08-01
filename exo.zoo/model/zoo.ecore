@@ -10,7 +10,9 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="animal" upperBound="-1"
         eType="#//Animal" containment="true"/>
   </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Animal"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Animal">
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Lion" eSuperTypes="#//Animal"/>
   <eClassifiers xsi:type="ecore:EClass" name="Monkey" eSuperTypes="#//Animal"/>
 </ecore:EPackage>

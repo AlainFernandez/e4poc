@@ -10,7 +10,7 @@
       <!-- @generated zoo -->
       <package
             uri="http://www.example.org/zoo"
-            class="exo.zoo.ZooPackage"
+            class="exo.zoo.MZooPackage"
             genModel="model/zoo.genmodel"/>
    </extension>
 

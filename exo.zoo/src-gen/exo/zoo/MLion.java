@@ -8,9 +8,9 @@ package exo.zoo;
  * <!-- end-user-doc -->
  *
  *
- * @see exo.zoo.ZooPackage#getLion()
+ * @see exo.zoo.MZooPackage#getLion()
  * @model
  * @generated
  */
-public interface Lion extends Animal {
-} // Lion
+public interface MLion extends Animal {
+} // MLion

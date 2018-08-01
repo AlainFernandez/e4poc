@@ -2,6 +2,8 @@
  */
 package exo.zoo.provider;
 
+import exo.zoo.MZooFactory;
+import exo.zoo.MZooPackage;
 import exo.zoo.Zoo;
 import exo.zoo.ZooFactory;
 import exo.zoo.ZooPackage;
@@ -28,7 +30,7 @@ import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link exo.zoo.Zoo} object.
+ * This is the item provider adapter for a {@link exo.zoo.MZoo} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
@@ -72,7 +74,7 @@ public class ZooItemProvider extends ItemProviderAdapter implements IEditingDoma
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
 						getResourceLocator(), getString("_UI_Zoo_name_feature"),
 						getString("_UI_PropertyDescriptor_description", "_UI_Zoo_name_feature", "_UI_Zoo_type"),
-						ZooPackage.Literals.ZOO__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
+						MZooPackage.Literals.ZOO__NAME, true, false, false, ItemPropertyDescriptor.GENERIC_VALUE_IMAGE,
 						null, null));
 	}
 
@@ -88,7 +90,7 @@ public class ZooItemProvider extends ItemProviderAdapter implements IEditingDoma
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(ZooPackage.Literals.ZOO__PARC);
+			childrenFeatures.add(MZooPackage.Literals.ZOO__PARC);
 		}
 		return childrenFeatures;
 	}
@@ -152,10 +154,10 @@ public class ZooItemProvider extends ItemProviderAdapter implements IEditingDoma
 		updateChildren(notification);
 
 		switch (notification.getFeatureID(Zoo.class)) {
-		case ZooPackage.ZOO__NAME:
+		case MZooPackage.ZOO__NAME:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case ZooPackage.ZOO__PARC:
+		case MZooPackage.ZOO__PARC:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -173,7 +175,8 @@ public class ZooItemProvider extends ItemProviderAdapter implements IEditingDoma
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(ZooPackage.Literals.ZOO__PARC, ZooFactory.eINSTANCE.createParc()));
+		newChildDescriptors
+				.add(createChildParameter(MZooPackage.Literals.ZOO__PARC, MZooFactory.eINSTANCE.createParc()));
 	}
 
 	/**
