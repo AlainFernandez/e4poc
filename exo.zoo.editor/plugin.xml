@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated zoo -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="exo.zoo.presentation.ZooModelWizardID"
+            name="%_UI_ZooModelWizard_label"
+            class="exo.zoo.presentation.ZooModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/ZooModelFile.gif">
+         <description>%_UI_ZooModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated zoo -->
+      <editor
+            id="exo.zoo.presentation.ZooEditorID"
+            name="%_UI_ZooEditor_label"
+            icon="icons/full/obj16/ZooModelFile.gif"
+            extensions="zoo"
+            class="exo.zoo.presentation.ZooEditor"
+            contributorClass="exo.zoo.presentation.ZooActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
