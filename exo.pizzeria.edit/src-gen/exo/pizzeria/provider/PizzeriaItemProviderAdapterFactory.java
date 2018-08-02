@@ -211,6 +211,52 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link exo.pizzeria.MTable} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected TableItemProvider tableItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link exo.pizzeria.MTable}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createTableAdapter() {
+		if (tableItemProvider == null) {
+			tableItemProvider = new TableItemProvider(this);
+		}
+
+		return tableItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link exo.pizzeria.MClient} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected ClientItemProvider clientItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link exo.pizzeria.MClient}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createClientAdapter() {
+		if (clientItemProvider == null) {
+			clientItemProvider = new ClientItemProvider(this);
+		}
+
+		return clientItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -321,6 +367,10 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 			fromageItemProvider.dispose();
 		if (pizzeriaItemProvider != null)
 			pizzeriaItemProvider.dispose();
+		if (tableItemProvider != null)
+			tableItemProvider.dispose();
+		if (clientItemProvider != null)
+			clientItemProvider.dispose();
 	}
 
 }

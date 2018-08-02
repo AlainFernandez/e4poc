@@ -2,9 +2,8 @@
  */
 package exo.pizzeria.provider;
 
-import exo.pizzeria.MPizzeriaFactory;
 import exo.pizzeria.MPizzeriaPackage;
-import exo.pizzeria.Pizzeria;
+import exo.pizzeria.Table;
 
 import java.util.Collection;
 import java.util.List;
@@ -14,8 +13,6 @@ import org.eclipse.emf.common.notify.Notification;
 
 import org.eclipse.emf.common.util.ResourceLocator;
 
-import org.eclipse.emf.ecore.EStructuralFeature;
-
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -23,16 +20,17 @@ import org.eclipse.emf.edit.provider.IItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.IItemPropertySource;
 import org.eclipse.emf.edit.provider.IStructuredItemContentProvider;
 import org.eclipse.emf.edit.provider.ITreeItemContentProvider;
+import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
 /**
- * This is the item provider adapter for a {@link exo.pizzeria.MPizzeria} object.
+ * This is the item provider adapter for a {@link exo.pizzeria.MTable} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class TableItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -40,7 +38,7 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PizzeriaItemProvider(AdapterFactory adapterFactory) {
+	public TableItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -55,9 +53,25 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
+			addIdPropertyDescriptor(object);
 			addClientPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
+	}
+
+	/**
+	 * This adds a property descriptor for the Id feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addIdPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Table_id_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Table_id_feature", "_UI_Table_type"),
+						MPizzeriaPackage.Literals.TABLE__ID, true, false, false,
+						ItemPropertyDescriptor.INTEGRAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -69,52 +83,20 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 	protected void addClientPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Pizzeria_client_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Pizzeria_client_feature",
-								"_UI_Pizzeria_type"),
-						MPizzeriaPackage.Literals.PIZZERIA__CLIENT, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Table_client_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Table_client_feature", "_UI_Table_type"),
+						MPizzeriaPackage.Literals.TABLE__CLIENT, true, false, true, null, null, null));
 	}
 
 	/**
-	 * This specifies how to implement {@link #getChildren} and is used to deduce an appropriate feature for an
-	 * {@link org.eclipse.emf.edit.command.AddCommand}, {@link org.eclipse.emf.edit.command.RemoveCommand} or
-	 * {@link org.eclipse.emf.edit.command.MoveCommand} in {@link #createCommand}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
-		if (childrenFeatures == null) {
-			super.getChildrenFeatures(object);
-			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__PIZZA);
-			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__TABLE);
-		}
-		return childrenFeatures;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	protected EStructuralFeature getChildFeature(Object object, Object child) {
-		// Check the type of the specified child object and return the proper feature to use for
-		// adding (see {@link AddCommand}) it as a child.
-
-		return super.getChildFeature(object, child);
-	}
-
-	/**
-	 * This returns Pizzeria.gif.
+	 * This returns Table.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Pizzeria"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Table"));
 	}
 
 	/**
@@ -135,7 +117,8 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 	 */
 	@Override
 	public String getText(Object object) {
-		return getString("_UI_Pizzeria_type");
+		Table table = (Table) object;
+		return getString("_UI_Table_type") + " " + table.getId();
 	}
 
 	/**
@@ -149,10 +132,9 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Pizzeria.class)) {
-		case MPizzeriaPackage.PIZZERIA__PIZZA:
-		case MPizzeriaPackage.PIZZERIA__TABLE:
-			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
+		switch (notification.getFeatureID(Table.class)) {
+		case MPizzeriaPackage.TABLE__ID:
+			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
 		}
 		super.notifyChanged(notification);
@@ -168,12 +150,6 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 	@Override
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
-
-		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZERIA__PIZZA,
-				MPizzeriaFactory.eINSTANCE.createPizza()));
-
-		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZERIA__TABLE,
-				MPizzeriaFactory.eINSTANCE.createTable()));
 	}
 
 	/**

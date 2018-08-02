@@ -2,6 +2,7 @@
  */
 package exo.pizzeria.impl;
 
+import exo.pizzeria.Client;
 import exo.pizzeria.Fromage;
 import exo.pizzeria.Ingredient;
 import exo.pizzeria.Jambon;
@@ -9,6 +10,7 @@ import exo.pizzeria.MPizzeriaFactory;
 import exo.pizzeria.MPizzeriaPackage;
 import exo.pizzeria.Pizza;
 import exo.pizzeria.Pizzeria;
+import exo.pizzeria.Table;
 import exo.pizzeria.Tomate;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -66,6 +68,20 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 	 * @generated
 	 */
 	private EClass pizzeriaEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass tableEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass clientEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -235,6 +251,78 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPizzeria_Client() {
+		return (EReference) pizzeriaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPizzeria_Table() {
+		return (EReference) pizzeriaEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getTable() {
+		return tableEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getTable_Id() {
+		return (EAttribute) tableEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getTable_Client() {
+		return (EReference) tableEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getClient() {
+		return clientEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getClient_Name() {
+		return (EAttribute) clientEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getClient_Pizza() {
+		return (EReference) clientEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MPizzeriaFactory getPizzeriaFactory() {
 		return (MPizzeriaFactory) getEFactoryInstance();
 	}
@@ -275,6 +363,16 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 
 		pizzeriaEClass = createEClass(PIZZERIA);
 		createEReference(pizzeriaEClass, PIZZERIA__PIZZA);
+		createEReference(pizzeriaEClass, PIZZERIA__CLIENT);
+		createEReference(pizzeriaEClass, PIZZERIA__TABLE);
+
+		tableEClass = createEClass(TABLE);
+		createEAttribute(tableEClass, TABLE__ID);
+		createEReference(tableEClass, TABLE__CLIENT);
+
+		clientEClass = createEClass(CLIENT);
+		createEAttribute(clientEClass, CLIENT__NAME);
+		createEReference(clientEClass, CLIENT__PIZZA);
 	}
 
 	/**
@@ -335,6 +433,26 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 				IS_GENERATED_INSTANCE_CLASS);
 		initEReference(getPizzeria_Pizza(), this.getPizza(), null, "pizza", null, 0, -1, Pizzeria.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+		initEReference(getPizzeria_Client(), this.getClient(), null, "client", null, 0, 1, Pizzeria.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPizzeria_Table(), this.getTable(), null, "table", null, 0, -1, Pizzeria.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getTable_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Table.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getTable_Client(), this.getClient(), null, "client", null, 0, 6, Table.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
+
+		initEClass(clientEClass, Client.class, "Client", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getClient_Name(), ecorePackage.getEString(), "name", null, 0, 1, Client.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getClient_Pizza(), this.getPizza(), null, "pizza", null, 0, -1, Client.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
 
 		// Create resource

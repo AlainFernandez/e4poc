@@ -68,6 +68,10 @@ public class MPizzeriaFactoryImpl extends EFactoryImpl implements MPizzeriaFacto
 			return createFromage();
 		case MPizzeriaPackage.PIZZERIA:
 			return createPizzeria();
+		case MPizzeriaPackage.TABLE:
+			return createTable();
+		case MPizzeriaPackage.CLIENT:
+			return createClient();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -131,6 +135,26 @@ public class MPizzeriaFactoryImpl extends EFactoryImpl implements MPizzeriaFacto
 	public Pizzeria createPizzeria() {
 		PizzeriaImpl pizzeria = new PizzeriaImpl();
 		return pizzeria;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Table createTable() {
+		TableImpl table = new TableImpl();
+		return table;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Client createClient() {
+		ClientImpl client = new ClientImpl();
+		return client;
 	}
 
 	/**

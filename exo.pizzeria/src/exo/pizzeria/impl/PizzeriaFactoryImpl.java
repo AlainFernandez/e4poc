@@ -8,6 +8,8 @@ import exo.pizzeria.Tomate;
 import exo.pizzeria.Jambon;
 import exo.pizzeria.Fromage;
 import exo.pizzeria.Pizzeria;
+import exo.pizzeria.Table;
+import exo.pizzeria.Client;
 import exo.pizzeria.PizzeriaFactory;
 
 
@@ -56,6 +58,16 @@ public class PizzeriaFactoryImpl extends MPizzeriaFactoryImpl implements Pizzeri
 	public Pizzeria createPizzeria()
 	{
 		Pizzeria result = new PizzeriaImpl();
+		return result;
+	}
+	public Table createTable()
+	{
+		Table result = new TableImpl();
+		return result;
+	}
+	public Client createClient()
+	{
+		Client result = new ClientImpl();
 		return result;
 	}
 }
