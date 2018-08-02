@@ -18,7 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  * </ul>
  *
  * @see exo.pizzeria.MPizzeriaPackage#getIngredient()
- * @model
+ * @model abstract="true"
  * @generated
  */
 public interface MIngredient extends EObject {

@@ -90,6 +90,7 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__PIZZA);
 			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__CLIENTS);
 			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__TABLES);
+			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__RECETTES);
 		}
 		return childrenFeatures;
 	}
@@ -153,6 +154,7 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 		switch (notification.getFeatureID(Pizzeria.class)) {
 		case MPizzeriaPackage.PIZZERIA__PIZZA:
 		case MPizzeriaPackage.PIZZERIA__TABLES:
+		case MPizzeriaPackage.PIZZERIA__RECETTES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -178,6 +180,9 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 
 		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZERIA__TABLES,
 				MPizzeriaFactory.eINSTANCE.createTable()));
+
+		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZERIA__RECETTES,
+				MPizzeriaFactory.eINSTANCE.createRecette()));
 	}
 
 	/**

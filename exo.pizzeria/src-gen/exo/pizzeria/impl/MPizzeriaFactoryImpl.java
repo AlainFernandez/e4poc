@@ -5,6 +5,7 @@ package exo.pizzeria.impl;
 import exo.pizzeria.*;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EDataType;
 import org.eclipse.emf.ecore.EObject;
 import org.eclipse.emf.ecore.EPackage;
 
@@ -58,8 +59,6 @@ public class MPizzeriaFactoryImpl extends EFactoryImpl implements MPizzeriaFacto
 		switch (eClass.getClassifierID()) {
 		case MPizzeriaPackage.PIZZA:
 			return createPizza();
-		case MPizzeriaPackage.INGREDIENT:
-			return createIngredient();
 		case MPizzeriaPackage.TOMATE:
 			return createTomate();
 		case MPizzeriaPackage.JAMBON:
@@ -72,8 +71,42 @@ public class MPizzeriaFactoryImpl extends EFactoryImpl implements MPizzeriaFacto
 			return createTable();
 		case MPizzeriaPackage.CLIENT:
 			return createClient();
+		case MPizzeriaPackage.RECETTE:
+			return createRecette();
+		case MPizzeriaPackage.OEUF:
+			return createOeuf();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object createFromString(EDataType eDataType, String initialValue) {
+		switch (eDataType.getClassifierID()) {
+		case MPizzeriaPackage.ETAT_PIZZA:
+			return createEtatPizzaFromString(eDataType, initialValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
+		}
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public String convertToString(EDataType eDataType, Object instanceValue) {
+		switch (eDataType.getClassifierID()) {
+		case MPizzeriaPackage.ETAT_PIZZA:
+			return convertEtatPizzaToString(eDataType, instanceValue);
+		default:
+			throw new IllegalArgumentException("The datatype '" + eDataType.getName() + "' is not a valid classifier");
 		}
 	}
 
@@ -85,16 +118,6 @@ public class MPizzeriaFactoryImpl extends EFactoryImpl implements MPizzeriaFacto
 	public Pizza createPizza() {
 		PizzaImpl pizza = new PizzaImpl();
 		return pizza;
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	public Ingredient createIngredient() {
-		IngredientImpl ingredient = new IngredientImpl();
-		return ingredient;
 	}
 
 	/**
@@ -155,6 +178,48 @@ public class MPizzeriaFactoryImpl extends EFactoryImpl implements MPizzeriaFacto
 	public Client createClient() {
 		ClientImpl client = new ClientImpl();
 		return client;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Recette createRecette() {
+		RecetteImpl recette = new RecetteImpl();
+		return recette;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Oeuf createOeuf() {
+		OeufImpl oeuf = new OeufImpl();
+		return oeuf;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EtatPizza createEtatPizzaFromString(EDataType eDataType, String initialValue) {
+		EtatPizza result = EtatPizza.get(initialValue);
+		if (result == null)
+			throw new IllegalArgumentException(
+					"The value '" + initialValue + "' is not a valid enumerator of '" + eDataType.getName() + "'");
+		return result;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public String convertEtatPizzaToString(EDataType eDataType, Object instanceValue) {
+		return instanceValue == null ? null : instanceValue.toString();
 	}
 
 	/**

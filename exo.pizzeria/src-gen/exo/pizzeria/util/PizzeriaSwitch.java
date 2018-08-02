@@ -128,6 +128,22 @@ public class PizzeriaSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MPizzeriaPackage.RECETTE: {
+			Recette recette = (Recette) theEObject;
+			T result = caseRecette(recette);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MPizzeriaPackage.OEUF: {
+			Oeuf oeuf = (Oeuf) theEObject;
+			T result = caseOeuf(oeuf);
+			if (result == null)
+				result = caseIngredient(oeuf);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -250,6 +266,36 @@ public class PizzeriaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseClient(Client object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Recette</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Recette</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseRecette(Recette object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Oeuf</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Oeuf</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseOeuf(Oeuf object) {
 		return null;
 	}
 

@@ -4,6 +4,7 @@ package exo.pizzeria;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -86,13 +87,22 @@ public interface MPizzeriaPackage extends EPackage {
 	int PIZZA__INGREDIENT = 1;
 
 	/**
+	 * The feature id for the '<em><b>Etat</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIZZA__ETAT = 2;
+
+	/**
 	 * The number of structural features of the '<em>Pizza</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIZZA_FEATURE_COUNT = 2;
+	int PIZZA_FEATURE_COUNT = 3;
 
 	/**
 	 * The operation id for the '<em>Get Price</em>' operation.
@@ -343,13 +353,22 @@ public interface MPizzeriaPackage extends EPackage {
 	int PIZZERIA__TABLES = 2;
 
 	/**
+	 * The feature id for the '<em><b>Recettes</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIZZERIA__RECETTES = 3;
+
+	/**
 	 * The number of structural features of the '<em>Pizzeria</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIZZERIA_FEATURE_COUNT = 3;
+	int PIZZERIA_FEATURE_COUNT = 4;
 
 	/**
 	 * The number of operations of the '<em>Pizzeria</em>' class.
@@ -453,6 +472,126 @@ public interface MPizzeriaPackage extends EPackage {
 	int CLIENT_OPERATION_COUNT = 0;
 
 	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MRecetteImpl <em>Recette</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MRecetteImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getRecette()
+	 * @generated
+	 */
+	int RECETTE = 8;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Ingredients</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE__INGREDIENTS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Calzone</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE__CALZONE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Temps Cuisson</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE__TEMPS_CUISSON = 3;
+
+	/**
+	 * The number of structural features of the '<em>Recette</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Recette</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE_OPERATION_COUNT = 0;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MOeufImpl <em>Oeuf</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MOeufImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getOeuf()
+	 * @generated
+	 */
+	int OEUF = 9;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OEUF__NAME = INGREDIENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OEUF__PRICE = INGREDIENT__PRICE;
+
+	/**
+	 * The number of structural features of the '<em>Oeuf</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OEUF_FEATURE_COUNT = INGREDIENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Oeuf</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OEUF_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.EtatPizza <em>Etat Pizza</em>}' enum.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.EtatPizza
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getEtatPizza()
+	 * @generated
+	 */
+	int ETAT_PIZZA = 10;
+
+	/**
 	 * Returns the meta object for class '{@link exo.pizzeria.MPizza <em>Pizza</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -483,6 +622,17 @@ public interface MPizzeriaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPizza_Ingredient();
+
+	/**
+	 * Returns the meta object for the attribute '{@link exo.pizzeria.MPizza#getEtat <em>Etat</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Etat</em>'.
+	 * @see exo.pizzeria.MPizza#getEtat()
+	 * @see #getPizza()
+	 * @generated
+	 */
+	EAttribute getPizza_Etat();
 
 	/**
 	 * Returns the meta object for the '{@link exo.pizzeria.MPizza#getPrice() <em>Get Price</em>}' operation.
@@ -610,6 +760,17 @@ public interface MPizzeriaPackage extends EPackage {
 	EReference getPizzeria_Tables();
 
 	/**
+	 * Returns the meta object for the containment reference list '{@link exo.pizzeria.MPizzeria#getRecettes <em>Recettes</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Recettes</em>'.
+	 * @see exo.pizzeria.MPizzeria#getRecettes()
+	 * @see #getPizzeria()
+	 * @generated
+	 */
+	EReference getPizzeria_Recettes();
+
+	/**
 	 * Returns the meta object for class '{@link exo.pizzeria.MTable <em>Table</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -674,6 +835,80 @@ public interface MPizzeriaPackage extends EPackage {
 	EReference getClient_Like();
 
 	/**
+	 * Returns the meta object for class '{@link exo.pizzeria.MRecette <em>Recette</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Recette</em>'.
+	 * @see exo.pizzeria.MRecette
+	 * @generated
+	 */
+	EClass getRecette();
+
+	/**
+	 * Returns the meta object for the attribute '{@link exo.pizzeria.MRecette#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see exo.pizzeria.MRecette#getName()
+	 * @see #getRecette()
+	 * @generated
+	 */
+	EAttribute getRecette_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link exo.pizzeria.MRecette#getIngredients <em>Ingredients</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Ingredients</em>'.
+	 * @see exo.pizzeria.MRecette#getIngredients()
+	 * @see #getRecette()
+	 * @generated
+	 */
+	EReference getRecette_Ingredients();
+
+	/**
+	 * Returns the meta object for the attribute '{@link exo.pizzeria.MRecette#isCalzone <em>Calzone</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Calzone</em>'.
+	 * @see exo.pizzeria.MRecette#isCalzone()
+	 * @see #getRecette()
+	 * @generated
+	 */
+	EAttribute getRecette_Calzone();
+
+	/**
+	 * Returns the meta object for the attribute '{@link exo.pizzeria.MRecette#getTempsCuisson <em>Temps Cuisson</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Temps Cuisson</em>'.
+	 * @see exo.pizzeria.MRecette#getTempsCuisson()
+	 * @see #getRecette()
+	 * @generated
+	 */
+	EAttribute getRecette_TempsCuisson();
+
+	/**
+	 * Returns the meta object for class '{@link exo.pizzeria.MOeuf <em>Oeuf</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Oeuf</em>'.
+	 * @see exo.pizzeria.MOeuf
+	 * @generated
+	 */
+	EClass getOeuf();
+
+	/**
+	 * Returns the meta object for enum '{@link exo.pizzeria.EtatPizza <em>Etat Pizza</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for enum '<em>Etat Pizza</em>'.
+	 * @see exo.pizzeria.EtatPizza
+	 * @generated
+	 */
+	EEnum getEtatPizza();
+
+	/**
 	 * Returns the factory that creates the instances of the model.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -721,6 +956,14 @@ public interface MPizzeriaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PIZZA__INGREDIENT = eINSTANCE.getPizza_Ingredient();
+
+		/**
+		 * The meta object literal for the '<em><b>Etat</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PIZZA__ETAT = eINSTANCE.getPizza_Etat();
 
 		/**
 		 * The meta object literal for the '<em><b>Get Price</b></em>' operation.
@@ -829,6 +1072,14 @@ public interface MPizzeriaPackage extends EPackage {
 		EReference PIZZERIA__TABLES = eINSTANCE.getPizzeria_Tables();
 
 		/**
+		 * The meta object literal for the '<em><b>Recettes</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PIZZERIA__RECETTES = eINSTANCE.getPizzeria_Recettes();
+
+		/**
 		 * The meta object literal for the '{@link exo.pizzeria.impl.MTableImpl <em>Table</em>}' class.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
@@ -879,6 +1130,68 @@ public interface MPizzeriaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference CLIENT__LIKE = eINSTANCE.getClient_Like();
+
+		/**
+		 * The meta object literal for the '{@link exo.pizzeria.impl.MRecetteImpl <em>Recette</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see exo.pizzeria.impl.MRecetteImpl
+		 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getRecette()
+		 * @generated
+		 */
+		EClass RECETTE = eINSTANCE.getRecette();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECETTE__NAME = eINSTANCE.getRecette_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Ingredients</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference RECETTE__INGREDIENTS = eINSTANCE.getRecette_Ingredients();
+
+		/**
+		 * The meta object literal for the '<em><b>Calzone</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECETTE__CALZONE = eINSTANCE.getRecette_Calzone();
+
+		/**
+		 * The meta object literal for the '<em><b>Temps Cuisson</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute RECETTE__TEMPS_CUISSON = eINSTANCE.getRecette_TempsCuisson();
+
+		/**
+		 * The meta object literal for the '{@link exo.pizzeria.impl.MOeufImpl <em>Oeuf</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see exo.pizzeria.impl.MOeufImpl
+		 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getOeuf()
+		 * @generated
+		 */
+		EClass OEUF = eINSTANCE.getOeuf();
+
+		/**
+		 * The meta object literal for the '{@link exo.pizzeria.EtatPizza <em>Etat Pizza</em>}' enum.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see exo.pizzeria.EtatPizza
+		 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getEtatPizza()
+		 * @generated
+		 */
+		EEnum ETAT_PIZZA = eINSTANCE.getEtatPizza();
 
 	}
 

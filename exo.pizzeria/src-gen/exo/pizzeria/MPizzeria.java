@@ -18,6 +18,7 @@ import org.eclipse.emf.ecore.EObject;
  *   <li>{@link exo.pizzeria.MPizzeria#getPizza <em>Pizza</em>}</li>
  *   <li>{@link exo.pizzeria.MPizzeria#getClients <em>Clients</em>}</li>
  *   <li>{@link exo.pizzeria.MPizzeria#getTables <em>Tables</em>}</li>
+ *   <li>{@link exo.pizzeria.MPizzeria#getRecettes <em>Recettes</em>}</li>
  * </ul>
  *
  * @see exo.pizzeria.MPizzeriaPackage#getPizzeria()
@@ -95,5 +96,21 @@ public interface MPizzeria extends EObject {
 	 * @generated
 	 */
 	EList<Table> getTables();
+
+	/**
+	 * Returns the value of the '<em><b>Recettes</b></em>' containment reference list.
+	 * The list contents are of type {@link exo.pizzeria.Recette}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Recettes</em>' containment reference list isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Recettes</em>' containment reference list.
+	 * @see exo.pizzeria.MPizzeriaPackage#getPizzeria_Recettes()
+	 * @model containment="true" lower="2"
+	 * @generated
+	 */
+	EList<Recette> getRecettes();
 
 } // MPizzeria

@@ -96,29 +96,6 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 	}
 
 	/**
-	 * This keeps track of the one adapter used for all {@link exo.pizzeria.MIngredient} instances.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	protected IngredientItemProvider ingredientItemProvider;
-
-	/**
-	 * This creates an adapter for a {@link exo.pizzeria.MIngredient}.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Adapter createIngredientAdapter() {
-		if (ingredientItemProvider == null) {
-			ingredientItemProvider = new IngredientItemProvider(this);
-		}
-
-		return ingredientItemProvider;
-	}
-
-	/**
 	 * This keeps track of the one adapter used for all {@link exo.pizzeria.MTomate} instances.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -257,6 +234,52 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link exo.pizzeria.MRecette} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected RecetteItemProvider recetteItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link exo.pizzeria.MRecette}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createRecetteAdapter() {
+		if (recetteItemProvider == null) {
+			recetteItemProvider = new RecetteItemProvider(this);
+		}
+
+		return recetteItemProvider;
+	}
+
+	/**
+	 * This keeps track of the one adapter used for all {@link exo.pizzeria.MOeuf} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected OeufItemProvider oeufItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link exo.pizzeria.MOeuf}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createOeufAdapter() {
+		if (oeufItemProvider == null) {
+			oeufItemProvider = new OeufItemProvider(this);
+		}
+
+		return oeufItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -357,8 +380,6 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 	public void dispose() {
 		if (pizzaItemProvider != null)
 			pizzaItemProvider.dispose();
-		if (ingredientItemProvider != null)
-			ingredientItemProvider.dispose();
 		if (tomateItemProvider != null)
 			tomateItemProvider.dispose();
 		if (jambonItemProvider != null)
@@ -371,6 +392,10 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 			tableItemProvider.dispose();
 		if (clientItemProvider != null)
 			clientItemProvider.dispose();
+		if (recetteItemProvider != null)
+			recetteItemProvider.dispose();
+		if (oeufItemProvider != null)
+			oeufItemProvider.dispose();
 	}
 
 }

@@ -1,9 +1,9 @@
 package exo.pizzeria.impl;
 
-import exo.pizzeria.Jambon;
+import exo.pizzeria.Recette;
 
 // This class overrides the generated class and will be instantiated by factory
-public class JambonImpl extends MJambonImpl implements Jambon
+public class RecetteImpl extends MRecetteImpl implements Recette
 {
 
 }

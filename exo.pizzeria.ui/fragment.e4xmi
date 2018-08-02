@@ -16,9 +16,9 @@
       </children>
     </elements>
     <elements xsi:type="menu:MenuContribution" xmi:id="_c2PDUJZTEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution.coreexpression" parentId="org.eclipse.ui.main.menu">
-      <children xsi:type="menu:Menu" xmi:id="_c2QRcJZTEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution" label="Pizza Editor">
+      <children xsi:type="menu:Menu" xmi:id="_c2QRcJZTEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution.edit" label="Pizza Editor">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_c2QRcpZTEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handledmenuitem.importpicture" label="Import Picture" command="_qyaYMJYwEei4s_wlcyiWaA">
-          <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_zKwpwJZdEei4s_wlcyiWaA" coreExpressionId="exo.pizzeria.presentation.PizzaSelected"/>
+          <visibleWhen xsi:type="ui:CoreExpression" xmi:id="__C6PkJZ1Eei4s_wlcyiWaA" coreExpressionId="exo.pizzeria.presentation.PizzaSelected"/>
         </children>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_C6Too5ZaEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handledmenuitem.1" label="Observe Current Selection" command="_LgQx0JZaEei4s_wlcyiWaA"/>
       </children>

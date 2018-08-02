@@ -12,11 +12,12 @@ public interface PizzeriaFactory extends MPizzeriaFactory
 	PizzeriaFactory eINSTANCE = PizzeriaFactoryImpl.init();
 				
 	public Pizza createPizza();
-	public Ingredient createIngredient();
 	public Tomate createTomate();
 	public Jambon createJambon();
 	public Fromage createFromage();
 	public Pizzeria createPizzeria();
 	public Table createTable();
 	public Client createClient();
+	public Recette createRecette();
+	public Oeuf createOeuf();
 }

@@ -7,6 +7,7 @@ import exo.pizzeria.MPizzeriaPackage;
 import exo.pizzeria.Pizza;
 import exo.pizzeria.Pizzeria;
 
+import exo.pizzeria.Recette;
 import exo.pizzeria.Table;
 import java.util.Collection;
 import org.eclipse.emf.common.notify.NotificationChain;
@@ -31,6 +32,7 @@ import org.eclipse.emf.ecore.util.InternalEList;
  *   <li>{@link exo.pizzeria.impl.MPizzeriaImpl#getPizza <em>Pizza</em>}</li>
  *   <li>{@link exo.pizzeria.impl.MPizzeriaImpl#getClients <em>Clients</em>}</li>
  *   <li>{@link exo.pizzeria.impl.MPizzeriaImpl#getTables <em>Tables</em>}</li>
+ *   <li>{@link exo.pizzeria.impl.MPizzeriaImpl#getRecettes <em>Recettes</em>}</li>
  * </ul>
  *
  * @generated
@@ -65,6 +67,16 @@ public class MPizzeriaImpl extends MinimalEObjectImpl.Container implements Pizze
 	 * @ordered
 	 */
 	protected EList<Table> tables;
+
+	/**
+	 * The cached value of the '{@link #getRecettes() <em>Recettes</em>}' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getRecettes()
+	 * @generated
+	 * @ordered
+	 */
+	protected EList<Recette> recettes;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -146,6 +158,18 @@ public class MPizzeriaImpl extends MinimalEObjectImpl.Container implements Pizze
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EList<Recette> getRecettes() {
+		if (recettes == null) {
+			recettes = new EObjectContainmentEList<Recette>(Recette.class, this, MPizzeriaPackage.PIZZERIA__RECETTES);
+		}
+		return recettes;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -155,6 +179,8 @@ public class MPizzeriaImpl extends MinimalEObjectImpl.Container implements Pizze
 			return ((InternalEList<?>) getClients()).basicRemove(otherEnd, msgs);
 		case MPizzeriaPackage.PIZZERIA__TABLES:
 			return ((InternalEList<?>) getTables()).basicRemove(otherEnd, msgs);
+		case MPizzeriaPackage.PIZZERIA__RECETTES:
+			return ((InternalEList<?>) getRecettes()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -173,6 +199,8 @@ public class MPizzeriaImpl extends MinimalEObjectImpl.Container implements Pizze
 			return getClients();
 		case MPizzeriaPackage.PIZZERIA__TABLES:
 			return getTables();
+		case MPizzeriaPackage.PIZZERIA__RECETTES:
+			return getRecettes();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -198,6 +226,10 @@ public class MPizzeriaImpl extends MinimalEObjectImpl.Container implements Pizze
 			getTables().clear();
 			getTables().addAll((Collection<? extends Table>) newValue);
 			return;
+		case MPizzeriaPackage.PIZZERIA__RECETTES:
+			getRecettes().clear();
+			getRecettes().addAll((Collection<? extends Recette>) newValue);
+			return;
 		}
 		super.eSet(featureID, newValue);
 	}
@@ -219,6 +251,9 @@ public class MPizzeriaImpl extends MinimalEObjectImpl.Container implements Pizze
 		case MPizzeriaPackage.PIZZERIA__TABLES:
 			getTables().clear();
 			return;
+		case MPizzeriaPackage.PIZZERIA__RECETTES:
+			getRecettes().clear();
+			return;
 		}
 		super.eUnset(featureID);
 	}
@@ -237,6 +272,8 @@ public class MPizzeriaImpl extends MinimalEObjectImpl.Container implements Pizze
 			return isSetClients();
 		case MPizzeriaPackage.PIZZERIA__TABLES:
 			return tables != null && !tables.isEmpty();
+		case MPizzeriaPackage.PIZZERIA__RECETTES:
+			return recettes != null && !recettes.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

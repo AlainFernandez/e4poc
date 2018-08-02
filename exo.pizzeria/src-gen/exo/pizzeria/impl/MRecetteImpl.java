@@ -2,12 +2,10 @@
  */
 package exo.pizzeria.impl;
 
-import exo.pizzeria.EtatPizza;
 import exo.pizzeria.Ingredient;
 import exo.pizzeria.MPizzeriaPackage;
-import exo.pizzeria.Pizza;
+import exo.pizzeria.Recette;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -26,20 +24,21 @@ import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Pizza</b></em>'.
+ * An implementation of the model object '<em><b>Recette</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link exo.pizzeria.impl.MPizzaImpl#getName <em>Name</em>}</li>
- *   <li>{@link exo.pizzeria.impl.MPizzaImpl#getIngredient <em>Ingredient</em>}</li>
- *   <li>{@link exo.pizzeria.impl.MPizzaImpl#getEtat <em>Etat</em>}</li>
+ *   <li>{@link exo.pizzeria.impl.MRecetteImpl#getName <em>Name</em>}</li>
+ *   <li>{@link exo.pizzeria.impl.MRecetteImpl#getIngredients <em>Ingredients</em>}</li>
+ *   <li>{@link exo.pizzeria.impl.MRecetteImpl#isCalzone <em>Calzone</em>}</li>
+ *   <li>{@link exo.pizzeria.impl.MRecetteImpl#getTempsCuisson <em>Temps Cuisson</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
+public class MRecetteImpl extends MinimalEObjectImpl.Container implements Recette {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -61,41 +60,61 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getIngredient() <em>Ingredient</em>}' containment reference list.
+	 * The cached value of the '{@link #getIngredients() <em>Ingredients</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getIngredient()
+	 * @see #getIngredients()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Ingredient> ingredient;
+	protected EList<Ingredient> ingredients;
 
 	/**
-	 * The default value of the '{@link #getEtat() <em>Etat</em>}' attribute.
+	 * The default value of the '{@link #isCalzone() <em>Calzone</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEtat()
+	 * @see #isCalzone()
 	 * @generated
 	 * @ordered
 	 */
-	protected static final EtatPizza ETAT_EDEFAULT = EtatPizza.COMMANDEE;
+	protected static final boolean CALZONE_EDEFAULT = false;
 
 	/**
-	 * The cached value of the '{@link #getEtat() <em>Etat</em>}' attribute.
+	 * The cached value of the '{@link #isCalzone() <em>Calzone</em>}' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getEtat()
+	 * @see #isCalzone()
 	 * @generated
 	 * @ordered
 	 */
-	protected EtatPizza etat = ETAT_EDEFAULT;
+	protected boolean calzone = CALZONE_EDEFAULT;
+
+	/**
+	 * The default value of the '{@link #getTempsCuisson() <em>Temps Cuisson</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTempsCuisson()
+	 * @generated
+	 * @ordered
+	 */
+	protected static final float TEMPS_CUISSON_EDEFAULT = 0.0F;
+
+	/**
+	 * The cached value of the '{@link #getTempsCuisson() <em>Temps Cuisson</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see #getTempsCuisson()
+	 * @generated
+	 * @ordered
+	 */
+	protected float tempsCuisson = TEMPS_CUISSON_EDEFAULT;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MPizzaImpl() {
+	protected MRecetteImpl() {
 		super();
 	}
 
@@ -106,7 +125,7 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MPizzeriaPackage.Literals.PIZZA;
+		return MPizzeriaPackage.Literals.RECETTE;
 	}
 
 	/**
@@ -127,7 +146,7 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MPizzeriaPackage.PIZZA__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MPizzeriaPackage.RECETTE__NAME, oldName, name));
 	}
 
 	/**
@@ -135,12 +154,12 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Ingredient> getIngredient() {
-		if (ingredient == null) {
-			ingredient = new EObjectContainmentEList<Ingredient>(Ingredient.class, this,
-					MPizzeriaPackage.PIZZA__INGREDIENT);
+	public EList<Ingredient> getIngredients() {
+		if (ingredients == null) {
+			ingredients = new EObjectContainmentEList<Ingredient>(Ingredient.class, this,
+					MPizzeriaPackage.RECETTE__INGREDIENTS);
 		}
-		return ingredient;
+		return ingredients;
 	}
 
 	/**
@@ -148,8 +167,8 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EtatPizza getEtat() {
-		return etat;
+	public boolean isCalzone() {
+		return calzone;
 	}
 
 	/**
@@ -157,11 +176,12 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public void setEtat(EtatPizza newEtat) {
-		EtatPizza oldEtat = etat;
-		etat = newEtat == null ? ETAT_EDEFAULT : newEtat;
+	public void setCalzone(boolean newCalzone) {
+		boolean oldCalzone = calzone;
+		calzone = newCalzone;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MPizzeriaPackage.PIZZA__ETAT, oldEtat, etat));
+			eNotify(new ENotificationImpl(this, Notification.SET, MPizzeriaPackage.RECETTE__CALZONE, oldCalzone,
+					calzone));
 	}
 
 	/**
@@ -169,10 +189,8 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public float getPrice() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public float getTempsCuisson() {
+		return tempsCuisson;
 	}
 
 	/**
@@ -180,10 +198,12 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public int numberSale() {
-		// TODO: implement this method
-		// Ensure that you remove @generated or mark it @generated NOT
-		throw new UnsupportedOperationException();
+	public void setTempsCuisson(float newTempsCuisson) {
+		float oldTempsCuisson = tempsCuisson;
+		tempsCuisson = newTempsCuisson;
+		if (eNotificationRequired())
+			eNotify(new ENotificationImpl(this, Notification.SET, MPizzeriaPackage.RECETTE__TEMPS_CUISSON,
+					oldTempsCuisson, tempsCuisson));
 	}
 
 	/**
@@ -194,8 +214,8 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
-		case MPizzeriaPackage.PIZZA__INGREDIENT:
-			return ((InternalEList<?>) getIngredient()).basicRemove(otherEnd, msgs);
+		case MPizzeriaPackage.RECETTE__INGREDIENTS:
+			return ((InternalEList<?>) getIngredients()).basicRemove(otherEnd, msgs);
 		}
 		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
@@ -208,12 +228,14 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MPizzeriaPackage.PIZZA__NAME:
+		case MPizzeriaPackage.RECETTE__NAME:
 			return getName();
-		case MPizzeriaPackage.PIZZA__INGREDIENT:
-			return getIngredient();
-		case MPizzeriaPackage.PIZZA__ETAT:
-			return getEtat();
+		case MPizzeriaPackage.RECETTE__INGREDIENTS:
+			return getIngredients();
+		case MPizzeriaPackage.RECETTE__CALZONE:
+			return isCalzone();
+		case MPizzeriaPackage.RECETTE__TEMPS_CUISSON:
+			return getTempsCuisson();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -227,15 +249,18 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MPizzeriaPackage.PIZZA__NAME:
+		case MPizzeriaPackage.RECETTE__NAME:
 			setName((String) newValue);
 			return;
-		case MPizzeriaPackage.PIZZA__INGREDIENT:
-			getIngredient().clear();
-			getIngredient().addAll((Collection<? extends Ingredient>) newValue);
+		case MPizzeriaPackage.RECETTE__INGREDIENTS:
+			getIngredients().clear();
+			getIngredients().addAll((Collection<? extends Ingredient>) newValue);
 			return;
-		case MPizzeriaPackage.PIZZA__ETAT:
-			setEtat((EtatPizza) newValue);
+		case MPizzeriaPackage.RECETTE__CALZONE:
+			setCalzone((Boolean) newValue);
+			return;
+		case MPizzeriaPackage.RECETTE__TEMPS_CUISSON:
+			setTempsCuisson((Float) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -249,14 +274,17 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MPizzeriaPackage.PIZZA__NAME:
+		case MPizzeriaPackage.RECETTE__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case MPizzeriaPackage.PIZZA__INGREDIENT:
-			getIngredient().clear();
+		case MPizzeriaPackage.RECETTE__INGREDIENTS:
+			getIngredients().clear();
 			return;
-		case MPizzeriaPackage.PIZZA__ETAT:
-			setEtat(ETAT_EDEFAULT);
+		case MPizzeriaPackage.RECETTE__CALZONE:
+			setCalzone(CALZONE_EDEFAULT);
+			return;
+		case MPizzeriaPackage.RECETTE__TEMPS_CUISSON:
+			setTempsCuisson(TEMPS_CUISSON_EDEFAULT);
 			return;
 		}
 		super.eUnset(featureID);
@@ -270,30 +298,16 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MPizzeriaPackage.PIZZA__NAME:
+		case MPizzeriaPackage.RECETTE__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case MPizzeriaPackage.PIZZA__INGREDIENT:
-			return ingredient != null && !ingredient.isEmpty();
-		case MPizzeriaPackage.PIZZA__ETAT:
-			return etat != ETAT_EDEFAULT;
+		case MPizzeriaPackage.RECETTE__INGREDIENTS:
+			return ingredients != null && !ingredients.isEmpty();
+		case MPizzeriaPackage.RECETTE__CALZONE:
+			return calzone != CALZONE_EDEFAULT;
+		case MPizzeriaPackage.RECETTE__TEMPS_CUISSON:
+			return tempsCuisson != TEMPS_CUISSON_EDEFAULT;
 		}
 		return super.eIsSet(featureID);
-	}
-
-	/**
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 */
-	@Override
-	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
-		switch (operationID) {
-		case MPizzeriaPackage.PIZZA___GET_PRICE:
-			return getPrice();
-		case MPizzeriaPackage.PIZZA___NUMBER_SALE:
-			return numberSale();
-		}
-		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
@@ -309,10 +323,12 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 		StringBuilder result = new StringBuilder(super.toString());
 		result.append(" (name: ");
 		result.append(name);
-		result.append(", etat: ");
-		result.append(etat);
+		result.append(", calzone: ");
+		result.append(calzone);
+		result.append(", tempsCuisson: ");
+		result.append(tempsCuisson);
 		result.append(')');
 		return result.toString();
 	}
 
-} //MPizzaImpl
+} //MRecetteImpl

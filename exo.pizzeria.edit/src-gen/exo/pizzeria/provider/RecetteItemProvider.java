@@ -2,13 +2,20 @@
  */
 package exo.pizzeria.provider;
 
+import exo.pizzeria.MPizzeriaFactory;
+import exo.pizzeria.MPizzeriaPackage;
+import exo.pizzeria.Recette;
+
 import java.util.Collection;
 import java.util.List;
 
 import org.eclipse.emf.common.notify.AdapterFactory;
 import org.eclipse.emf.common.notify.Notification;
+
 import org.eclipse.emf.common.util.ResourceLocator;
+
 import org.eclipse.emf.ecore.EStructuralFeature;
+
 import org.eclipse.emf.edit.provider.ComposeableAdapterFactory;
 import org.eclipse.emf.edit.provider.IEditingDomainItemProvider;
 import org.eclipse.emf.edit.provider.IItemLabelProvider;
@@ -20,17 +27,13 @@ import org.eclipse.emf.edit.provider.ItemPropertyDescriptor;
 import org.eclipse.emf.edit.provider.ItemProviderAdapter;
 import org.eclipse.emf.edit.provider.ViewerNotification;
 
-import exo.pizzeria.MPizzeriaFactory;
-import exo.pizzeria.MPizzeriaPackage;
-import exo.pizzeria.Pizza;
-
 /**
- * This is the item provider adapter for a {@link exo.pizzeria.MPizza} object.
+ * This is the item provider adapter for a {@link exo.pizzeria.MRecette} object.
  * <!-- begin-user-doc -->
  * <!-- end-user-doc -->
  * @generated
  */
-public class PizzaItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
+public class RecetteItemProvider extends ItemProviderAdapter implements IEditingDomainItemProvider,
 		IStructuredItemContentProvider, ITreeItemContentProvider, IItemLabelProvider, IItemPropertySource {
 	/**
 	 * This constructs an instance from a factory and a notifier.
@@ -38,7 +41,7 @@ public class PizzaItemProvider extends ItemProviderAdapter implements IEditingDo
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public PizzaItemProvider(AdapterFactory adapterFactory) {
+	public RecetteItemProvider(AdapterFactory adapterFactory) {
 		super(adapterFactory);
 	}
 
@@ -54,7 +57,8 @@ public class PizzaItemProvider extends ItemProviderAdapter implements IEditingDo
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addEtatPropertyDescriptor(object);
+			addCalzonePropertyDescriptor(object);
+			addTempsCuissonPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -68,25 +72,42 @@ public class PizzaItemProvider extends ItemProviderAdapter implements IEditingDo
 	protected void addNamePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Pizza_name_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Pizza_name_feature", "_UI_Pizza_type"),
-						MPizzeriaPackage.Literals.PIZZA__NAME, true, false, false,
+						getResourceLocator(), getString("_UI_Recette_name_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Recette_name_feature", "_UI_Recette_type"),
+						MPizzeriaPackage.Literals.RECETTE__NAME, true, false, false,
 						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
 	}
 
 	/**
-	 * This adds a property descriptor for the Etat feature.
+	 * This adds a property descriptor for the Calzone feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addEtatPropertyDescriptor(Object object) {
+	protected void addCalzonePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Pizza_etat_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Pizza_etat_feature", "_UI_Pizza_type"),
-						MPizzeriaPackage.Literals.PIZZA__ETAT, true, false, false,
-						ItemPropertyDescriptor.GENERIC_VALUE_IMAGE, null, null));
+						getResourceLocator(), getString("_UI_Recette_calzone_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Recette_calzone_feature",
+								"_UI_Recette_type"),
+						MPizzeriaPackage.Literals.RECETTE__CALZONE, true, false, false,
+						ItemPropertyDescriptor.BOOLEAN_VALUE_IMAGE, null, null));
+	}
+
+	/**
+	 * This adds a property descriptor for the Temps Cuisson feature.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected void addTempsCuissonPropertyDescriptor(Object object) {
+		itemPropertyDescriptors
+				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
+						getResourceLocator(), getString("_UI_Recette_tempsCuisson_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Recette_tempsCuisson_feature",
+								"_UI_Recette_type"),
+						MPizzeriaPackage.Literals.RECETTE__TEMPS_CUISSON, true, false, false,
+						ItemPropertyDescriptor.REAL_VALUE_IMAGE, null, null));
 	}
 
 	/**
@@ -101,7 +122,7 @@ public class PizzaItemProvider extends ItemProviderAdapter implements IEditingDo
 	public Collection<? extends EStructuralFeature> getChildrenFeatures(Object object) {
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
-			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZA__INGREDIENT);
+			childrenFeatures.add(MPizzeriaPackage.Literals.RECETTE__INGREDIENTS);
 		}
 		return childrenFeatures;
 	}
@@ -120,14 +141,14 @@ public class PizzaItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
-	 * This returns Pizza.gif.
+	 * This returns Recette.gif.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
 	@Override
 	public Object getImage(Object object) {
-		return overlayImage(object, getResourceLocator().getImage("full/obj16/Pizza"));
+		return overlayImage(object, getResourceLocator().getImage("full/obj16/Recette"));
 	}
 
 	/**
@@ -148,9 +169,9 @@ public class PizzaItemProvider extends ItemProviderAdapter implements IEditingDo
 	 */
 	@Override
 	public String getText(Object object) {
-		String label = ((Pizza) object).getName();
-		return label == null || label.length() == 0 ? getString("_UI_Pizza_type")
-				: getString("_UI_Pizza_type") + " " + label;
+		String label = ((Recette) object).getName();
+		return label == null || label.length() == 0 ? getString("_UI_Recette_type")
+				: getString("_UI_Recette_type") + " " + label;
 	}
 
 	/**
@@ -164,12 +185,13 @@ public class PizzaItemProvider extends ItemProviderAdapter implements IEditingDo
 	public void notifyChanged(Notification notification) {
 		updateChildren(notification);
 
-		switch (notification.getFeatureID(Pizza.class)) {
-		case MPizzeriaPackage.PIZZA__NAME:
-		case MPizzeriaPackage.PIZZA__ETAT:
+		switch (notification.getFeatureID(Recette.class)) {
+		case MPizzeriaPackage.RECETTE__NAME:
+		case MPizzeriaPackage.RECETTE__CALZONE:
+		case MPizzeriaPackage.RECETTE__TEMPS_CUISSON:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), false, true));
 			return;
-		case MPizzeriaPackage.PIZZA__INGREDIENT:
+		case MPizzeriaPackage.RECETTE__INGREDIENTS:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -187,16 +209,16 @@ public class PizzaItemProvider extends ItemProviderAdapter implements IEditingDo
 	protected void collectNewChildDescriptors(Collection<Object> newChildDescriptors, Object object) {
 		super.collectNewChildDescriptors(newChildDescriptors, object);
 
-		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZA__INGREDIENT,
+		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.RECETTE__INGREDIENTS,
 				MPizzeriaFactory.eINSTANCE.createTomate()));
 
-		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZA__INGREDIENT,
+		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.RECETTE__INGREDIENTS,
 				MPizzeriaFactory.eINSTANCE.createJambon()));
 
-		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZA__INGREDIENT,
+		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.RECETTE__INGREDIENTS,
 				MPizzeriaFactory.eINSTANCE.createFromage()));
 
-		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZA__INGREDIENT,
+		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.RECETTE__INGREDIENTS,
 				MPizzeriaFactory.eINSTANCE.createOeuf()));
 	}
 

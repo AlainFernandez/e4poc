@@ -26,7 +26,7 @@ import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
  *
  * @generated
  */
-public class MIngredientImpl extends MinimalEObjectImpl.Container implements Ingredient {
+public abstract class MIngredientImpl extends MinimalEObjectImpl.Container implements Ingredient {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->

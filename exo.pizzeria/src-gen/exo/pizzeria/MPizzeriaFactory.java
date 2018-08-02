@@ -31,15 +31,6 @@ public interface MPizzeriaFactory extends EFactory {
 	Pizza createPizza();
 
 	/**
-	 * Returns a new object of class '<em>Ingredient</em>'.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @return a new object of class '<em>Ingredient</em>'.
-	 * @generated
-	 */
-	Ingredient createIngredient();
-
-	/**
 	 * Returns a new object of class '<em>Tomate</em>'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -92,6 +83,24 @@ public interface MPizzeriaFactory extends EFactory {
 	 * @generated
 	 */
 	Client createClient();
+
+	/**
+	 * Returns a new object of class '<em>Recette</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Recette</em>'.
+	 * @generated
+	 */
+	Recette createRecette();
+
+	/**
+	 * Returns a new object of class '<em>Oeuf</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Oeuf</em>'.
+	 * @generated
+	 */
+	Oeuf createOeuf();
 
 	/**
 	 * Returns the package supported by this factory.

@@ -3,13 +3,14 @@ package exo.pizzeria.impl;
 import org.eclipse.emf.ecore.plugin.EcorePlugin;
 
 import exo.pizzeria.Pizza;
-import exo.pizzeria.Ingredient;
 import exo.pizzeria.Tomate;
 import exo.pizzeria.Jambon;
 import exo.pizzeria.Fromage;
 import exo.pizzeria.Pizzeria;
 import exo.pizzeria.Table;
 import exo.pizzeria.Client;
+import exo.pizzeria.Recette;
+import exo.pizzeria.Oeuf;
 import exo.pizzeria.PizzeriaFactory;
 
 
@@ -33,11 +34,6 @@ public class PizzeriaFactoryImpl extends MPizzeriaFactoryImpl implements Pizzeri
 	public Pizza createPizza()
 	{
 		Pizza result = new PizzaImpl();
-		return result;
-	}
-	public Ingredient createIngredient()
-	{
-		Ingredient result = new IngredientImpl();
 		return result;
 	}
 	public Tomate createTomate()
@@ -68,6 +64,16 @@ public class PizzeriaFactoryImpl extends MPizzeriaFactoryImpl implements Pizzeri
 	public Client createClient()
 	{
 		Client result = new ClientImpl();
+		return result;
+	}
+	public Recette createRecette()
+	{
+		Recette result = new RecetteImpl();
+		return result;
+	}
+	public Oeuf createOeuf()
+	{
+		Oeuf result = new OeufImpl();
 		return result;
 	}
 }

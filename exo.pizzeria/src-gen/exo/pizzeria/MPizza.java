@@ -17,6 +17,7 @@ import org.eclipse.emf.ecore.EObject;
  * <ul>
  *   <li>{@link exo.pizzeria.MPizza#getName <em>Name</em>}</li>
  *   <li>{@link exo.pizzeria.MPizza#getIngredient <em>Ingredient</em>}</li>
+ *   <li>{@link exo.pizzeria.MPizza#getEtat <em>Etat</em>}</li>
  * </ul>
  *
  * @see exo.pizzeria.MPizzeriaPackage#getPizza()
@@ -65,6 +66,35 @@ public interface MPizza extends EObject {
 	 * @generated
 	 */
 	EList<Ingredient> getIngredient();
+
+	/**
+	 * Returns the value of the '<em><b>Etat</b></em>' attribute.
+	 * The literals are from the enumeration {@link exo.pizzeria.EtatPizza}.
+	 * <!-- begin-user-doc -->
+	 * <p>
+	 * If the meaning of the '<em>Etat</em>' attribute isn't clear,
+	 * there really should be more of a description here...
+	 * </p>
+	 * <!-- end-user-doc -->
+	 * @return the value of the '<em>Etat</em>' attribute.
+	 * @see exo.pizzeria.EtatPizza
+	 * @see #setEtat(EtatPizza)
+	 * @see exo.pizzeria.MPizzeriaPackage#getPizza_Etat()
+	 * @model
+	 * @generated
+	 */
+	EtatPizza getEtat();
+
+	/**
+	 * Sets the value of the '{@link exo.pizzeria.MPizza#getEtat <em>Etat</em>}' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @param value the new value of the '<em>Etat</em>' attribute.
+	 * @see exo.pizzeria.EtatPizza
+	 * @see #getEtat()
+	 * @generated
+	 */
+	void setEtat(EtatPizza value);
 
 	/**
 	 * <!-- begin-user-doc -->

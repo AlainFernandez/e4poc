@@ -3,18 +3,22 @@
 package exo.pizzeria.impl;
 
 import exo.pizzeria.Client;
+import exo.pizzeria.EtatPizza;
 import exo.pizzeria.Fromage;
 import exo.pizzeria.Ingredient;
 import exo.pizzeria.Jambon;
 import exo.pizzeria.MPizzeriaFactory;
 import exo.pizzeria.MPizzeriaPackage;
+import exo.pizzeria.Oeuf;
 import exo.pizzeria.Pizza;
 import exo.pizzeria.Pizzeria;
+import exo.pizzeria.Recette;
 import exo.pizzeria.Table;
 import exo.pizzeria.Tomate;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EEnum;
 import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
@@ -83,6 +87,27 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 	 * @generated
 	 */
 	private EClass clientEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass recetteEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass oeufEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EEnum etatPizzaEEnum = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -173,6 +198,15 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 	 */
 	public EReference getPizza_Ingredient() {
 		return (EReference) pizzaEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPizza_Etat() {
+		return (EAttribute) pizzaEClass.getEStructuralFeatures().get(2);
 	}
 
 	/**
@@ -288,6 +322,15 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EReference getPizzeria_Recettes() {
+		return (EReference) pizzeriaEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EClass getTable() {
 		return tableEClass;
 	}
@@ -342,6 +385,69 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getRecette() {
+		return recetteEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRecette_Name() {
+		return (EAttribute) recetteEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getRecette_Ingredients() {
+		return (EReference) recetteEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRecette_Calzone() {
+		return (EAttribute) recetteEClass.getEStructuralFeatures().get(2);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getRecette_TempsCuisson() {
+		return (EAttribute) recetteEClass.getEStructuralFeatures().get(3);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EClass getOeuf() {
+		return oeufEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EEnum getEtatPizza() {
+		return etatPizzaEEnum;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MPizzeriaFactory getPizzeriaFactory() {
 		return (MPizzeriaFactory) getEFactoryInstance();
 	}
@@ -369,6 +475,7 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 		pizzaEClass = createEClass(PIZZA);
 		createEAttribute(pizzaEClass, PIZZA__NAME);
 		createEReference(pizzaEClass, PIZZA__INGREDIENT);
+		createEAttribute(pizzaEClass, PIZZA__ETAT);
 		createEOperation(pizzaEClass, PIZZA___GET_PRICE);
 		createEOperation(pizzaEClass, PIZZA___NUMBER_SALE);
 
@@ -386,6 +493,7 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 		createEReference(pizzeriaEClass, PIZZERIA__PIZZA);
 		createEReference(pizzeriaEClass, PIZZERIA__CLIENTS);
 		createEReference(pizzeriaEClass, PIZZERIA__TABLES);
+		createEReference(pizzeriaEClass, PIZZERIA__RECETTES);
 
 		tableEClass = createEClass(TABLE);
 		createEAttribute(tableEClass, TABLE__ID);
@@ -394,6 +502,17 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 		clientEClass = createEClass(CLIENT);
 		createEAttribute(clientEClass, CLIENT__NAME);
 		createEReference(clientEClass, CLIENT__LIKE);
+
+		recetteEClass = createEClass(RECETTE);
+		createEAttribute(recetteEClass, RECETTE__NAME);
+		createEReference(recetteEClass, RECETTE__INGREDIENTS);
+		createEAttribute(recetteEClass, RECETTE__CALZONE);
+		createEAttribute(recetteEClass, RECETTE__TEMPS_CUISSON);
+
+		oeufEClass = createEClass(OEUF);
+
+		// Create enums
+		etatPizzaEEnum = createEEnum(ETAT_PIZZA);
 	}
 
 	/**
@@ -428,6 +547,7 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 		tomateEClass.getESuperTypes().add(this.getIngredient());
 		jambonEClass.getESuperTypes().add(this.getIngredient());
 		fromageEClass.getESuperTypes().add(this.getIngredient());
+		oeufEClass.getESuperTypes().add(this.getIngredient());
 
 		// Initialize classes, features, and operations; add parameters
 		initEClass(pizzaEClass, Pizza.class, "Pizza", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
@@ -436,12 +556,14 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 		initEReference(getPizza_Ingredient(), this.getIngredient(), null, "ingredient", null, 0, -1, Pizza.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getPizza_Etat(), this.getEtatPizza(), "etat", null, 0, 1, Pizza.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEOperation(getPizza__GetPrice(), ecorePackage.getEFloat(), "getPrice", 0, 1, IS_UNIQUE, IS_ORDERED);
 
 		initEOperation(getPizza__NumberSale(), ecorePackage.getEInt(), "numberSale", 0, 1, IS_UNIQUE, IS_ORDERED);
 
-		initEClass(ingredientEClass, Ingredient.class, "Ingredient", !IS_ABSTRACT, !IS_INTERFACE,
+		initEClass(ingredientEClass, Ingredient.class, "Ingredient", IS_ABSTRACT, !IS_INTERFACE,
 				IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getIngredient_Name(), ecorePackage.getEString(), "name", null, 0, 1, Ingredient.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
@@ -465,6 +587,9 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 		initEReference(getPizzeria_Tables(), this.getTable(), null, "tables", null, 1, -1, Pizzeria.class,
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
 				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPizzeria_Recettes(), this.getRecette(), null, "recettes", null, 2, -1, Pizzeria.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(tableEClass, Table.class, "Table", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 		initEAttribute(getTable_Id(), ecorePackage.getEInt(), "id", null, 0, 1, Table.class, !IS_TRANSIENT,
@@ -479,6 +604,26 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 		initEReference(getClient_Like(), this.getPizza(), null, "like", null, 0, -1, Client.class, !IS_TRANSIENT,
 				!IS_VOLATILE, IS_CHANGEABLE, !IS_COMPOSITE, IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
 				IS_ORDERED);
+
+		initEClass(recetteEClass, Recette.class, "Recette", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getRecette_Name(), ecorePackage.getEString(), "name", null, 0, 1, Recette.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getRecette_Ingredients(), this.getIngredient(), null, "ingredients", null, 1, -1, Recette.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE,
+				IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRecette_Calzone(), ecorePackage.getEBoolean(), "calzone", null, 0, 1, Recette.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEAttribute(getRecette_TempsCuisson(), ecorePackage.getEFloat(), "tempsCuisson", null, 0, 1, Recette.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+
+		initEClass(oeufEClass, Oeuf.class, "Oeuf", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		// Initialize enums and add enum literals
+		initEEnum(etatPizzaEEnum, EtatPizza.class, "EtatPizza");
+		addEEnumLiteral(etatPizzaEEnum, EtatPizza.COMMANDEE);
+		addEEnumLiteral(etatPizzaEEnum, EtatPizza.EN_PREPARATION);
+		addEEnumLiteral(etatPizzaEEnum, EtatPizza.LIVREE);
+		addEEnumLiteral(etatPizzaEEnum, EtatPizza.PAYEE);
 
 		// Create resource
 		createResource(eNS_URI);
