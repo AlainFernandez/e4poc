@@ -23,6 +23,16 @@
     <genClasses ecoreClass="pizzeria.ecore#//Fromage"/>
     <genClasses ecoreClass="pizzeria.ecore#//Pizzeria">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizzeria/pizza"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizzeria/client"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizzeria/table"/>
+    </genClasses>
+    <genClasses ecoreClass="pizzeria.ecore#//Table">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Table/id"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Table/client"/>
+    </genClasses>
+    <genClasses ecoreClass="pizzeria.ecore#//Client">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Client/name"/>
+      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Client/pizza"/>
     </genClasses>
   </genPackages>
 </genmodel:GenModel>
