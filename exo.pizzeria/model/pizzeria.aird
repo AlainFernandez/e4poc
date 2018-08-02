@@ -84,6 +84,15 @@
           <styles xmi:type="notation:ShapeStyle" xmi:id="_fWTEAZWdEeiJdraegbAIMw" fontName="Segoe UI" fontHeight="8"/>
           <layoutConstraint xmi:type="notation:Bounds" xmi:id="_fWTEApWdEeiJdraegbAIMw" x="528" y="288" width="120" height="100"/>
         </children>
+        <children xmi:type="notation:Node" xmi:id="_REnLAJY1Eei4s_wlcyiWaA" type="2003" element="_RD-44JY1Eei4s_wlcyiWaA">
+          <children xmi:type="notation:Node" xmi:id="_REtRoJY1Eei4s_wlcyiWaA" type="5007"/>
+          <children xmi:type="notation:Node" xmi:id="_REufwJY1Eei4s_wlcyiWaA" type="7004">
+            <styles xmi:type="notation:SortingStyle" xmi:id="_REufwZY1Eei4s_wlcyiWaA"/>
+            <styles xmi:type="notation:FilteringStyle" xmi:id="_REufwpY1Eei4s_wlcyiWaA"/>
+          </children>
+          <styles xmi:type="notation:ShapeStyle" xmi:id="_REnLAZY1Eei4s_wlcyiWaA" fontName="Segoe UI" fontHeight="8"/>
+          <layoutConstraint xmi:type="notation:Bounds" xmi:id="_REnLApY1Eei4s_wlcyiWaA" x="126" y="300" width="120" height="100"/>
+        </children>
         <styles xmi:type="notation:DiagramStyle" xmi:id="_KykWuJWcEeiJdraegbAIMw"/>
         <edges xmi:type="notation:Edge" xmi:id="_jb3yQJWdEeiJdraegbAIMw" type="4001" element="_jbn6oJWdEeiJdraegbAIMw" source="_Vyd9UJWdEeiJdraegbAIMw" target="_-w2b0JWcEeiJdraegbAIMw">
           <children xmi:type="notation:Node" xmi:id="_jb4ZUJWdEeiJdraegbAIMw" type="6001">
@@ -149,9 +158,25 @@
           <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ogwBYJWdEeiJdraegbAIMw" id="(1.0,0.673469387755102)"/>
           <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_ogwBYZWdEeiJdraegbAIMw" id="(0.0,0.8571428571428571)"/>
         </edges>
+        <edges xmi:type="notation:Edge" xmi:id="_a2XY8JY1Eei4s_wlcyiWaA" type="4001" element="_a2KkoJY1Eei4s_wlcyiWaA" source="_REnLAJY1Eei4s_wlcyiWaA" target="_y4S5cJWcEeiJdraegbAIMw">
+          <children xmi:type="notation:Node" xmi:id="_a2YAAJY1Eei4s_wlcyiWaA" type="6001">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a2YAAZY1Eei4s_wlcyiWaA" y="-10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_a2YAApY1Eei4s_wlcyiWaA" type="6002">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a2YAA5Y1Eei4s_wlcyiWaA" y="10"/>
+          </children>
+          <children xmi:type="notation:Node" xmi:id="_a2YABJY1Eei4s_wlcyiWaA" type="6003">
+            <layoutConstraint xmi:type="notation:Bounds" xmi:id="_a2YABZY1Eei4s_wlcyiWaA" y="10"/>
+          </children>
+          <styles xmi:type="notation:ConnectorStyle" xmi:id="_a2XY8ZY1Eei4s_wlcyiWaA" routing="Rectilinear"/>
+          <styles xmi:type="notation:FontStyle" xmi:id="_a2XY8pY1Eei4s_wlcyiWaA" fontColor="7490599" fontName="Segoe UI" fontHeight="8"/>
+          <bendpoints xmi:type="notation:RelativeBendpoints" xmi:id="_a2XY85Y1Eei4s_wlcyiWaA" points="[0, 0, 132, 184]$[0, -92, 132, 92]$[-132, -92, 0, 92]$[-132, -184, 0, 0]"/>
+          <sourceAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a2YnEJY1Eei4s_wlcyiWaA" id="(0.6101694915254238,0.0)"/>
+          <targetAnchor xmi:type="notation:IdentityAnchor" xmi:id="_a2YnEZY1Eei4s_wlcyiWaA" id="(0.4067796610169492,1.0)"/>
+        </edges>
       </data>
     </ownedAnnotationEntries>
-    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_y4HTQJWcEeiJdraegbAIMw" name="Pizza" tooltipText="" outgoingEdges="_ogXm4JWdEeiJdraegbAIMw" width="12" height="10">
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_y4HTQJWcEeiJdraegbAIMw" name="Pizza" tooltipText="" outgoingEdges="_ogXm4JWdEeiJdraegbAIMw" incomingEdges="_a2KkoJY1Eei4s_wlcyiWaA" width="12" height="10">
       <target xmi:type="ecore:EClass" href="pizzeria.ecore#//Pizza"/>
       <semanticElements xmi:type="ecore:EClass" href="pizzeria.ecore#//Pizza"/>
       <arrangeConstraints>KEEP_LOCATION</arrangeConstraints>
@@ -274,6 +299,27 @@
           <customFeatures>labelSize</customFeatures>
         </centerLabelStyle>
         <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_ogY1ApWdEeiJdraegbAIMw" showIcon="false" labelColor="39,76,114">
+          <customFeatures>labelSize</customFeatures>
+        </endLabelStyle>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:EdgeMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@edgeMappings[name='EC_EReference']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DNodeList" xmi:id="_RD-44JY1Eei4s_wlcyiWaA" name="Pizzeria" tooltipText="" outgoingEdges="_a2KkoJY1Eei4s_wlcyiWaA" width="12" height="10">
+      <target xmi:type="ecore:EClass" href="pizzeria.ecore#//Pizzeria"/>
+      <semanticElements xmi:type="ecore:EClass" href="pizzeria.ecore#//Pizzeria"/>
+      <ownedStyle xmi:type="diagram:FlatContainerStyle" xmi:id="_REAuEJY1Eei4s_wlcyiWaA" borderSize="1" borderSizeComputationExpression="1" backgroundStyle="Liquid" foregroundColor="255,252,216">
+        <description xmi:type="style:FlatContainerStyleDescription" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']/@style"/>
+      </ownedStyle>
+      <actualMapping xmi:type="description_1:ContainerMapping" href="platform:/plugin/org.eclipse.emf.ecoretools.design/description/ecore.odesign#//@ownedViewpoints[name='Design']/@ownedRepresentations[name='Entities']/@defaultLayer/@containerMappings[name='EC%20EClass']"/>
+    </ownedDiagramElements>
+    <ownedDiagramElements xmi:type="diagram:DEdge" xmi:id="_a2KkoJY1Eei4s_wlcyiWaA" name="[0..*] pizza" sourceNode="_RD-44JY1Eei4s_wlcyiWaA" targetNode="_y4HTQJWcEeiJdraegbAIMw">
+      <target xmi:type="ecore:EReference" href="pizzeria.ecore#//Pizzeria/pizza"/>
+      <semanticElements xmi:type="ecore:EReference" href="pizzeria.ecore#//Pizzeria/pizza"/>
+      <ownedStyle xmi:type="diagram:EdgeStyle" xmi:id="_a2LywJY1Eei4s_wlcyiWaA" description="_ogYN8JWdEeiJdraegbAIMw" sourceArrow="FillDiamond" routingStyle="manhattan" strokeColor="0,0,0">
+        <centerLabelStyle xmi:type="diagram:CenterLabelStyle" xmi:id="_a2LywZY1Eei4s_wlcyiWaA" showIcon="false">
+          <customFeatures>labelSize</customFeatures>
+        </centerLabelStyle>
+        <endLabelStyle xmi:type="diagram:EndLabelStyle" xmi:id="_a2LywpY1Eei4s_wlcyiWaA" showIcon="false" labelColor="39,76,114">
           <customFeatures>labelSize</customFeatures>
         </endLabelStyle>
       </ownedStyle>

@@ -13,4 +13,8 @@
   <eClassifiers xsi:type="ecore:EClass" name="Tomate" eSuperTypes="#//Ingredient"/>
   <eClassifiers xsi:type="ecore:EClass" name="Jambon" eSuperTypes="#//Ingredient"/>
   <eClassifiers xsi:type="ecore:EClass" name="Fromage" eSuperTypes="#//Ingredient"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Pizzeria">
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pizza" upperBound="-1"
+        eType="#//Pizza" containment="true"/>
+  </eClassifiers>
 </ecore:EPackage>
