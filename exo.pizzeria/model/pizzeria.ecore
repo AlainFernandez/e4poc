@@ -19,7 +19,7 @@
     <eStructuralFeatures xsi:type="ecore:EReference" name="pizza" upperBound="-1"
         eType="#//Pizza" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="clients" upperBound="-1"
-        eType="#//Client" unsettable="true"/>
+        eType="#//Client" unsettable="true" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="tables" lowerBound="1"
         upperBound="-1" eType="#//Table" containment="true"/>
   </eClassifiers>

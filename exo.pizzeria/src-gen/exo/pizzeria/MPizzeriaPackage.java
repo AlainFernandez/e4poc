@@ -325,7 +325,7 @@ public interface MPizzeriaPackage extends EPackage {
 	int PIZZERIA__PIZZA = 0;
 
 	/**
-	 * The feature id for the '<em><b>Clients</b></em>' reference list.
+	 * The feature id for the '<em><b>Clients</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
@@ -588,10 +588,10 @@ public interface MPizzeriaPackage extends EPackage {
 	EReference getPizzeria_Pizza();
 
 	/**
-	 * Returns the meta object for the reference list '{@link exo.pizzeria.MPizzeria#getClients <em>Clients</em>}'.
+	 * Returns the meta object for the containment reference list '{@link exo.pizzeria.MPizzeria#getClients <em>Clients</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Clients</em>'.
+	 * @return the meta object for the containment reference list '<em>Clients</em>'.
 	 * @see exo.pizzeria.MPizzeria#getClients()
 	 * @see #getPizzeria()
 	 * @generated
@@ -813,7 +813,7 @@ public interface MPizzeriaPackage extends EPackage {
 		EReference PIZZERIA__PIZZA = eINSTANCE.getPizzeria_Pizza();
 
 		/**
-		 * The meta object literal for the '<em><b>Clients</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Clients</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated

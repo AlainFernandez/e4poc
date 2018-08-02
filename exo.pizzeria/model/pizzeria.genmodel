@@ -5,7 +5,8 @@
     editorDirectory="/exo.pizzeria.editor/src-gen" modelPluginID="exo.pizzeria" modelName="Pizzeria"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    interfaceNamePattern="M{0}" classNamePattern="M{0}Impl" operationReflection="true">
+    interfaceNamePattern="M{0}" classNamePattern="M{0}Impl" operationReflection="true"
+    importOrganizing="true">
   <foreignModel>pizzeria.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Pizzeria" basePackage="exo" disposableProviderFactory="true"
@@ -25,7 +26,8 @@
     <genClasses ecoreClass="pizzeria.ecore#//Fromage"/>
     <genClasses ecoreClass="pizzeria.ecore#//Pizzeria">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizzeria/pizza"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizzeria/clients"/>
+      <genFeatures notify="false" children="true" createChild="true" propertySortChoices="true"
+          ecoreFeature="ecore:EReference pizzeria.ecore#//Pizzeria/clients"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizzeria/tables"/>
     </genClasses>
     <genClasses ecoreClass="pizzeria.ecore#//Table">

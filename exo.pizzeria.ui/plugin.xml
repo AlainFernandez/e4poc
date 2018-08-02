@@ -12,10 +12,10 @@
    <extension
          point="org.eclipse.core.expressions.definitions">
       <definition
-            id="exo.pizzeria.presentation.PizzeriaEditorID">
+            id="exo.pizzeria.presentation.PizzaSelected">
          <iterate>
             <instanceof
-                  value="org.eclipse.emf.codegen.ecore.genmodel.GenModel">
+                  value="exo.pizzeria.Pizza">
             </instanceof>
          </iterate>
       </definition>

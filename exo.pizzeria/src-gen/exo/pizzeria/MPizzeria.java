@@ -42,7 +42,7 @@ public interface MPizzeria extends EObject {
 	EList<Pizza> getPizza();
 
 	/**
-	 * Returns the value of the '<em><b>Clients</b></em>' reference list.
+	 * Returns the value of the '<em><b>Clients</b></em>' containment reference list.
 	 * The list contents are of type {@link exo.pizzeria.Client}.
 	 * <!-- begin-user-doc -->
 	 * <p>
@@ -50,17 +50,17 @@ public interface MPizzeria extends EObject {
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Clients</em>' reference list.
+	 * @return the value of the '<em>Clients</em>' containment reference list.
 	 * @see #isSetClients()
 	 * @see #unsetClients()
 	 * @see exo.pizzeria.MPizzeriaPackage#getPizzeria_Clients()
-	 * @model unsettable="true"
+	 * @model containment="true" unsettable="true"
 	 * @generated
 	 */
 	EList<Client> getClients();
 
 	/**
-	 * Unsets the value of the '{@link exo.pizzeria.MPizzeria#getClients <em>Clients</em>}' reference list.
+	 * Unsets the value of the '{@link exo.pizzeria.MPizzeria#getClients <em>Clients</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #isSetClients()
@@ -70,10 +70,10 @@ public interface MPizzeria extends EObject {
 	void unsetClients();
 
 	/**
-	 * Returns whether the value of the '{@link exo.pizzeria.MPizzeria#getClients <em>Clients</em>}' reference list is set.
+	 * Returns whether the value of the '{@link exo.pizzeria.MPizzeria#getClients <em>Clients</em>}' containment reference list is set.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return whether the value of the '<em>Clients</em>' reference list is set.
+	 * @return whether the value of the '<em>Clients</em>' containment reference list is set.
 	 * @see #unsetClients()
 	 * @see #getClients()
 	 * @generated

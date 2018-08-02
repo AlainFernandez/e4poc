@@ -18,7 +18,6 @@ import org.eclipse.emf.ecore.InternalEObject;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
 import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
@@ -48,7 +47,7 @@ public class MPizzeriaImpl extends MinimalEObjectImpl.Container implements Pizze
 	protected EList<Pizza> pizza;
 
 	/**
-	 * The cached value of the '{@link #getClients() <em>Clients</em>}' reference list.
+	 * The cached value of the '{@link #getClients() <em>Clients</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @see #getClients()
@@ -105,7 +104,7 @@ public class MPizzeriaImpl extends MinimalEObjectImpl.Container implements Pizze
 	 */
 	public EList<Client> getClients() {
 		if (clients == null) {
-			clients = new EObjectResolvingEList.Unsettable<Client>(Client.class, this,
+			clients = new EObjectContainmentEList.Unsettable<Client>(Client.class, this,
 					MPizzeriaPackage.PIZZERIA__CLIENTS);
 		}
 		return clients;
@@ -152,6 +151,8 @@ public class MPizzeriaImpl extends MinimalEObjectImpl.Container implements Pizze
 		switch (featureID) {
 		case MPizzeriaPackage.PIZZERIA__PIZZA:
 			return ((InternalEList<?>) getPizza()).basicRemove(otherEnd, msgs);
+		case MPizzeriaPackage.PIZZERIA__CLIENTS:
+			return ((InternalEList<?>) getClients()).basicRemove(otherEnd, msgs);
 		case MPizzeriaPackage.PIZZERIA__TABLES:
 			return ((InternalEList<?>) getTables()).basicRemove(otherEnd, msgs);
 		}

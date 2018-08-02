@@ -88,6 +88,7 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__PIZZA);
+			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__CLIENTS);
 			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__TABLES);
 		}
 		return childrenFeatures;
@@ -171,6 +172,9 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 
 		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZERIA__PIZZA,
 				MPizzeriaFactory.eINSTANCE.createPizza()));
+
+		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZERIA__CLIENTS,
+				MPizzeriaFactory.eINSTANCE.createClient()));
 
 		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZERIA__TABLES,
 				MPizzeriaFactory.eINSTANCE.createTable()));
