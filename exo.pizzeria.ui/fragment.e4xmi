@@ -2,15 +2,25 @@
 <fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmlns:ui="http://www.eclipse.org/ui/2010/UIModel/application/ui" xmi:id="_hjltoJYvEei4s_wlcyiWaA">
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_U8RLUJYwEei4s_wlcyiWaA" featurename="commands" parentElementId="xpath:/">
     <elements xsi:type="commands:Command" xmi:id="_qyaYMJYwEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.command.importpicture" commandName="Import Picture"/>
+    <elements xsi:type="commands:Command" xmi:id="_LgQx0JZaEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.command.observecurrentselection" commandName="Observe Current Selection"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_v6ZlsJYwEei4s_wlcyiWaA" featurename="handlers" parentElementId="xpath:/">
     <elements xsi:type="commands:Handler" xmi:id="_z9_-AJYwEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handler.import.picture" contributionURI="bundleclass://exo.pizzeria.ui/exo.pizzeria.ui.handlers.ImportPictureHandler" command="_qyaYMJYwEei4s_wlcyiWaA"/>
+    <elements xsi:type="commands:Handler" xmi:id="_Ptx7IJZaEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handler.0" contributionURI="bundleclass://exo.pizzeria.ui/exo.pizzeria.ui.handlers.ObserveCurrentSelectionHandler" command="_LgQx0JZaEei4s_wlcyiWaA"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_0624wJY5Eei4s_wlcyiWaA" featurename="menuContributions" parentElementId="xpath:/">
-    <elements xsi:type="menu:MenuContribution" xmi:id="_72LsIJY5Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution" positionInParent="after=additions" parentId="exo.pizzeria.presentation.PizzeriaEditorID">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_72LsIJY5Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution.contextualmenu" positionInParent="after=additions" parentId="exo.pizzeria.presentation.PizzeriaEditorID">
       <children xsi:type="menu:Menu" xmi:id="_ST0W0JY6Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution" label="Pizza Editor">
         <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_p0QOYJZSEei4s_wlcyiWaA" coreExpressionId="exo.pizzeria.presentation.PizzaSelected"/>
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_Bq2ZcJY6Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handledmenuitem.importpicture" label="Import Picture" command="_qyaYMJYwEei4s_wlcyiWaA"/>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Bq2ZcJY6Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handledmenuitem.importpicture" label="Import Picture context" command="_qyaYMJYwEei4s_wlcyiWaA"/>
+      </children>
+    </elements>
+    <elements xsi:type="menu:MenuContribution" xmi:id="_c2PDUJZTEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution.coreexpression" parentId="org.eclipse.ui.main.menu">
+      <children xsi:type="menu:Menu" xmi:id="_c2QRcJZTEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution" label="Pizza Editor">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_c2QRcpZTEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handledmenuitem.importpicture" label="Import Picture" command="_qyaYMJYwEei4s_wlcyiWaA">
+          <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_zKwpwJZdEei4s_wlcyiWaA" coreExpressionId="exo.pizzeria.presentation.PizzaSelected"/>
+        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_C6Too5ZaEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handledmenuitem.1" label="Observe Current Selection" command="_LgQx0JZaEei4s_wlcyiWaA"/>
       </children>
     </elements>
   </fragments>
