@@ -55,24 +55,24 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 		if (itemPropertyDescriptors == null) {
 			super.getPropertyDescriptors(object);
 
-			addClientPropertyDescriptor(object);
+			addClientsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
 
 	/**
-	 * This adds a property descriptor for the Client feature.
+	 * This adds a property descriptor for the Clients feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClientPropertyDescriptor(Object object) {
+	protected void addClientsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Pizzeria_client_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Pizzeria_client_feature",
+						getResourceLocator(), getString("_UI_Pizzeria_clients_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Pizzeria_clients_feature",
 								"_UI_Pizzeria_type"),
-						MPizzeriaPackage.Literals.PIZZERIA__CLIENT, true, false, true, null, null, null));
+						MPizzeriaPackage.Literals.PIZZERIA__CLIENTS, true, false, true, null, null, null));
 	}
 
 	/**
@@ -88,7 +88,7 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 		if (childrenFeatures == null) {
 			super.getChildrenFeatures(object);
 			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__PIZZA);
-			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__TABLE);
+			childrenFeatures.add(MPizzeriaPackage.Literals.PIZZERIA__TABLES);
 		}
 		return childrenFeatures;
 	}
@@ -151,7 +151,7 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 
 		switch (notification.getFeatureID(Pizzeria.class)) {
 		case MPizzeriaPackage.PIZZERIA__PIZZA:
-		case MPizzeriaPackage.PIZZERIA__TABLE:
+		case MPizzeriaPackage.PIZZERIA__TABLES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
 			return;
 		}
@@ -172,7 +172,7 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZERIA__PIZZA,
 				MPizzeriaFactory.eINSTANCE.createPizza()));
 
-		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZERIA__TABLE,
+		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZERIA__TABLES,
 				MPizzeriaFactory.eINSTANCE.createTable()));
 	}
 

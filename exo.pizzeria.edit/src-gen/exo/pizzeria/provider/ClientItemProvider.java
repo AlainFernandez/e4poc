@@ -54,7 +54,7 @@ public class ClientItemProvider extends ItemProviderAdapter implements IEditingD
 			super.getPropertyDescriptors(object);
 
 			addNamePropertyDescriptor(object);
-			addPizzaPropertyDescriptor(object);
+			addLikePropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -75,17 +75,17 @@ public class ClientItemProvider extends ItemProviderAdapter implements IEditingD
 	}
 
 	/**
-	 * This adds a property descriptor for the Pizza feature.
+	 * This adds a property descriptor for the Like feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addPizzaPropertyDescriptor(Object object) {
+	protected void addLikePropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Client_pizza_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Client_pizza_feature", "_UI_Client_type"),
-						MPizzeriaPackage.Literals.CLIENT__PIZZA, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Client_like_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Client_like_feature", "_UI_Client_type"),
+						MPizzeriaPackage.Literals.CLIENT__LIKE, true, false, true, null, null, null));
 	}
 
 	/**

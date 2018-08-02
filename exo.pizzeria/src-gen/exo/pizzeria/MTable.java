@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link exo.pizzeria.MTable#getId <em>Id</em>}</li>
- *   <li>{@link exo.pizzeria.MTable#getClient <em>Client</em>}</li>
+ *   <li>{@link exo.pizzeria.MTable#getClients <em>Clients</em>}</li>
  * </ul>
  *
  * @see exo.pizzeria.MPizzeriaPackage#getTable()
@@ -51,19 +51,19 @@ public interface MTable extends EObject {
 	void setId(int value);
 
 	/**
-	 * Returns the value of the '<em><b>Client</b></em>' reference list.
+	 * Returns the value of the '<em><b>Clients</b></em>' reference list.
 	 * The list contents are of type {@link exo.pizzeria.Client}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Client</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Clients</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Client</em>' reference list.
-	 * @see exo.pizzeria.MPizzeriaPackage#getTable_Client()
-	 * @model upper="6"
+	 * @return the value of the '<em>Clients</em>' reference list.
+	 * @see exo.pizzeria.MPizzeriaPackage#getTable_Clients()
+	 * @model resolveProxies="false" upper="6"
 	 * @generated
 	 */
-	EList<Client> getClient();
+	EList<Client> getClients();
 
 } // MTable

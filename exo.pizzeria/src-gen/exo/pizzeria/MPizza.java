@@ -66,4 +66,20 @@ public interface MPizza extends EObject {
 	 */
 	EList<Ingredient> getIngredient();
 
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model kind="operation"
+	 * @generated
+	 */
+	float getPrice();
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @model
+	 * @generated
+	 */
+	int numberSale();
+
 } // MPizza

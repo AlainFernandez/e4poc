@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link exo.pizzeria.impl.MClientImpl#getName <em>Name</em>}</li>
- *   <li>{@link exo.pizzeria.impl.MClientImpl#getPizza <em>Pizza</em>}</li>
+ *   <li>{@link exo.pizzeria.impl.MClientImpl#getLike <em>Like</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,14 +55,14 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getPizza() <em>Pizza</em>}' reference list.
+	 * The cached value of the '{@link #getLike() <em>Like</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getPizza()
+	 * @see #getLike()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Pizza> pizza;
+	protected EList<Pizza> like;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,11 +109,11 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Pizza> getPizza() {
-		if (pizza == null) {
-			pizza = new EObjectResolvingEList<Pizza>(Pizza.class, this, MPizzeriaPackage.CLIENT__PIZZA);
+	public EList<Pizza> getLike() {
+		if (like == null) {
+			like = new EObjectResolvingEList<Pizza>(Pizza.class, this, MPizzeriaPackage.CLIENT__LIKE);
 		}
-		return pizza;
+		return like;
 	}
 
 	/**
@@ -126,8 +126,8 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 		switch (featureID) {
 		case MPizzeriaPackage.CLIENT__NAME:
 			return getName();
-		case MPizzeriaPackage.CLIENT__PIZZA:
-			return getPizza();
+		case MPizzeriaPackage.CLIENT__LIKE:
+			return getLike();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -144,9 +144,9 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 		case MPizzeriaPackage.CLIENT__NAME:
 			setName((String) newValue);
 			return;
-		case MPizzeriaPackage.CLIENT__PIZZA:
-			getPizza().clear();
-			getPizza().addAll((Collection<? extends Pizza>) newValue);
+		case MPizzeriaPackage.CLIENT__LIKE:
+			getLike().clear();
+			getLike().addAll((Collection<? extends Pizza>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -163,8 +163,8 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 		case MPizzeriaPackage.CLIENT__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case MPizzeriaPackage.CLIENT__PIZZA:
-			getPizza().clear();
+		case MPizzeriaPackage.CLIENT__LIKE:
+			getLike().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -180,8 +180,8 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 		switch (featureID) {
 		case MPizzeriaPackage.CLIENT__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case MPizzeriaPackage.CLIENT__PIZZA:
-			return pizza != null && !pizza.isEmpty();
+		case MPizzeriaPackage.CLIENT__LIKE:
+			return like != null && !like.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

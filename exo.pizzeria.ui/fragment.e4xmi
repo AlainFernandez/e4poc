@@ -8,7 +8,7 @@
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_0624wJY5Eei4s_wlcyiWaA" featurename="menuContributions" parentElementId="xpath:/">
     <elements xsi:type="menu:MenuContribution" xmi:id="_72LsIJY5Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution" parentId="exo.pizzeria.presentation.PizzeriaEditorID">
-      <children xsi:type="menu:Menu" xmi:id="_ST0W0JY6Eei4s_wlcyiWaA" elementId="exo.pizzeriaMenuID">
+      <children xsi:type="menu:Menu" xmi:id="_ST0W0JY6Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution" label="Pizza Editor">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_Bq2ZcJY6Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handledmenuitem.importpicture" label="Import Picture" command="_qyaYMJYwEei4s_wlcyiWaA"/>
       </children>
     </elements>

@@ -4,6 +4,7 @@ package exo.pizzeria;
 
 import org.eclipse.emf.ecore.EAttribute;
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.EOperation;
 import org.eclipse.emf.ecore.EPackage;
 import org.eclipse.emf.ecore.EReference;
 
@@ -94,13 +95,31 @@ public interface MPizzeriaPackage extends EPackage {
 	int PIZZA_FEATURE_COUNT = 2;
 
 	/**
+	 * The operation id for the '<em>Get Price</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIZZA___GET_PRICE = 0;
+
+	/**
+	 * The operation id for the '<em>Number Sale</em>' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIZZA___NUMBER_SALE = 1;
+
+	/**
 	 * The number of operations of the '<em>Pizza</em>' class.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIZZA_OPERATION_COUNT = 0;
+	int PIZZA_OPERATION_COUNT = 2;
 
 	/**
 	 * The meta object id for the '{@link exo.pizzeria.impl.MIngredientImpl <em>Ingredient</em>}' class.
@@ -306,22 +325,22 @@ public interface MPizzeriaPackage extends EPackage {
 	int PIZZERIA__PIZZA = 0;
 
 	/**
-	 * The feature id for the '<em><b>Client</b></em>' reference.
+	 * The feature id for the '<em><b>Clients</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIZZERIA__CLIENT = 1;
+	int PIZZERIA__CLIENTS = 1;
 
 	/**
-	 * The feature id for the '<em><b>Table</b></em>' containment reference list.
+	 * The feature id for the '<em><b>Tables</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int PIZZERIA__TABLE = 2;
+	int PIZZERIA__TABLES = 2;
 
 	/**
 	 * The number of structural features of the '<em>Pizzeria</em>' class.
@@ -361,13 +380,13 @@ public interface MPizzeriaPackage extends EPackage {
 	int TABLE__ID = 0;
 
 	/**
-	 * The feature id for the '<em><b>Client</b></em>' reference list.
+	 * The feature id for the '<em><b>Clients</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int TABLE__CLIENT = 1;
+	int TABLE__CLIENTS = 1;
 
 	/**
 	 * The number of structural features of the '<em>Table</em>' class.
@@ -407,13 +426,13 @@ public interface MPizzeriaPackage extends EPackage {
 	int CLIENT__NAME = 0;
 
 	/**
-	 * The feature id for the '<em><b>Pizza</b></em>' reference list.
+	 * The feature id for the '<em><b>Like</b></em>' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 * @ordered
 	 */
-	int CLIENT__PIZZA = 1;
+	int CLIENT__LIKE = 1;
 
 	/**
 	 * The number of structural features of the '<em>Client</em>' class.
@@ -464,6 +483,26 @@ public interface MPizzeriaPackage extends EPackage {
 	 * @generated
 	 */
 	EReference getPizza_Ingredient();
+
+	/**
+	 * Returns the meta object for the '{@link exo.pizzeria.MPizza#getPrice() <em>Get Price</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Get Price</em>' operation.
+	 * @see exo.pizzeria.MPizza#getPrice()
+	 * @generated
+	 */
+	EOperation getPizza__GetPrice();
+
+	/**
+	 * Returns the meta object for the '{@link exo.pizzeria.MPizza#numberSale() <em>Number Sale</em>}' operation.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the '<em>Number Sale</em>' operation.
+	 * @see exo.pizzeria.MPizza#numberSale()
+	 * @generated
+	 */
+	EOperation getPizza__NumberSale();
 
 	/**
 	 * Returns the meta object for class '{@link exo.pizzeria.MIngredient <em>Ingredient</em>}'.
@@ -549,26 +588,26 @@ public interface MPizzeriaPackage extends EPackage {
 	EReference getPizzeria_Pizza();
 
 	/**
-	 * Returns the meta object for the reference '{@link exo.pizzeria.MPizzeria#getClient <em>Client</em>}'.
+	 * Returns the meta object for the reference list '{@link exo.pizzeria.MPizzeria#getClients <em>Clients</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference '<em>Client</em>'.
-	 * @see exo.pizzeria.MPizzeria#getClient()
+	 * @return the meta object for the reference list '<em>Clients</em>'.
+	 * @see exo.pizzeria.MPizzeria#getClients()
 	 * @see #getPizzeria()
 	 * @generated
 	 */
-	EReference getPizzeria_Client();
+	EReference getPizzeria_Clients();
 
 	/**
-	 * Returns the meta object for the containment reference list '{@link exo.pizzeria.MPizzeria#getTable <em>Table</em>}'.
+	 * Returns the meta object for the containment reference list '{@link exo.pizzeria.MPizzeria#getTables <em>Tables</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the containment reference list '<em>Table</em>'.
-	 * @see exo.pizzeria.MPizzeria#getTable()
+	 * @return the meta object for the containment reference list '<em>Tables</em>'.
+	 * @see exo.pizzeria.MPizzeria#getTables()
 	 * @see #getPizzeria()
 	 * @generated
 	 */
-	EReference getPizzeria_Table();
+	EReference getPizzeria_Tables();
 
 	/**
 	 * Returns the meta object for class '{@link exo.pizzeria.MTable <em>Table</em>}'.
@@ -592,15 +631,15 @@ public interface MPizzeriaPackage extends EPackage {
 	EAttribute getTable_Id();
 
 	/**
-	 * Returns the meta object for the reference list '{@link exo.pizzeria.MTable#getClient <em>Client</em>}'.
+	 * Returns the meta object for the reference list '{@link exo.pizzeria.MTable#getClients <em>Clients</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Client</em>'.
-	 * @see exo.pizzeria.MTable#getClient()
+	 * @return the meta object for the reference list '<em>Clients</em>'.
+	 * @see exo.pizzeria.MTable#getClients()
 	 * @see #getTable()
 	 * @generated
 	 */
-	EReference getTable_Client();
+	EReference getTable_Clients();
 
 	/**
 	 * Returns the meta object for class '{@link exo.pizzeria.MClient <em>Client</em>}'.
@@ -624,15 +663,15 @@ public interface MPizzeriaPackage extends EPackage {
 	EAttribute getClient_Name();
 
 	/**
-	 * Returns the meta object for the reference list '{@link exo.pizzeria.MClient#getPizza <em>Pizza</em>}'.
+	 * Returns the meta object for the reference list '{@link exo.pizzeria.MClient#getLike <em>Like</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @return the meta object for the reference list '<em>Pizza</em>'.
-	 * @see exo.pizzeria.MClient#getPizza()
+	 * @return the meta object for the reference list '<em>Like</em>'.
+	 * @see exo.pizzeria.MClient#getLike()
 	 * @see #getClient()
 	 * @generated
 	 */
-	EReference getClient_Pizza();
+	EReference getClient_Like();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -682,6 +721,22 @@ public interface MPizzeriaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PIZZA__INGREDIENT = eINSTANCE.getPizza_Ingredient();
+
+		/**
+		 * The meta object literal for the '<em><b>Get Price</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PIZZA___GET_PRICE = eINSTANCE.getPizza__GetPrice();
+
+		/**
+		 * The meta object literal for the '<em><b>Number Sale</b></em>' operation.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EOperation PIZZA___NUMBER_SALE = eINSTANCE.getPizza__NumberSale();
 
 		/**
 		 * The meta object literal for the '{@link exo.pizzeria.impl.MIngredientImpl <em>Ingredient</em>}' class.
@@ -758,20 +813,20 @@ public interface MPizzeriaPackage extends EPackage {
 		EReference PIZZERIA__PIZZA = eINSTANCE.getPizzeria_Pizza();
 
 		/**
-		 * The meta object literal for the '<em><b>Client</b></em>' reference feature.
+		 * The meta object literal for the '<em><b>Clients</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PIZZERIA__CLIENT = eINSTANCE.getPizzeria_Client();
+		EReference PIZZERIA__CLIENTS = eINSTANCE.getPizzeria_Clients();
 
 		/**
-		 * The meta object literal for the '<em><b>Table</b></em>' containment reference list feature.
+		 * The meta object literal for the '<em><b>Tables</b></em>' containment reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference PIZZERIA__TABLE = eINSTANCE.getPizzeria_Table();
+		EReference PIZZERIA__TABLES = eINSTANCE.getPizzeria_Tables();
 
 		/**
 		 * The meta object literal for the '{@link exo.pizzeria.impl.MTableImpl <em>Table</em>}' class.
@@ -792,12 +847,12 @@ public interface MPizzeriaPackage extends EPackage {
 		EAttribute TABLE__ID = eINSTANCE.getTable_Id();
 
 		/**
-		 * The meta object literal for the '<em><b>Client</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Clients</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference TABLE__CLIENT = eINSTANCE.getTable_Client();
+		EReference TABLE__CLIENTS = eINSTANCE.getTable_Clients();
 
 		/**
 		 * The meta object literal for the '{@link exo.pizzeria.impl.MClientImpl <em>Client</em>}' class.
@@ -818,12 +873,12 @@ public interface MPizzeriaPackage extends EPackage {
 		EAttribute CLIENT__NAME = eINSTANCE.getClient_Name();
 
 		/**
-		 * The meta object literal for the '<em><b>Pizza</b></em>' reference list feature.
+		 * The meta object literal for the '<em><b>Like</b></em>' reference list feature.
 		 * <!-- begin-user-doc -->
 		 * <!-- end-user-doc -->
 		 * @generated
 		 */
-		EReference CLIENT__PIZZA = eINSTANCE.getClient_Pizza();
+		EReference CLIENT__LIKE = eINSTANCE.getClient_Like();
 
 	}
 

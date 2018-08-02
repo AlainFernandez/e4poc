@@ -16,7 +16,7 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link exo.pizzeria.MClient#getName <em>Name</em>}</li>
- *   <li>{@link exo.pizzeria.MClient#getPizza <em>Pizza</em>}</li>
+ *   <li>{@link exo.pizzeria.MClient#getLike <em>Like</em>}</li>
  * </ul>
  *
  * @see exo.pizzeria.MPizzeriaPackage#getClient()
@@ -51,19 +51,19 @@ public interface MClient extends EObject {
 	void setName(String value);
 
 	/**
-	 * Returns the value of the '<em><b>Pizza</b></em>' reference list.
+	 * Returns the value of the '<em><b>Like</b></em>' reference list.
 	 * The list contents are of type {@link exo.pizzeria.Pizza}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Pizza</em>' reference list isn't clear,
+	 * If the meaning of the '<em>Like</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Pizza</em>' reference list.
-	 * @see exo.pizzeria.MPizzeriaPackage#getClient_Pizza()
+	 * @return the value of the '<em>Like</em>' reference list.
+	 * @see exo.pizzeria.MPizzeriaPackage#getClient_Like()
 	 * @model
 	 * @generated
 	 */
-	EList<Pizza> getPizza();
+	EList<Pizza> getLike();
 
 } // MClient

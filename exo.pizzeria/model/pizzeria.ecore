@@ -2,6 +2,8 @@
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pizzeria" nsURI="http://www.example.org/pizzeria" nsPrefix="pizzeria">
   <eClassifiers xsi:type="ecore:EClass" name="Pizza">
+    <eOperations name="getPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eOperations name="numberSale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="ingredient" upperBound="-1"
         eType="#//Ingredient" containment="true"/>
@@ -16,18 +18,18 @@
   <eClassifiers xsi:type="ecore:EClass" name="Pizzeria">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pizza" upperBound="-1"
         eType="#//Pizza" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="client" eType="#//Client"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="table" upperBound="-1"
-        eType="#//Table" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clients" upperBound="-1"
+        eType="#//Client" unsettable="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="tables" lowerBound="1"
+        upperBound="-1" eType="#//Table" containment="true"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Table">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="client" upperBound="6"
-        eType="#//Client"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="clients" upperBound="6"
+        eType="#//Client" resolveProxies="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Client">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pizza" upperBound="-1"
-        eType="#//Pizza"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="like" upperBound="-1" eType="#//Pizza"/>
   </eClassifiers>
 </ecore:EPackage>

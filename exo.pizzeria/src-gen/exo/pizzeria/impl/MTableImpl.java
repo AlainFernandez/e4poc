@@ -17,7 +17,7 @@ import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectEList;
 
 /**
  * <!-- begin-user-doc -->
@@ -28,7 +28,7 @@ import org.eclipse.emf.ecore.util.EObjectResolvingEList;
  * </p>
  * <ul>
  *   <li>{@link exo.pizzeria.impl.MTableImpl#getId <em>Id</em>}</li>
- *   <li>{@link exo.pizzeria.impl.MTableImpl#getClient <em>Client</em>}</li>
+ *   <li>{@link exo.pizzeria.impl.MTableImpl#getClients <em>Clients</em>}</li>
  * </ul>
  *
  * @generated
@@ -55,14 +55,14 @@ public class MTableImpl extends MinimalEObjectImpl.Container implements Table {
 	protected int id = ID_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getClient() <em>Client</em>}' reference list.
+	 * The cached value of the '{@link #getClients() <em>Clients</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getClient()
+	 * @see #getClients()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Client> client;
+	protected EList<Client> clients;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -109,11 +109,11 @@ public class MTableImpl extends MinimalEObjectImpl.Container implements Table {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Client> getClient() {
-		if (client == null) {
-			client = new EObjectResolvingEList<Client>(Client.class, this, MPizzeriaPackage.TABLE__CLIENT);
+	public EList<Client> getClients() {
+		if (clients == null) {
+			clients = new EObjectEList<Client>(Client.class, this, MPizzeriaPackage.TABLE__CLIENTS);
 		}
-		return client;
+		return clients;
 	}
 
 	/**
@@ -126,8 +126,8 @@ public class MTableImpl extends MinimalEObjectImpl.Container implements Table {
 		switch (featureID) {
 		case MPizzeriaPackage.TABLE__ID:
 			return getId();
-		case MPizzeriaPackage.TABLE__CLIENT:
-			return getClient();
+		case MPizzeriaPackage.TABLE__CLIENTS:
+			return getClients();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -144,9 +144,9 @@ public class MTableImpl extends MinimalEObjectImpl.Container implements Table {
 		case MPizzeriaPackage.TABLE__ID:
 			setId((Integer) newValue);
 			return;
-		case MPizzeriaPackage.TABLE__CLIENT:
-			getClient().clear();
-			getClient().addAll((Collection<? extends Client>) newValue);
+		case MPizzeriaPackage.TABLE__CLIENTS:
+			getClients().clear();
+			getClients().addAll((Collection<? extends Client>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -163,8 +163,8 @@ public class MTableImpl extends MinimalEObjectImpl.Container implements Table {
 		case MPizzeriaPackage.TABLE__ID:
 			setId(ID_EDEFAULT);
 			return;
-		case MPizzeriaPackage.TABLE__CLIENT:
-			getClient().clear();
+		case MPizzeriaPackage.TABLE__CLIENTS:
+			getClients().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -180,8 +180,8 @@ public class MTableImpl extends MinimalEObjectImpl.Container implements Table {
 		switch (featureID) {
 		case MPizzeriaPackage.TABLE__ID:
 			return id != ID_EDEFAULT;
-		case MPizzeriaPackage.TABLE__CLIENT:
-			return client != null && !client.isEmpty();
+		case MPizzeriaPackage.TABLE__CLIENTS:
+			return clients != null && !clients.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}

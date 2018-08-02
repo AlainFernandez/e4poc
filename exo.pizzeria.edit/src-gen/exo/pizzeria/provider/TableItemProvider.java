@@ -54,7 +54,7 @@ public class TableItemProvider extends ItemProviderAdapter implements IEditingDo
 			super.getPropertyDescriptors(object);
 
 			addIdPropertyDescriptor(object);
-			addClientPropertyDescriptor(object);
+			addClientsPropertyDescriptor(object);
 		}
 		return itemPropertyDescriptors;
 	}
@@ -75,17 +75,17 @@ public class TableItemProvider extends ItemProviderAdapter implements IEditingDo
 	}
 
 	/**
-	 * This adds a property descriptor for the Client feature.
+	 * This adds a property descriptor for the Clients feature.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected void addClientPropertyDescriptor(Object object) {
+	protected void addClientsPropertyDescriptor(Object object) {
 		itemPropertyDescriptors
 				.add(createItemPropertyDescriptor(((ComposeableAdapterFactory) adapterFactory).getRootAdapterFactory(),
-						getResourceLocator(), getString("_UI_Table_client_feature"),
-						getString("_UI_PropertyDescriptor_description", "_UI_Table_client_feature", "_UI_Table_type"),
-						MPizzeriaPackage.Literals.TABLE__CLIENT, true, false, true, null, null, null));
+						getResourceLocator(), getString("_UI_Table_clients_feature"),
+						getString("_UI_PropertyDescriptor_description", "_UI_Table_clients_feature", "_UI_Table_type"),
+						MPizzeriaPackage.Literals.TABLE__CLIENTS, true, false, true, null, null, null));
 	}
 
 	/**

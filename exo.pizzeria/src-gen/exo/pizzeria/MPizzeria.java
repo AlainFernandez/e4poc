@@ -16,8 +16,8 @@ import org.eclipse.emf.ecore.EObject;
  * </p>
  * <ul>
  *   <li>{@link exo.pizzeria.MPizzeria#getPizza <em>Pizza</em>}</li>
- *   <li>{@link exo.pizzeria.MPizzeria#getClient <em>Client</em>}</li>
- *   <li>{@link exo.pizzeria.MPizzeria#getTable <em>Table</em>}</li>
+ *   <li>{@link exo.pizzeria.MPizzeria#getClients <em>Clients</em>}</li>
+ *   <li>{@link exo.pizzeria.MPizzeria#getTables <em>Tables</em>}</li>
  * </ul>
  *
  * @see exo.pizzeria.MPizzeriaPackage#getPizzeria()
@@ -42,45 +42,58 @@ public interface MPizzeria extends EObject {
 	EList<Pizza> getPizza();
 
 	/**
-	 * Returns the value of the '<em><b>Client</b></em>' reference.
+	 * Returns the value of the '<em><b>Clients</b></em>' reference list.
+	 * The list contents are of type {@link exo.pizzeria.Client}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Client</em>' reference isn't clear,
+	 * If the meaning of the '<em>Clients</em>' reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Client</em>' reference.
-	 * @see #setClient(Client)
-	 * @see exo.pizzeria.MPizzeriaPackage#getPizzeria_Client()
-	 * @model
+	 * @return the value of the '<em>Clients</em>' reference list.
+	 * @see #isSetClients()
+	 * @see #unsetClients()
+	 * @see exo.pizzeria.MPizzeriaPackage#getPizzeria_Clients()
+	 * @model unsettable="true"
 	 * @generated
 	 */
-	Client getClient();
+	EList<Client> getClients();
 
 	/**
-	 * Sets the value of the '{@link exo.pizzeria.MPizzeria#getClient <em>Client</em>}' reference.
+	 * Unsets the value of the '{@link exo.pizzeria.MPizzeria#getClients <em>Clients</em>}' reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @param value the new value of the '<em>Client</em>' reference.
-	 * @see #getClient()
+	 * @see #isSetClients()
+	 * @see #getClients()
 	 * @generated
 	 */
-	void setClient(Client value);
+	void unsetClients();
 
 	/**
-	 * Returns the value of the '<em><b>Table</b></em>' containment reference list.
+	 * Returns whether the value of the '{@link exo.pizzeria.MPizzeria#getClients <em>Clients</em>}' reference list is set.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return whether the value of the '<em>Clients</em>' reference list is set.
+	 * @see #unsetClients()
+	 * @see #getClients()
+	 * @generated
+	 */
+	boolean isSetClients();
+
+	/**
+	 * Returns the value of the '<em><b>Tables</b></em>' containment reference list.
 	 * The list contents are of type {@link exo.pizzeria.Table}.
 	 * <!-- begin-user-doc -->
 	 * <p>
-	 * If the meaning of the '<em>Table</em>' containment reference list isn't clear,
+	 * If the meaning of the '<em>Tables</em>' containment reference list isn't clear,
 	 * there really should be more of a description here...
 	 * </p>
 	 * <!-- end-user-doc -->
-	 * @return the value of the '<em>Table</em>' containment reference list.
-	 * @see exo.pizzeria.MPizzeriaPackage#getPizzeria_Table()
-	 * @model containment="true"
+	 * @return the value of the '<em>Tables</em>' containment reference list.
+	 * @see exo.pizzeria.MPizzeriaPackage#getPizzeria_Tables()
+	 * @model containment="true" required="true"
 	 * @generated
 	 */
-	EList<Table> getTable();
+	EList<Table> getTables();
 
 } // MPizzeria

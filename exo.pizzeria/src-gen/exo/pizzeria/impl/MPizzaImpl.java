@@ -6,6 +6,7 @@ import exo.pizzeria.Ingredient;
 import exo.pizzeria.MPizzeriaPackage;
 import exo.pizzeria.Pizza;
 
+import java.lang.reflect.InvocationTargetException;
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
@@ -125,6 +126,28 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public float getPrice() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public int numberSale() {
+		// TODO: implement this method
+		// Ensure that you remove @generated or mark it @generated NOT
+		throw new UnsupportedOperationException();
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	@Override
 	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
 		switch (featureID) {
@@ -202,6 +225,22 @@ public class MPizzaImpl extends MinimalEObjectImpl.Container implements Pizza {
 			return ingredient != null && !ingredient.isEmpty();
 		}
 		return super.eIsSet(featureID);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Object eInvoke(int operationID, EList<?> arguments) throws InvocationTargetException {
+		switch (operationID) {
+		case MPizzeriaPackage.PIZZA___GET_PRICE:
+			return getPrice();
+		case MPizzeriaPackage.PIZZA___NUMBER_SALE:
+			return numberSale();
+		}
+		return super.eInvoke(operationID, arguments);
 	}
 
 	/**
