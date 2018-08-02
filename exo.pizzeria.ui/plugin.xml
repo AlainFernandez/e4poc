@@ -9,5 +9,14 @@
             uri="fragment.e4xmi">
       </fragment>
    </extension>
+   <extension
+         point="org.eclipse.core.expressions.definitions">
+      <definition
+            id="exo.pizzeria.ui.id0">
+         <instanceof
+               value="exo.pizzeria.presentation.PizzeriaEditorID">
+         </instanceof>
+      </definition>
+   </extension>
 
 </plugin>

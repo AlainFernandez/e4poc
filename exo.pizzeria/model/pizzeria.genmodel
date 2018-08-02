@@ -23,7 +23,6 @@
     <genClasses ecoreClass="pizzeria.ecore#//Fromage"/>
     <genClasses ecoreClass="pizzeria.ecore#//Pizzeria">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizzeria/pizza"/>
-      <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizzeria/client"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizzeria/table"/>
     </genClasses>
     <genClasses ecoreClass="pizzeria.ecore#//Table">

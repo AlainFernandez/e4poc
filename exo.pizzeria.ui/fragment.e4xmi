@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="ASCII"?>
-<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:basic="http://www.eclipse.org/ui/2010/UIModel/application/ui/basic" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_hjltoJYvEei4s_wlcyiWaA">
+<fragment:ModelFragments xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:commands="http://www.eclipse.org/ui/2010/UIModel/application/commands" xmlns:fragment="http://www.eclipse.org/ui/2010/UIModel/fragment" xmlns:menu="http://www.eclipse.org/ui/2010/UIModel/application/ui/menu" xmi:id="_hjltoJYvEei4s_wlcyiWaA">
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_U8RLUJYwEei4s_wlcyiWaA" featurename="commands" parentElementId="xpath:/">
     <elements xsi:type="commands:Command" xmi:id="_qyaYMJYwEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.command.importpicture" commandName="Import Picture"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_v6ZlsJYwEei4s_wlcyiWaA" featurename="handlers" parentElementId="xpath:/">
     <elements xsi:type="commands:Handler" xmi:id="_z9_-AJYwEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handler.import.picture" contributionURI="bundleclass://exo.pizzeria.ui/exo.pizzeria.ui.handlers.ImportPictureHandler" command="_qyaYMJYwEei4s_wlcyiWaA"/>
   </fragments>
-  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_D08BgJYxEei4s_wlcyiWaA" featurename="children" parentElementId="xpath:/">
-    <elements xsi:type="basic:TrimmedWindow" xmi:id="_OXNmEJY0Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.trimmedwindow.0">
-      <mainMenu xmi:id="_O5o9sJY0Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menu.0">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_QYIU8JY0Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handledmenuitem.importpicture" label="Import Picture" command="_qyaYMJYwEei4s_wlcyiWaA"/>
-      </mainMenu>
+  <fragments xsi:type="fragment:StringModelFragment" xmi:id="_0624wJY5Eei4s_wlcyiWaA" featurename="menuContributions" parentElementId="xpath:/">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_72LsIJY5Eei4s_wlcyiWaA" elementId="exo.pizzeriaMenuID" parentId="exo.pizzeria.presentation.PizzeriaEditorID">
+      <children xsi:type="menu:Menu" xmi:id="_ST0W0JY6Eei4s_wlcyiWaA" elementId="exo.pizzeria.presentation.PizzeriaEditorID">
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_Bq2ZcJY6Eei4s_wlcyiWaA" elementId="exo.pizzeria.ui.handledmenuitem.importpicture" label="Import Picture" command="_qyaYMJYwEei4s_wlcyiWaA"/>
+      </children>
     </elements>
   </fragments>
 </fragment:ModelFragments>
