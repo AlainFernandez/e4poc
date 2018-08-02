@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated pizzeria -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="exo.pizzeria.presentation.PizzeriaModelWizardID"
+            name="%_UI_PizzeriaModelWizard_label"
+            class="exo.pizzeria.presentation.PizzeriaModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/PizzeriaModelFile.gif">
+         <description>%_UI_PizzeriaModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated pizzeria -->
+      <editor
+            id="exo.pizzeria.presentation.PizzeriaEditorID"
+            name="%_UI_PizzeriaEditor_label"
+            icon="icons/full/obj16/PizzeriaModelFile.gif"
+            extensions="pizzeria"
+            class="exo.pizzeria.presentation.PizzeriaEditor"
+            contributorClass="exo.pizzeria.presentation.PizzeriaActionBarContributor">
+      </editor>
+   </extension>
+</plugin>
