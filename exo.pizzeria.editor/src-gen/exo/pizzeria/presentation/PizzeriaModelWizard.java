@@ -70,8 +70,6 @@ import org.eclipse.ui.part.ISetSelectionTarget;
 
 import exo.pizzeria.MPizzeriaFactory;
 import exo.pizzeria.MPizzeriaPackage;
-import exo.pizzeria.PizzeriaFactory;
-import exo.pizzeria.PizzeriaPackage;
 import exo.pizzeria.provider.PizzeriaEditPlugin;
 
 import org.eclipse.core.runtime.Path;

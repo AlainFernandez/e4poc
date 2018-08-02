@@ -92,6 +92,11 @@ public class PizzeriaAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter casePizzeria(Pizzeria object) {
+			return createPizzeriaAdapter();
+		}
+
+		@Override
 		public Adapter defaultCase(EObject object) {
 			return createEObjectAdapter();
 		}
@@ -177,6 +182,20 @@ public class PizzeriaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createFromageAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link exo.pizzeria.MPizzeria <em>Pizzeria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see exo.pizzeria.MPizzeria
+	 * @generated
+	 */
+	public Adapter createPizzeriaAdapter() {
 		return null;
 	}
 

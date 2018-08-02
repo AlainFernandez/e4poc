@@ -188,6 +188,29 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link exo.pizzeria.MPizzeria} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PizzeriaItemProvider pizzeriaItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link exo.pizzeria.MPizzeria}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPizzeriaAdapter() {
+		if (pizzeriaItemProvider == null) {
+			pizzeriaItemProvider = new PizzeriaItemProvider(this);
+		}
+
+		return pizzeriaItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -296,6 +319,8 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 			jambonItemProvider.dispose();
 		if (fromageItemProvider != null)
 			fromageItemProvider.dispose();
+		if (pizzeriaItemProvider != null)
+			pizzeriaItemProvider.dispose();
 	}
 
 }

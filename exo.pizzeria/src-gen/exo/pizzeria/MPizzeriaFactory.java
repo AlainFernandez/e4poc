@@ -67,6 +67,15 @@ public interface MPizzeriaFactory extends EFactory {
 	Fromage createFromage();
 
 	/**
+	 * Returns a new object of class '<em>Pizzeria</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Pizzeria</em>'.
+	 * @generated
+	 */
+	Pizzeria createPizzeria();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

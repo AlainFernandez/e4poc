@@ -287,6 +287,43 @@ public interface MPizzeriaPackage extends EPackage {
 	int FROMAGE_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MPizzeriaImpl <em>Pizzeria</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MPizzeriaImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getPizzeria()
+	 * @generated
+	 */
+	int PIZZERIA = 5;
+
+	/**
+	 * The feature id for the '<em><b>Pizza</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIZZERIA__PIZZA = 0;
+
+	/**
+	 * The number of structural features of the '<em>Pizzeria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIZZERIA_FEATURE_COUNT = 1;
+
+	/**
+	 * The number of operations of the '<em>Pizzeria</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIZZERIA_OPERATION_COUNT = 0;
+
+	/**
 	 * Returns the meta object for class '{@link exo.pizzeria.MPizza <em>Pizza</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -379,6 +416,27 @@ public interface MPizzeriaPackage extends EPackage {
 	 * @generated
 	 */
 	EClass getFromage();
+
+	/**
+	 * Returns the meta object for class '{@link exo.pizzeria.MPizzeria <em>Pizzeria</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Pizzeria</em>'.
+	 * @see exo.pizzeria.MPizzeria
+	 * @generated
+	 */
+	EClass getPizzeria();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link exo.pizzeria.MPizzeria#getPizza <em>Pizza</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Pizza</em>'.
+	 * @see exo.pizzeria.MPizzeria#getPizza()
+	 * @see #getPizzeria()
+	 * @generated
+	 */
+	EReference getPizzeria_Pizza();
 
 	/**
 	 * Returns the factory that creates the instances of the model.
@@ -484,6 +542,24 @@ public interface MPizzeriaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass FROMAGE = eINSTANCE.getFromage();
+
+		/**
+		 * The meta object literal for the '{@link exo.pizzeria.impl.MPizzeriaImpl <em>Pizzeria</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see exo.pizzeria.impl.MPizzeriaImpl
+		 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getPizzeria()
+		 * @generated
+		 */
+		EClass PIZZERIA = eINSTANCE.getPizzeria();
+
+		/**
+		 * The meta object literal for the '<em><b>Pizza</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PIZZERIA__PIZZA = eINSTANCE.getPizzeria_Pizza();
 
 	}
 

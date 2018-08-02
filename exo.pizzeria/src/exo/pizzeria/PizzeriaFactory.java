@@ -16,4 +16,5 @@ public interface PizzeriaFactory extends MPizzeriaFactory
 	public Tomate createTomate();
 	public Jambon createJambon();
 	public Fromage createFromage();
+	public Pizzeria createPizzeria();
 }

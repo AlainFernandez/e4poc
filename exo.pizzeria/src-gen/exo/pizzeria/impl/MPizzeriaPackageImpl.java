@@ -8,6 +8,7 @@ import exo.pizzeria.Jambon;
 import exo.pizzeria.MPizzeriaFactory;
 import exo.pizzeria.MPizzeriaPackage;
 import exo.pizzeria.Pizza;
+import exo.pizzeria.Pizzeria;
 import exo.pizzeria.Tomate;
 
 import org.eclipse.emf.ecore.EAttribute;
@@ -58,6 +59,13 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 	 * @generated
 	 */
 	private EClass fromageEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pizzeriaEClass = null;
 
 	/**
 	 * Creates an instance of the model <b>Package</b>, registered with
@@ -209,6 +217,24 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPizzeria() {
+		return pizzeriaEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPizzeria_Pizza() {
+		return (EReference) pizzeriaEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public MPizzeriaFactory getPizzeriaFactory() {
 		return (MPizzeriaFactory) getEFactoryInstance();
 	}
@@ -246,6 +272,9 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 		jambonEClass = createEClass(JAMBON);
 
 		fromageEClass = createEClass(FROMAGE);
+
+		pizzeriaEClass = createEClass(PIZZERIA);
+		createEReference(pizzeriaEClass, PIZZERIA__PIZZA);
 	}
 
 	/**
@@ -301,6 +330,12 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 		initEClass(jambonEClass, Jambon.class, "Jambon", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
 
 		initEClass(fromageEClass, Fromage.class, "Fromage", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(pizzeriaEClass, Pizzeria.class, "Pizzeria", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEReference(getPizzeria_Pizza(), this.getPizza(), null, "pizza", null, 0, -1, Pizzeria.class, !IS_TRANSIENT,
+				!IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES, !IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED,
+				IS_ORDERED);
 
 		// Create resource
 		createResource(eNS_URI);

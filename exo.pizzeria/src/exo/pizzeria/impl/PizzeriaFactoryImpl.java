@@ -7,6 +7,7 @@ import exo.pizzeria.Ingredient;
 import exo.pizzeria.Tomate;
 import exo.pizzeria.Jambon;
 import exo.pizzeria.Fromage;
+import exo.pizzeria.Pizzeria;
 import exo.pizzeria.PizzeriaFactory;
 
 
@@ -50,6 +51,11 @@ public class PizzeriaFactoryImpl extends MPizzeriaFactoryImpl implements Pizzeri
 	public Fromage createFromage()
 	{
 		Fromage result = new FromageImpl();
+		return result;
+	}
+	public Pizzeria createPizzeria()
+	{
+		Pizzeria result = new PizzeriaImpl();
 		return result;
 	}
 }
