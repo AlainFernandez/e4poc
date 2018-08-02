@@ -22,10 +22,12 @@
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Table">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="id" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="client" eType="#//Client"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="client" upperBound="6"
+        eType="#//Client"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Client">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="pizza" eType="#//Pizza"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="pizza" upperBound="-1"
+        eType="#//Pizza"/>
   </eClassifiers>
 </ecore:EPackage>
