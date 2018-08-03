@@ -2,37 +2,41 @@
  */
 package exo.pizzeria.impl;
 
-import exo.pizzeria.Client;
 import exo.pizzeria.MPizzeriaPackage;
-import exo.pizzeria.Pizza;
+import exo.pizzeria.Pizzeria;
+import exo.pizzeria.PizzeriaChain;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;
+import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
+import org.eclipse.emf.ecore.InternalEObject;
 
 import org.eclipse.emf.ecore.impl.ENotificationImpl;
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
-import org.eclipse.emf.ecore.util.EObjectResolvingEList;
+import org.eclipse.emf.ecore.util.EObjectContainmentEList;
+import org.eclipse.emf.ecore.util.InternalEList;
 
 /**
  * <!-- begin-user-doc -->
- * An implementation of the model object '<em><b>Client</b></em>'.
+ * An implementation of the model object '<em><b>Chain</b></em>'.
  * <!-- end-user-doc -->
  * <p>
  * The following features are implemented:
  * </p>
  * <ul>
- *   <li>{@link exo.pizzeria.impl.MClientImpl#getName <em>Name</em>}</li>
- *   <li>{@link exo.pizzeria.impl.MClientImpl#getLike <em>Like</em>}</li>
+ *   <li>{@link exo.pizzeria.impl.MPizzeriaChainImpl#getName <em>Name</em>}</li>
+ *   <li>{@link exo.pizzeria.impl.MPizzeriaChainImpl#getMagasins <em>Magasins</em>}</li>
  * </ul>
  *
  * @generated
  */
-public class MClientImpl extends MinimalEObjectImpl.Container implements Client {
+public class MPizzeriaChainImpl extends MinimalEObjectImpl.Container implements PizzeriaChain {
 	/**
 	 * The default value of the '{@link #getName() <em>Name</em>}' attribute.
 	 * <!-- begin-user-doc -->
@@ -54,21 +58,21 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 	protected String name = NAME_EDEFAULT;
 
 	/**
-	 * The cached value of the '{@link #getLike() <em>Like</em>}' reference list.
+	 * The cached value of the '{@link #getMagasins() <em>Magasins</em>}' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
-	 * @see #getLike()
+	 * @see #getMagasins()
 	 * @generated
 	 * @ordered
 	 */
-	protected EList<Pizza> like;
+	protected EList<Pizzeria> magasins;
 
 	/**
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	protected MClientImpl() {
+	protected MPizzeriaChainImpl() {
 		super();
 	}
 
@@ -79,7 +83,7 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 	 */
 	@Override
 	protected EClass eStaticClass() {
-		return MPizzeriaPackage.Literals.CLIENT;
+		return MPizzeriaPackage.Literals.PIZZERIA_CHAIN;
 	}
 
 	/**
@@ -100,7 +104,8 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 		String oldName = name;
 		name = newName;
 		if (eNotificationRequired())
-			eNotify(new ENotificationImpl(this, Notification.SET, MPizzeriaPackage.CLIENT__NAME, oldName, name));
+			eNotify(new ENotificationImpl(this, Notification.SET, MPizzeriaPackage.PIZZERIA_CHAIN__NAME, oldName,
+					name));
 	}
 
 	/**
@@ -108,11 +113,26 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
-	public EList<Pizza> getLike() {
-		if (like == null) {
-			like = new EObjectResolvingEList<Pizza>(Pizza.class, this, MPizzeriaPackage.CLIENT__LIKE);
+	public EList<Pizzeria> getMagasins() {
+		if (magasins == null) {
+			magasins = new EObjectContainmentEList<Pizzeria>(Pizzeria.class, this,
+					MPizzeriaPackage.PIZZERIA_CHAIN__MAGASINS);
 		}
-		return like;
+		return magasins;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public NotificationChain eInverseRemove(InternalEObject otherEnd, int featureID, NotificationChain msgs) {
+		switch (featureID) {
+		case MPizzeriaPackage.PIZZERIA_CHAIN__MAGASINS:
+			return ((InternalEList<?>) getMagasins()).basicRemove(otherEnd, msgs);
+		}
+		return super.eInverseRemove(otherEnd, featureID, msgs);
 	}
 
 	/**
@@ -123,10 +143,10 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 	@Override
 	public Object eGet(int featureID, boolean resolve, boolean coreType) {
 		switch (featureID) {
-		case MPizzeriaPackage.CLIENT__NAME:
+		case MPizzeriaPackage.PIZZERIA_CHAIN__NAME:
 			return getName();
-		case MPizzeriaPackage.CLIENT__LIKE:
-			return getLike();
+		case MPizzeriaPackage.PIZZERIA_CHAIN__MAGASINS:
+			return getMagasins();
 		}
 		return super.eGet(featureID, resolve, coreType);
 	}
@@ -140,12 +160,12 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 	@Override
 	public void eSet(int featureID, Object newValue) {
 		switch (featureID) {
-		case MPizzeriaPackage.CLIENT__NAME:
+		case MPizzeriaPackage.PIZZERIA_CHAIN__NAME:
 			setName((String) newValue);
 			return;
-		case MPizzeriaPackage.CLIENT__LIKE:
-			getLike().clear();
-			getLike().addAll((Collection<? extends Pizza>) newValue);
+		case MPizzeriaPackage.PIZZERIA_CHAIN__MAGASINS:
+			getMagasins().clear();
+			getMagasins().addAll((Collection<? extends Pizzeria>) newValue);
 			return;
 		}
 		super.eSet(featureID, newValue);
@@ -159,11 +179,11 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 	@Override
 	public void eUnset(int featureID) {
 		switch (featureID) {
-		case MPizzeriaPackage.CLIENT__NAME:
+		case MPizzeriaPackage.PIZZERIA_CHAIN__NAME:
 			setName(NAME_EDEFAULT);
 			return;
-		case MPizzeriaPackage.CLIENT__LIKE:
-			getLike().clear();
+		case MPizzeriaPackage.PIZZERIA_CHAIN__MAGASINS:
+			getMagasins().clear();
 			return;
 		}
 		super.eUnset(featureID);
@@ -177,10 +197,10 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 	@Override
 	public boolean eIsSet(int featureID) {
 		switch (featureID) {
-		case MPizzeriaPackage.CLIENT__NAME:
+		case MPizzeriaPackage.PIZZERIA_CHAIN__NAME:
 			return NAME_EDEFAULT == null ? name != null : !NAME_EDEFAULT.equals(name);
-		case MPizzeriaPackage.CLIENT__LIKE:
-			return like != null && !like.isEmpty();
+		case MPizzeriaPackage.PIZZERIA_CHAIN__MAGASINS:
+			return magasins != null && !magasins.isEmpty();
 		}
 		return super.eIsSet(featureID);
 	}
@@ -202,4 +222,4 @@ public class MClientImpl extends MinimalEObjectImpl.Container implements Client 
 		return result.toString();
 	}
 
-} //MClientImpl
+} //MPizzeriaChainImpl

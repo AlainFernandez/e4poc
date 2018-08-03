@@ -11,9 +11,7 @@
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_zvVOEJZrEei4s_wlcyiWaA" featurename="menuContributions" parentElementId="xpath:/">
     <elements xsi:type="menu:MenuContribution" xmi:id="_4kOgcJZrEei4s_wlcyiWaA" elementId="exo.pizzeria.importer.menucontribution.0" parentId="org.eclipse.ui.main.menu">
       <children xsi:type="menu:Menu" xmi:id="_FyhRQJZtEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution.import" label="Import">
-        <children xsi:type="menu:HandledMenuItem" xmi:id="_QnY-gJZsEei4s_wlcyiWaA" elementId="id.importrecette" label="Import Recette Pizza" command="_Wyo1QJZrEei4s_wlcyiWaA">
-          <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_D4Pm0JZ2Eei4s_wlcyiWaA" coreExpressionId="exo.pizzeria.importer.pizzeria.selected"/>
-        </children>
+        <children xsi:type="menu:HandledMenuItem" xmi:id="_QnY-gJZsEei4s_wlcyiWaA" elementId="id.importrecette" label="Import Recette Pizza" command="_Wyo1QJZrEei4s_wlcyiWaA"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_nYp5YJZ4Eei4s_wlcyiWaA" elementId="exo.pizzeria.importer.handledmenuitem.export" label="export" command="_uYWPYJZ4Eei4s_wlcyiWaA">
           <visibleWhen xsi:type="ui:CoreExpression" xmi:id="_p4TLoJZ4Eei4s_wlcyiWaA" coreExpressionId="exo.pizzeria.importer.pizzeria.selected"/>
         </children>

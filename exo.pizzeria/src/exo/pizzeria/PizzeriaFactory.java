@@ -20,4 +20,5 @@ public interface PizzeriaFactory extends MPizzeriaFactory
 	public Client createClient();
 	public Recette createRecette();
 	public Oeuf createOeuf();
+	public PizzeriaChain createPizzeriaChain();
 }

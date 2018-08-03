@@ -12,6 +12,7 @@ import exo.pizzeria.MPizzeriaPackage;
 import exo.pizzeria.Oeuf;
 import exo.pizzeria.Pizza;
 import exo.pizzeria.Pizzeria;
+import exo.pizzeria.PizzeriaChain;
 import exo.pizzeria.Recette;
 import exo.pizzeria.Table;
 import exo.pizzeria.Tomate;
@@ -101,6 +102,13 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 	 * @generated
 	 */
 	private EClass oeufEClass = null;
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	private EClass pizzeriaChainEClass = null;
 
 	/**
 	 * <!-- begin-user-doc -->
@@ -439,6 +447,33 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 	 * <!-- end-user-doc -->
 	 * @generated
 	 */
+	public EClass getPizzeriaChain() {
+		return pizzeriaChainEClass;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EAttribute getPizzeriaChain_Name() {
+		return (EAttribute) pizzeriaChainEClass.getEStructuralFeatures().get(0);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public EReference getPizzeriaChain_Magasins() {
+		return (EReference) pizzeriaChainEClass.getEStructuralFeatures().get(1);
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
 	public EEnum getEtatPizza() {
 		return etatPizzaEEnum;
 	}
@@ -510,6 +545,10 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 		createEAttribute(recetteEClass, RECETTE__TEMPS_CUISSON);
 
 		oeufEClass = createEClass(OEUF);
+
+		pizzeriaChainEClass = createEClass(PIZZERIA_CHAIN);
+		createEAttribute(pizzeriaChainEClass, PIZZERIA_CHAIN__NAME);
+		createEReference(pizzeriaChainEClass, PIZZERIA_CHAIN__MAGASINS);
 
 		// Create enums
 		etatPizzaEEnum = createEEnum(ETAT_PIZZA);
@@ -617,6 +656,14 @@ public class MPizzeriaPackageImpl extends EPackageImpl implements MPizzeriaPacka
 				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		initEClass(oeufEClass, Oeuf.class, "Oeuf", !IS_ABSTRACT, !IS_INTERFACE, IS_GENERATED_INSTANCE_CLASS);
+
+		initEClass(pizzeriaChainEClass, PizzeriaChain.class, "PizzeriaChain", !IS_ABSTRACT, !IS_INTERFACE,
+				IS_GENERATED_INSTANCE_CLASS);
+		initEAttribute(getPizzeriaChain_Name(), ecorePackage.getEString(), "name", null, 0, 1, PizzeriaChain.class,
+				!IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, !IS_UNSETTABLE, !IS_ID, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
+		initEReference(getPizzeriaChain_Magasins(), this.getPizzeria(), null, "magasins", null, 0, -1,
+				PizzeriaChain.class, !IS_TRANSIENT, !IS_VOLATILE, IS_CHANGEABLE, IS_COMPOSITE, !IS_RESOLVE_PROXIES,
+				!IS_UNSETTABLE, IS_UNIQUE, !IS_DERIVED, IS_ORDERED);
 
 		// Initialize enums and add enum literals
 		initEEnum(etatPizzaEEnum, EtatPizza.class, "EtatPizza");

@@ -280,6 +280,29 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link exo.pizzeria.MPizzeriaChain} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected PizzeriaChainItemProvider pizzeriaChainItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link exo.pizzeria.MPizzeriaChain}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createPizzeriaChainAdapter() {
+		if (pizzeriaChainItemProvider == null) {
+			pizzeriaChainItemProvider = new PizzeriaChainItemProvider(this);
+		}
+
+		return pizzeriaChainItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -396,6 +419,8 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 			recetteItemProvider.dispose();
 		if (oeufItemProvider != null)
 			oeufItemProvider.dispose();
+		if (pizzeriaChainItemProvider != null)
+			pizzeriaChainItemProvider.dispose();
 	}
 
 }

@@ -144,6 +144,13 @@ public class PizzeriaSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MPizzeriaPackage.PIZZERIA_CHAIN: {
+			PizzeriaChain pizzeriaChain = (PizzeriaChain) theEObject;
+			T result = casePizzeriaChain(pizzeriaChain);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		default:
 			return defaultCase(theEObject);
 		}
@@ -296,6 +303,21 @@ public class PizzeriaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T caseOeuf(Oeuf object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Chain</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Chain</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T casePizzeriaChain(PizzeriaChain object) {
 		return null;
 	}
 

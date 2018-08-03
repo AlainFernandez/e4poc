@@ -582,6 +582,52 @@ public interface MPizzeriaPackage extends EPackage {
 	int OEUF_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
 
 	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MPizzeriaChainImpl <em>Chain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MPizzeriaChainImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getPizzeriaChain()
+	 * @generated
+	 */
+	int PIZZERIA_CHAIN = 10;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIZZERIA_CHAIN__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Magasins</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIZZERIA_CHAIN__MAGASINS = 1;
+
+	/**
+	 * The number of structural features of the '<em>Chain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIZZERIA_CHAIN_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Chain</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int PIZZERIA_CHAIN_OPERATION_COUNT = 0;
+
+	/**
 	 * The meta object id for the '{@link exo.pizzeria.EtatPizza <em>Etat Pizza</em>}' enum.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -589,7 +635,7 @@ public interface MPizzeriaPackage extends EPackage {
 	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getEtatPizza()
 	 * @generated
 	 */
-	int ETAT_PIZZA = 10;
+	int ETAT_PIZZA = 11;
 
 	/**
 	 * Returns the meta object for class '{@link exo.pizzeria.MPizza <em>Pizza</em>}'.
@@ -899,6 +945,38 @@ public interface MPizzeriaPackage extends EPackage {
 	EClass getOeuf();
 
 	/**
+	 * Returns the meta object for class '{@link exo.pizzeria.MPizzeriaChain <em>Chain</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Chain</em>'.
+	 * @see exo.pizzeria.MPizzeriaChain
+	 * @generated
+	 */
+	EClass getPizzeriaChain();
+
+	/**
+	 * Returns the meta object for the attribute '{@link exo.pizzeria.MPizzeriaChain#getName <em>Name</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the attribute '<em>Name</em>'.
+	 * @see exo.pizzeria.MPizzeriaChain#getName()
+	 * @see #getPizzeriaChain()
+	 * @generated
+	 */
+	EAttribute getPizzeriaChain_Name();
+
+	/**
+	 * Returns the meta object for the containment reference list '{@link exo.pizzeria.MPizzeriaChain#getMagasins <em>Magasins</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for the containment reference list '<em>Magasins</em>'.
+	 * @see exo.pizzeria.MPizzeriaChain#getMagasins()
+	 * @see #getPizzeriaChain()
+	 * @generated
+	 */
+	EReference getPizzeriaChain_Magasins();
+
+	/**
 	 * Returns the meta object for enum '{@link exo.pizzeria.EtatPizza <em>Etat Pizza</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1182,6 +1260,32 @@ public interface MPizzeriaPackage extends EPackage {
 		 * @generated
 		 */
 		EClass OEUF = eINSTANCE.getOeuf();
+
+		/**
+		 * The meta object literal for the '{@link exo.pizzeria.impl.MPizzeriaChainImpl <em>Chain</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see exo.pizzeria.impl.MPizzeriaChainImpl
+		 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getPizzeriaChain()
+		 * @generated
+		 */
+		EClass PIZZERIA_CHAIN = eINSTANCE.getPizzeriaChain();
+
+		/**
+		 * The meta object literal for the '<em><b>Name</b></em>' attribute feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EAttribute PIZZERIA_CHAIN__NAME = eINSTANCE.getPizzeriaChain_Name();
+
+		/**
+		 * The meta object literal for the '<em><b>Magasins</b></em>' containment reference list feature.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @generated
+		 */
+		EReference PIZZERIA_CHAIN__MAGASINS = eINSTANCE.getPizzeriaChain_Magasins();
 
 		/**
 		 * The meta object literal for the '{@link exo.pizzeria.EtatPizza <em>Etat Pizza</em>}' enum.

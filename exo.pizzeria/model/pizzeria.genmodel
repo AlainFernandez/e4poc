@@ -52,5 +52,9 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Recette/tempsCuisson"/>
     </genClasses>
     <genClasses ecoreClass="pizzeria.ecore#//Oeuf"/>
+    <genClasses ecoreClass="pizzeria.ecore#//PizzeriaChain">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//PizzeriaChain/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//PizzeriaChain/magasins"/>
+    </genClasses>
   </genPackages>
 </genmodel:GenModel>

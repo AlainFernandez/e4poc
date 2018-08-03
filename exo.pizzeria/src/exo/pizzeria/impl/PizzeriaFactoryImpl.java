@@ -11,6 +11,7 @@ import exo.pizzeria.Table;
 import exo.pizzeria.Client;
 import exo.pizzeria.Recette;
 import exo.pizzeria.Oeuf;
+import exo.pizzeria.PizzeriaChain;
 import exo.pizzeria.PizzeriaFactory;
 
 
@@ -74,6 +75,11 @@ public class PizzeriaFactoryImpl extends MPizzeriaFactoryImpl implements Pizzeri
 	public Oeuf createOeuf()
 	{
 		Oeuf result = new OeufImpl();
+		return result;
+	}
+	public PizzeriaChain createPizzeriaChain()
+	{
+		PizzeriaChain result = new PizzeriaChainImpl();
 		return result;
 	}
 }

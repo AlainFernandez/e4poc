@@ -103,6 +103,15 @@ public interface MPizzeriaFactory extends EFactory {
 	Oeuf createOeuf();
 
 	/**
+	 * Returns a new object of class '<em>Chain</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Chain</em>'.
+	 * @generated
+	 */
+	PizzeriaChain createPizzeriaChain();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

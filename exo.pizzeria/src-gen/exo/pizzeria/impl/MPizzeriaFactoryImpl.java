@@ -75,6 +75,8 @@ public class MPizzeriaFactoryImpl extends EFactoryImpl implements MPizzeriaFacto
 			return createRecette();
 		case MPizzeriaPackage.OEUF:
 			return createOeuf();
+		case MPizzeriaPackage.PIZZERIA_CHAIN:
+			return createPizzeriaChain();
 		default:
 			throw new IllegalArgumentException("The class '" + eClass.getName() + "' is not a valid classifier");
 		}
@@ -198,6 +200,16 @@ public class MPizzeriaFactoryImpl extends EFactoryImpl implements MPizzeriaFacto
 	public Oeuf createOeuf() {
 		OeufImpl oeuf = new OeufImpl();
 		return oeuf;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public PizzeriaChain createPizzeriaChain() {
+		PizzeriaChainImpl pizzeriaChain = new PizzeriaChainImpl();
+		return pizzeriaChain;
 	}
 
 	/**
