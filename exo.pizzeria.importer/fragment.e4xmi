@@ -9,7 +9,7 @@
     <elements xsi:type="commands:Handler" xmi:id="_wljt0JZ4Eei4s_wlcyiWaA" elementId="exo.pizzeria.importer.handler.0" contributionURI="bundleclass://exo.pizzeria.importer/exo.pizzeria.importer.handlers.ExportRecetteHandler" command="_uYWPYJZ4Eei4s_wlcyiWaA"/>
   </fragments>
   <fragments xsi:type="fragment:StringModelFragment" xmi:id="_zvVOEJZrEei4s_wlcyiWaA" featurename="menuContributions" parentElementId="xpath:/">
-    <elements xsi:type="menu:MenuContribution" xmi:id="_4kOgcJZrEei4s_wlcyiWaA" elementId="exo.pizzeria.importer.menucontribution.0" parentId="org.eclipse.ui.main.menu">
+    <elements xsi:type="menu:MenuContribution" xmi:id="_4kOgcJZrEei4s_wlcyiWaA" elementId="exo.pizzeria.importer.menucontribution.0" positionInParent="after=additions" parentId="exo.pizzeria.ui.menu">
       <children xsi:type="menu:Menu" xmi:id="_FyhRQJZtEei4s_wlcyiWaA" elementId="exo.pizzeria.ui.menucontribution.import" label="Import">
         <children xsi:type="menu:HandledMenuItem" xmi:id="_QnY-gJZsEei4s_wlcyiWaA" elementId="id.importrecette" label="Import Recette Pizza" command="_Wyo1QJZrEei4s_wlcyiWaA"/>
         <children xsi:type="menu:HandledMenuItem" xmi:id="_nYp5YJZ4Eei4s_wlcyiWaA" elementId="exo.pizzeria.importer.handledmenuitem.export" label="export" command="_uYWPYJZ4Eei4s_wlcyiWaA">

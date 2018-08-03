@@ -153,6 +153,7 @@ public class PizzeriaItemProvider extends ItemProviderAdapter implements IEditin
 
 		switch (notification.getFeatureID(Pizzeria.class)) {
 		case MPizzeriaPackage.PIZZERIA__PIZZA:
+		case MPizzeriaPackage.PIZZERIA__CLIENTS:
 		case MPizzeriaPackage.PIZZERIA__TABLES:
 		case MPizzeriaPackage.PIZZERIA__RECETTES:
 			fireNotifyChanged(new ViewerNotification(notification, notification.getNotifier(), true, false));
