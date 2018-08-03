@@ -219,6 +219,9 @@ public class RecetteItemProvider extends ItemProviderAdapter implements IEditing
 				MPizzeriaFactory.eINSTANCE.createFromage()));
 
 		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.RECETTE__INGREDIENTS,
+				MPizzeriaFactory.eINSTANCE.createAnchoix()));
+
+		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.RECETTE__INGREDIENTS,
 				MPizzeriaFactory.eINSTANCE.createOeuf()));
 	}
 

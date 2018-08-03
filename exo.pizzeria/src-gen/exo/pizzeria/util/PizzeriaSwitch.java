@@ -66,9 +66,9 @@ public class PizzeriaSwitch<T> extends Switch<T> {
 	@Override
 	protected T doSwitch(int classifierID, EObject theEObject) {
 		switch (classifierID) {
-		case MPizzeriaPackage.PIZZA: {
-			Pizza pizza = (Pizza) theEObject;
-			T result = casePizza(pizza);
+		case MPizzeriaPackage.RECETTE: {
+			Recette recette = (Recette) theEObject;
+			T result = caseRecette(recette);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -107,6 +107,31 @@ public class PizzeriaSwitch<T> extends Switch<T> {
 				result = defaultCase(theEObject);
 			return result;
 		}
+		case MPizzeriaPackage.ANCHOIX: {
+			Anchoix anchoix = (Anchoix) theEObject;
+			T result = caseAnchoix(anchoix);
+			if (result == null)
+				result = caseIngredient(anchoix);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MPizzeriaPackage.OEUF: {
+			Oeuf oeuf = (Oeuf) theEObject;
+			T result = caseOeuf(oeuf);
+			if (result == null)
+				result = caseIngredient(oeuf);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
+		case MPizzeriaPackage.PIZZA: {
+			Pizza pizza = (Pizza) theEObject;
+			T result = casePizza(pizza);
+			if (result == null)
+				result = defaultCase(theEObject);
+			return result;
+		}
 		case MPizzeriaPackage.PIZZERIA: {
 			Pizzeria pizzeria = (Pizzeria) theEObject;
 			T result = casePizzeria(pizzeria);
@@ -124,22 +149,6 @@ public class PizzeriaSwitch<T> extends Switch<T> {
 		case MPizzeriaPackage.CLIENT: {
 			Client client = (Client) theEObject;
 			T result = caseClient(client);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case MPizzeriaPackage.RECETTE: {
-			Recette recette = (Recette) theEObject;
-			T result = caseRecette(recette);
-			if (result == null)
-				result = defaultCase(theEObject);
-			return result;
-		}
-		case MPizzeriaPackage.OEUF: {
-			Oeuf oeuf = (Oeuf) theEObject;
-			T result = caseOeuf(oeuf);
-			if (result == null)
-				result = caseIngredient(oeuf);
 			if (result == null)
 				result = defaultCase(theEObject);
 			return result;
@@ -318,6 +327,21 @@ public class PizzeriaSwitch<T> extends Switch<T> {
 	 * @generated
 	 */
 	public T casePizzeriaChain(PizzeriaChain object) {
+		return null;
+	}
+
+	/**
+	 * Returns the result of interpreting the object as an instance of '<em>Anchoix</em>'.
+	 * <!-- begin-user-doc -->
+	 * This implementation returns null;
+	 * returning a non-null result will terminate the switch.
+	 * <!-- end-user-doc -->
+	 * @param object the target of the switch.
+	 * @return the result of interpreting the object as an instance of '<em>Anchoix</em>'.
+	 * @see #doSwitch(org.eclipse.emf.ecore.EObject) doSwitch(EObject)
+	 * @generated
+	 */
+	public T caseAnchoix(Anchoix object) {
 		return null;
 	}
 

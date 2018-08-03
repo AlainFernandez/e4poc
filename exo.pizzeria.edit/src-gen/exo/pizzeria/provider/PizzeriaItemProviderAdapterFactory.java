@@ -303,6 +303,29 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 	}
 
 	/**
+	 * This keeps track of the one adapter used for all {@link exo.pizzeria.MAnchoix} instances.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	protected AnchoixItemProvider anchoixItemProvider;
+
+	/**
+	 * This creates an adapter for a {@link exo.pizzeria.MAnchoix}.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	@Override
+	public Adapter createAnchoixAdapter() {
+		if (anchoixItemProvider == null) {
+			anchoixItemProvider = new AnchoixItemProvider(this);
+		}
+
+		return anchoixItemProvider;
+	}
+
+	/**
 	 * This returns the root adapter factory that contains this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -401,24 +424,26 @@ public class PizzeriaItemProviderAdapterFactory extends PizzeriaAdapterFactory
 	 * @generated
 	 */
 	public void dispose() {
-		if (pizzaItemProvider != null)
-			pizzaItemProvider.dispose();
+		if (recetteItemProvider != null)
+			recetteItemProvider.dispose();
 		if (tomateItemProvider != null)
 			tomateItemProvider.dispose();
 		if (jambonItemProvider != null)
 			jambonItemProvider.dispose();
 		if (fromageItemProvider != null)
 			fromageItemProvider.dispose();
+		if (anchoixItemProvider != null)
+			anchoixItemProvider.dispose();
+		if (oeufItemProvider != null)
+			oeufItemProvider.dispose();
+		if (pizzaItemProvider != null)
+			pizzaItemProvider.dispose();
 		if (pizzeriaItemProvider != null)
 			pizzeriaItemProvider.dispose();
 		if (tableItemProvider != null)
 			tableItemProvider.dispose();
 		if (clientItemProvider != null)
 			clientItemProvider.dispose();
-		if (recetteItemProvider != null)
-			recetteItemProvider.dispose();
-		if (oeufItemProvider != null)
-			oeufItemProvider.dispose();
 		if (pizzeriaChainItemProvider != null)
 			pizzeriaChainItemProvider.dispose();
 	}

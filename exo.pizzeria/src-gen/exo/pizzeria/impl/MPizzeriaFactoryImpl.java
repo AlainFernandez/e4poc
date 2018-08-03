@@ -57,24 +57,26 @@ public class MPizzeriaFactoryImpl extends EFactoryImpl implements MPizzeriaFacto
 	@Override
 	public EObject create(EClass eClass) {
 		switch (eClass.getClassifierID()) {
-		case MPizzeriaPackage.PIZZA:
-			return createPizza();
+		case MPizzeriaPackage.RECETTE:
+			return createRecette();
 		case MPizzeriaPackage.TOMATE:
 			return createTomate();
 		case MPizzeriaPackage.JAMBON:
 			return createJambon();
 		case MPizzeriaPackage.FROMAGE:
 			return createFromage();
+		case MPizzeriaPackage.ANCHOIX:
+			return createAnchoix();
+		case MPizzeriaPackage.OEUF:
+			return createOeuf();
+		case MPizzeriaPackage.PIZZA:
+			return createPizza();
 		case MPizzeriaPackage.PIZZERIA:
 			return createPizzeria();
 		case MPizzeriaPackage.TABLE:
 			return createTable();
 		case MPizzeriaPackage.CLIENT:
 			return createClient();
-		case MPizzeriaPackage.RECETTE:
-			return createRecette();
-		case MPizzeriaPackage.OEUF:
-			return createOeuf();
 		case MPizzeriaPackage.PIZZERIA_CHAIN:
 			return createPizzeriaChain();
 		default:
@@ -210,6 +212,16 @@ public class MPizzeriaFactoryImpl extends EFactoryImpl implements MPizzeriaFacto
 	public PizzeriaChain createPizzeriaChain() {
 		PizzeriaChainImpl pizzeriaChain = new PizzeriaChainImpl();
 		return pizzeriaChain;
+	}
+
+	/**
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 */
+	public Anchoix createAnchoix() {
+		AnchoixImpl anchoix = new AnchoixImpl();
+		return anchoix;
 	}
 
 	/**

@@ -12,6 +12,7 @@ import exo.pizzeria.Client;
 import exo.pizzeria.Recette;
 import exo.pizzeria.Oeuf;
 import exo.pizzeria.PizzeriaChain;
+import exo.pizzeria.Anchoix;
 import exo.pizzeria.PizzeriaFactory;
 
 
@@ -80,6 +81,11 @@ public class PizzeriaFactoryImpl extends MPizzeriaFactoryImpl implements Pizzeri
 	public PizzeriaChain createPizzeriaChain()
 	{
 		PizzeriaChain result = new PizzeriaChainImpl();
+		return result;
+	}
+	public Anchoix createAnchoix()
+	{
+		Anchoix result = new AnchoixImpl();
 		return result;
 	}
 }

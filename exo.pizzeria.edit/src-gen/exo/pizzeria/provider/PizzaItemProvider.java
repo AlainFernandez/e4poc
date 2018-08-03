@@ -197,6 +197,9 @@ public class PizzaItemProvider extends ItemProviderAdapter implements IEditingDo
 				MPizzeriaFactory.eINSTANCE.createFromage()));
 
 		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZA__INGREDIENT,
+				MPizzeriaFactory.eINSTANCE.createAnchoix()));
+
+		newChildDescriptors.add(createChildParameter(MPizzeriaPackage.Literals.PIZZA__INGREDIENT,
 				MPizzeriaFactory.eINSTANCE.createOeuf()));
 	}
 

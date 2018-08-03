@@ -6,7 +6,9 @@ import exo.pizzeria.EtatPizza;
 import exo.pizzeria.Ingredient;
 import exo.pizzeria.MPizzeriaPackage;
 import exo.pizzeria.Pizza;
+
 import java.lang.reflect.InvocationTargetException;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

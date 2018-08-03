@@ -66,7 +66,387 @@ public interface MPizzeriaPackage extends EPackage {
 	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getPizza()
 	 * @generated
 	 */
-	int PIZZA = 0;
+	int PIZZA = 7;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MIngredientImpl <em>Ingredient</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MIngredientImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getIngredient()
+	 * @generated
+	 */
+	int INGREDIENT = 1;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MTomateImpl <em>Tomate</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MTomateImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getTomate()
+	 * @generated
+	 */
+	int TOMATE = 2;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MJambonImpl <em>Jambon</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MJambonImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getJambon()
+	 * @generated
+	 */
+	int JAMBON = 3;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MFromageImpl <em>Fromage</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MFromageImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getFromage()
+	 * @generated
+	 */
+	int FROMAGE = 4;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MPizzeriaImpl <em>Pizzeria</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MPizzeriaImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getPizzeria()
+	 * @generated
+	 */
+	int PIZZERIA = 8;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MTableImpl <em>Table</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MTableImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getTable()
+	 * @generated
+	 */
+	int TABLE = 9;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MClientImpl <em>Client</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MClientImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getClient()
+	 * @generated
+	 */
+	int CLIENT = 10;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MRecetteImpl <em>Recette</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MRecetteImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getRecette()
+	 * @generated
+	 */
+	int RECETTE = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Ingredients</b></em>' containment reference list.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE__INGREDIENTS = 1;
+
+	/**
+	 * The feature id for the '<em><b>Calzone</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE__CALZONE = 2;
+
+	/**
+	 * The feature id for the '<em><b>Temps Cuisson</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE__TEMPS_CUISSON = 3;
+
+	/**
+	 * The number of structural features of the '<em>Recette</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE_FEATURE_COUNT = 4;
+
+	/**
+	 * The number of operations of the '<em>Recette</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int RECETTE_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INGREDIENT__NAME = 0;
+
+	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INGREDIENT__PRICE = 1;
+
+	/**
+	 * The number of structural features of the '<em>Ingredient</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INGREDIENT_FEATURE_COUNT = 2;
+
+	/**
+	 * The number of operations of the '<em>Ingredient</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int INGREDIENT_OPERATION_COUNT = 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOMATE__NAME = INGREDIENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOMATE__PRICE = INGREDIENT__PRICE;
+
+	/**
+	 * The number of structural features of the '<em>Tomate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOMATE_FEATURE_COUNT = INGREDIENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Tomate</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int TOMATE_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAMBON__NAME = INGREDIENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAMBON__PRICE = INGREDIENT__PRICE;
+
+	/**
+	 * The number of structural features of the '<em>Jambon</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAMBON_FEATURE_COUNT = INGREDIENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Jambon</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int JAMBON_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FROMAGE__NAME = INGREDIENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FROMAGE__PRICE = INGREDIENT__PRICE;
+
+	/**
+	 * The number of structural features of the '<em>Fromage</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FROMAGE_FEATURE_COUNT = INGREDIENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Fromage</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int FROMAGE_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MOeufImpl <em>Oeuf</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MOeufImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getOeuf()
+	 * @generated
+	 */
+	int OEUF = 6;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MPizzeriaChainImpl <em>Chain</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MPizzeriaChainImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getPizzeriaChain()
+	 * @generated
+	 */
+	int PIZZERIA_CHAIN = 11;
+
+	/**
+	 * The meta object id for the '{@link exo.pizzeria.impl.MAnchoixImpl <em>Anchoix</em>}' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @see exo.pizzeria.impl.MAnchoixImpl
+	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getAnchoix()
+	 * @generated
+	 */
+	int ANCHOIX = 5;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANCHOIX__NAME = INGREDIENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANCHOIX__PRICE = INGREDIENT__PRICE;
+
+	/**
+	 * The number of structural features of the '<em>Anchoix</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANCHOIX_FEATURE_COUNT = INGREDIENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Anchoix</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int ANCHOIX_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
+
+	/**
+	 * The feature id for the '<em><b>Name</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OEUF__NAME = INGREDIENT__NAME;
+
+	/**
+	 * The feature id for the '<em><b>Price</b></em>' attribute.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OEUF__PRICE = INGREDIENT__PRICE;
+
+	/**
+	 * The number of structural features of the '<em>Oeuf</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OEUF_FEATURE_COUNT = INGREDIENT_FEATURE_COUNT + 0;
+
+	/**
+	 * The number of operations of the '<em>Oeuf</em>' class.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @generated
+	 * @ordered
+	 */
+	int OEUF_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -132,200 +512,6 @@ public interface MPizzeriaPackage extends EPackage {
 	int PIZZA_OPERATION_COUNT = 2;
 
 	/**
-	 * The meta object id for the '{@link exo.pizzeria.impl.MIngredientImpl <em>Ingredient</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see exo.pizzeria.impl.MIngredientImpl
-	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getIngredient()
-	 * @generated
-	 */
-	int INGREDIENT = 1;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INGREDIENT__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Price</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INGREDIENT__PRICE = 1;
-
-	/**
-	 * The number of structural features of the '<em>Ingredient</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INGREDIENT_FEATURE_COUNT = 2;
-
-	/**
-	 * The number of operations of the '<em>Ingredient</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int INGREDIENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link exo.pizzeria.impl.MTomateImpl <em>Tomate</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see exo.pizzeria.impl.MTomateImpl
-	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getTomate()
-	 * @generated
-	 */
-	int TOMATE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOMATE__NAME = INGREDIENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Price</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOMATE__PRICE = INGREDIENT__PRICE;
-
-	/**
-	 * The number of structural features of the '<em>Tomate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOMATE_FEATURE_COUNT = INGREDIENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Tomate</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int TOMATE_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link exo.pizzeria.impl.MJambonImpl <em>Jambon</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see exo.pizzeria.impl.MJambonImpl
-	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getJambon()
-	 * @generated
-	 */
-	int JAMBON = 3;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAMBON__NAME = INGREDIENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Price</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAMBON__PRICE = INGREDIENT__PRICE;
-
-	/**
-	 * The number of structural features of the '<em>Jambon</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAMBON_FEATURE_COUNT = INGREDIENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Jambon</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int JAMBON_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link exo.pizzeria.impl.MFromageImpl <em>Fromage</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see exo.pizzeria.impl.MFromageImpl
-	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getFromage()
-	 * @generated
-	 */
-	int FROMAGE = 4;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FROMAGE__NAME = INGREDIENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Price</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FROMAGE__PRICE = INGREDIENT__PRICE;
-
-	/**
-	 * The number of structural features of the '<em>Fromage</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FROMAGE_FEATURE_COUNT = INGREDIENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Fromage</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int FROMAGE_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link exo.pizzeria.impl.MPizzeriaImpl <em>Pizzeria</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see exo.pizzeria.impl.MPizzeriaImpl
-	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getPizzeria()
-	 * @generated
-	 */
-	int PIZZERIA = 5;
-
-	/**
 	 * The feature id for the '<em><b>Pizza</b></em>' containment reference list.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -380,16 +566,6 @@ public interface MPizzeriaPackage extends EPackage {
 	int PIZZERIA_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link exo.pizzeria.impl.MTableImpl <em>Table</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see exo.pizzeria.impl.MTableImpl
-	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getTable()
-	 * @generated
-	 */
-	int TABLE = 6;
-
-	/**
 	 * The feature id for the '<em><b>Id</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -426,16 +602,6 @@ public interface MPizzeriaPackage extends EPackage {
 	int TABLE_OPERATION_COUNT = 0;
 
 	/**
-	 * The meta object id for the '{@link exo.pizzeria.impl.MClientImpl <em>Client</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see exo.pizzeria.impl.MClientImpl
-	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getClient()
-	 * @generated
-	 */
-	int CLIENT = 7;
-
-	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -470,126 +636,6 @@ public interface MPizzeriaPackage extends EPackage {
 	 * @ordered
 	 */
 	int CLIENT_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link exo.pizzeria.impl.MRecetteImpl <em>Recette</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see exo.pizzeria.impl.MRecetteImpl
-	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getRecette()
-	 * @generated
-	 */
-	int RECETTE = 8;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECETTE__NAME = 0;
-
-	/**
-	 * The feature id for the '<em><b>Ingredients</b></em>' containment reference list.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECETTE__INGREDIENTS = 1;
-
-	/**
-	 * The feature id for the '<em><b>Calzone</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECETTE__CALZONE = 2;
-
-	/**
-	 * The feature id for the '<em><b>Temps Cuisson</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECETTE__TEMPS_CUISSON = 3;
-
-	/**
-	 * The number of structural features of the '<em>Recette</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECETTE_FEATURE_COUNT = 4;
-
-	/**
-	 * The number of operations of the '<em>Recette</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int RECETTE_OPERATION_COUNT = 0;
-
-	/**
-	 * The meta object id for the '{@link exo.pizzeria.impl.MOeufImpl <em>Oeuf</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see exo.pizzeria.impl.MOeufImpl
-	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getOeuf()
-	 * @generated
-	 */
-	int OEUF = 9;
-
-	/**
-	 * The feature id for the '<em><b>Name</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OEUF__NAME = INGREDIENT__NAME;
-
-	/**
-	 * The feature id for the '<em><b>Price</b></em>' attribute.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OEUF__PRICE = INGREDIENT__PRICE;
-
-	/**
-	 * The number of structural features of the '<em>Oeuf</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OEUF_FEATURE_COUNT = INGREDIENT_FEATURE_COUNT + 0;
-
-	/**
-	 * The number of operations of the '<em>Oeuf</em>' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @generated
-	 * @ordered
-	 */
-	int OEUF_OPERATION_COUNT = INGREDIENT_OPERATION_COUNT + 0;
-
-	/**
-	 * The meta object id for the '{@link exo.pizzeria.impl.MPizzeriaChainImpl <em>Chain</em>}' class.
-	 * <!-- begin-user-doc -->
-	 * <!-- end-user-doc -->
-	 * @see exo.pizzeria.impl.MPizzeriaChainImpl
-	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getPizzeriaChain()
-	 * @generated
-	 */
-	int PIZZERIA_CHAIN = 10;
 
 	/**
 	 * The feature id for the '<em><b>Name</b></em>' attribute.
@@ -635,7 +681,7 @@ public interface MPizzeriaPackage extends EPackage {
 	 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getEtatPizza()
 	 * @generated
 	 */
-	int ETAT_PIZZA = 11;
+	int ETAT_PIZZA = 12;
 
 	/**
 	 * Returns the meta object for class '{@link exo.pizzeria.MPizza <em>Pizza</em>}'.
@@ -977,6 +1023,16 @@ public interface MPizzeriaPackage extends EPackage {
 	EReference getPizzeriaChain_Magasins();
 
 	/**
+	 * Returns the meta object for class '{@link exo.pizzeria.MAnchoix <em>Anchoix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return the meta object for class '<em>Anchoix</em>'.
+	 * @see exo.pizzeria.MAnchoix
+	 * @generated
+	 */
+	EClass getAnchoix();
+
+	/**
 	 * Returns the meta object for enum '{@link exo.pizzeria.EtatPizza <em>Etat Pizza</em>}'.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->
@@ -1286,6 +1342,16 @@ public interface MPizzeriaPackage extends EPackage {
 		 * @generated
 		 */
 		EReference PIZZERIA_CHAIN__MAGASINS = eINSTANCE.getPizzeriaChain_Magasins();
+
+		/**
+		 * The meta object literal for the '{@link exo.pizzeria.impl.MAnchoixImpl <em>Anchoix</em>}' class.
+		 * <!-- begin-user-doc -->
+		 * <!-- end-user-doc -->
+		 * @see exo.pizzeria.impl.MAnchoixImpl
+		 * @see exo.pizzeria.impl.MPizzeriaPackageImpl#getAnchoix()
+		 * @generated
+		 */
+		EClass ANCHOIX = eINSTANCE.getAnchoix();
 
 		/**
 		 * The meta object literal for the '{@link exo.pizzeria.EtatPizza <em>Etat Pizza</em>}' enum.

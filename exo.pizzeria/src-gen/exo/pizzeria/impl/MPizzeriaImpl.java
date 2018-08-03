@@ -6,16 +6,18 @@ import exo.pizzeria.Client;
 import exo.pizzeria.MPizzeriaPackage;
 import exo.pizzeria.Pizza;
 import exo.pizzeria.Pizzeria;
-
 import exo.pizzeria.Recette;
 import exo.pizzeria.Table;
+
 import java.util.Collection;
+
 import org.eclipse.emf.common.notify.NotificationChain;
 
 import org.eclipse.emf.common.util.EList;
 
 import org.eclipse.emf.ecore.EClass;
 import org.eclipse.emf.ecore.InternalEObject;
+
 import org.eclipse.emf.ecore.impl.MinimalEObjectImpl;
 
 import org.eclipse.emf.ecore.util.EObjectContainmentEList;

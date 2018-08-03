@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ecore:EPackage xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" name="pizzeria" nsURI="http://www.example.org/pizzeria" nsPrefix="pizzeria">
-  <eClassifiers xsi:type="ecore:EClass" name="Pizza">
-    <eOperations name="getPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-    <eOperations name="numberSale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Recette">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ingredient" upperBound="-1"
-        eType="#//Ingredient" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="etat" eType="#//EtatPizza"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ingredients" lowerBound="1"
+        upperBound="-1" eType="#//Ingredient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="calzone" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tempsCuisson" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Ingredient" abstract="true">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
@@ -16,6 +15,22 @@
   <eClassifiers xsi:type="ecore:EClass" name="Tomate" eSuperTypes="#//Ingredient"/>
   <eClassifiers xsi:type="ecore:EClass" name="Jambon" eSuperTypes="#//Ingredient"/>
   <eClassifiers xsi:type="ecore:EClass" name="Fromage" eSuperTypes="#//Ingredient"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Anchoix" eSuperTypes="#//Ingredient"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Oeuf" eSuperTypes="#//Ingredient"/>
+  <eClassifiers xsi:type="ecore:EClass" name="Pizza">
+    <eOperations name="getPrice" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
+    <eOperations name="numberSale" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EInt"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="ingredient" upperBound="-1"
+        eType="#//Ingredient" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="etat" eType="#//EtatPizza"/>
+  </eClassifiers>
+  <eClassifiers xsi:type="ecore:EEnum" name="EtatPizza">
+    <eLiterals name="commandee"/>
+    <eLiterals name="enPreparation" value="1"/>
+    <eLiterals name="livree" value="2"/>
+    <eLiterals name="payee" value="3"/>
+  </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Pizzeria">
     <eStructuralFeatures xsi:type="ecore:EReference" name="pizza" upperBound="-1"
         eType="#//Pizza" containment="true"/>
@@ -34,20 +49,6 @@
   <eClassifiers xsi:type="ecore:EClass" name="Client">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="like" upperBound="-1" eType="#//Pizza"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Recette">
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="ingredients" lowerBound="1"
-        upperBound="-1" eType="#//Ingredient" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="calzone" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"/>
-    <eStructuralFeatures xsi:type="ecore:EAttribute" name="tempsCuisson" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EFloat"/>
-  </eClassifiers>
-  <eClassifiers xsi:type="ecore:EClass" name="Oeuf" eSuperTypes="#//Ingredient"/>
-  <eClassifiers xsi:type="ecore:EEnum" name="EtatPizza">
-    <eLiterals name="commandee"/>
-    <eLiterals name="enPreparation" value="1"/>
-    <eLiterals name="livree" value="2"/>
-    <eLiterals name="payee" value="3"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="PizzeriaChain">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="name" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

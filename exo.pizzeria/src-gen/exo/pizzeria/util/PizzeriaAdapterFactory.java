@@ -67,8 +67,8 @@ public class PizzeriaAdapterFactory extends AdapterFactoryImpl {
 	 */
 	protected PizzeriaSwitch<Adapter> modelSwitch = new PizzeriaSwitch<Adapter>() {
 		@Override
-		public Adapter casePizza(Pizza object) {
-			return createPizzaAdapter();
+		public Adapter caseRecette(Recette object) {
+			return createRecetteAdapter();
 		}
 
 		@Override
@@ -92,6 +92,21 @@ public class PizzeriaAdapterFactory extends AdapterFactoryImpl {
 		}
 
 		@Override
+		public Adapter caseAnchoix(Anchoix object) {
+			return createAnchoixAdapter();
+		}
+
+		@Override
+		public Adapter caseOeuf(Oeuf object) {
+			return createOeufAdapter();
+		}
+
+		@Override
+		public Adapter casePizza(Pizza object) {
+			return createPizzaAdapter();
+		}
+
+		@Override
 		public Adapter casePizzeria(Pizzeria object) {
 			return createPizzeriaAdapter();
 		}
@@ -104,16 +119,6 @@ public class PizzeriaAdapterFactory extends AdapterFactoryImpl {
 		@Override
 		public Adapter caseClient(Client object) {
 			return createClientAdapter();
-		}
-
-		@Override
-		public Adapter caseRecette(Recette object) {
-			return createRecetteAdapter();
-		}
-
-		@Override
-		public Adapter caseOeuf(Oeuf object) {
-			return createOeufAdapter();
 		}
 
 		@Override
@@ -291,6 +296,20 @@ public class PizzeriaAdapterFactory extends AdapterFactoryImpl {
 	 * @generated
 	 */
 	public Adapter createPizzeriaChainAdapter() {
+		return null;
+	}
+
+	/**
+	 * Creates a new adapter for an object of class '{@link exo.pizzeria.MAnchoix <em>Anchoix</em>}'.
+	 * <!-- begin-user-doc -->
+	 * This default implementation returns null so that we can easily ignore cases;
+	 * it's useful to ignore a case when inheritance will catch all the cases anyway.
+	 * <!-- end-user-doc -->
+	 * @return the new adapter.
+	 * @see exo.pizzeria.MAnchoix
+	 * @generated
+	 */
+	public Adapter createAnchoixAdapter() {
 		return null;
 	}
 

@@ -5,6 +5,7 @@ package exo.pizzeria.impl;
 import exo.pizzeria.Client;
 import exo.pizzeria.MPizzeriaPackage;
 import exo.pizzeria.Pizza;
+
 import java.util.Collection;
 
 import org.eclipse.emf.common.notify.Notification;

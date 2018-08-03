@@ -112,6 +112,15 @@ public interface MPizzeriaFactory extends EFactory {
 	PizzeriaChain createPizzeriaChain();
 
 	/**
+	 * Returns a new object of class '<em>Anchoix</em>'.
+	 * <!-- begin-user-doc -->
+	 * <!-- end-user-doc -->
+	 * @return a new object of class '<em>Anchoix</em>'.
+	 * @generated
+	 */
+	Anchoix createAnchoix();
+
+	/**
 	 * Returns the package supported by this factory.
 	 * <!-- begin-user-doc -->
 	 * <!-- end-user-doc -->

@@ -5,7 +5,8 @@
     editorDirectory="/exo.pizzeria.editor/src-gen" modelPluginID="exo.pizzeria" modelName="Pizzeria"
     rootExtendsClass="org.eclipse.emf.ecore.impl.MinimalEObjectImpl$Container" codeFormatting="true"
     importerID="org.eclipse.emf.importer.ecore" complianceLevel="8.0" copyrightFields="false"
-    interfaceNamePattern="M{0}" classNamePattern="M{0}Impl" operationReflection="true">
+    interfaceNamePattern="M{0}" classNamePattern="M{0}Impl" operationReflection="true"
+    importOrganizing="true">
   <foreignModel>pizzeria.ecore</foreignModel>
   <testsDirectory xsi:nil="true"/>
   <genPackages prefix="Pizzeria" basePackage="exo" disposableProviderFactory="true"
@@ -16,12 +17,11 @@
       <genEnumLiterals ecoreEnumLiteral="pizzeria.ecore#//EtatPizza/livree"/>
       <genEnumLiterals ecoreEnumLiteral="pizzeria.ecore#//EtatPizza/payee"/>
     </genEnums>
-    <genClasses ecoreClass="pizzeria.ecore#//Pizza">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Pizza/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizza/ingredient"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Pizza/etat"/>
-      <genOperations ecoreOperation="pizzeria.ecore#//Pizza/getPrice"/>
-      <genOperations ecoreOperation="pizzeria.ecore#//Pizza/numberSale"/>
+    <genClasses ecoreClass="pizzeria.ecore#//Recette">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Recette/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Recette/ingredients"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Recette/calzone"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Recette/tempsCuisson"/>
     </genClasses>
     <genClasses ecoreClass="pizzeria.ecore#//Ingredient">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Ingredient/name"/>
@@ -30,6 +30,15 @@
     <genClasses ecoreClass="pizzeria.ecore#//Tomate"/>
     <genClasses ecoreClass="pizzeria.ecore#//Jambon"/>
     <genClasses ecoreClass="pizzeria.ecore#//Fromage"/>
+    <genClasses ecoreClass="pizzeria.ecore#//Anchoix"/>
+    <genClasses ecoreClass="pizzeria.ecore#//Oeuf"/>
+    <genClasses ecoreClass="pizzeria.ecore#//Pizza">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Pizza/name"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizza/ingredient"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Pizza/etat"/>
+      <genOperations ecoreOperation="pizzeria.ecore#//Pizza/getPrice"/>
+      <genOperations ecoreOperation="pizzeria.ecore#//Pizza/numberSale"/>
+    </genClasses>
     <genClasses ecoreClass="pizzeria.ecore#//Pizzeria">
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Pizzeria/pizza"/>
       <genFeatures notify="false" children="true" createChild="true" propertySortChoices="true"
@@ -45,13 +54,6 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Client/name"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Client/like"/>
     </genClasses>
-    <genClasses ecoreClass="pizzeria.ecore#//Recette">
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Recette/name"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//Recette/ingredients"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Recette/calzone"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//Recette/tempsCuisson"/>
-    </genClasses>
-    <genClasses ecoreClass="pizzeria.ecore#//Oeuf"/>
     <genClasses ecoreClass="pizzeria.ecore#//PizzeriaChain">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute pizzeria.ecore#//PizzeriaChain/name"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference pizzeria.ecore#//PizzeriaChain/magasins"/>
